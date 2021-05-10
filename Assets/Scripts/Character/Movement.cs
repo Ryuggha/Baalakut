@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float dashCastTime = 0.3f;
     [SerializeField] private float dashRecuperationTime = 0.5f;
     [SerializeField] private float offSetOnImpact = 0.5f;
+    [SerializeField] private float dashCooldown = 1f;
     private Vector3 dashTargetPos;
     private int dashState = 0;
     private float dashTimer;
@@ -146,9 +147,18 @@ public class Movement : MonoBehaviour
 
             if (dashTimer <= 0)
             {
-                dashState = 0;
+                dashState = 3;
                 playerManager.isInteracting = false;
                 playerManager.endDash();
+                dashTimer = dashCooldown;
+            }
+        }
+        else if (dashState == 3)
+        {
+            dashTimer -= delta;
+            if (dashTimer <= 0)
+            {
+                dashState = 0;
             }
         }
     }

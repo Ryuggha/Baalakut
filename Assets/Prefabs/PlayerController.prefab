@@ -895,7 +895,8 @@ MonoBehaviour:
     m_Bits: 7447
   fovMultiplicatorWhileCharging: 0.8
   lookSpeed: 0.4
-  followSpeed: 4
+  followSpeed: 0.0002
+  dashFollowSpeed: 0.1
   pivotSpeed: 0.4
   minimumPivot: -70
   maximumPivot: 40
@@ -1377,10 +1378,8 @@ MonoBehaviour:
   mouseY: 0
   rStickX: 0
   rStickY: 0
-  rollInput: 0
-  rollFlag: 0
-  jumpInput: 0
-  jumpFlag: 0
+  dashInput: 0
+  dashFlag: 0
   shotInput: 0
   shotFlag: 0
   menuInput: 0
@@ -1405,12 +1404,16 @@ MonoBehaviour:
   movementSpeed: 7
   rotationSpeed: 15
   movementMultWhenCharging: 0.5
-  jumpSpeed: 3
-  minJumpTime: 0.1
-  maxJumpTime: 0.2
-  floatTimeProportion: 0.5
   fallSpeed: 2
   timeInAirToLandAnimation: 0.5
+  dashDistance: 5
+  dashCastTime: 0.3
+  dashRecuperationTime: 0.5
+  offSetOnImpact: 0.2
+  dashCooldown: 1
+  dashLayerMask:
+    serializedVersion: 2
+    m_Bits: 4353
   groundDetectionRayStartPoint: 0.5
   minimumDistanceNeededToBeginFall: 1
   groundDirectionRayDistance: 0.05

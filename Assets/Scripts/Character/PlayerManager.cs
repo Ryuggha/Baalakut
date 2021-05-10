@@ -47,8 +47,8 @@ public class PlayerManager : MonoBehaviour
 
         #region Handle Player Movement and Actions
 
-        chargeStatus = sling.HandleShot(delta);
         movement.HandleDashing(delta);
+        chargeStatus = sling.HandleShot(delta);
         movement.HandleMovement(delta);
         movement.HandleFalling(delta, movement.moveDirection);
 
