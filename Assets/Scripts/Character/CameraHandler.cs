@@ -15,12 +15,13 @@ public class CameraHandler : MonoBehaviour
 
     private Vector3 cameraTransformPosition;
     [SerializeField] private LayerMask layerMask;
-    public static CameraHandler singleton;
+    [HideInInspector] public static CameraHandler singleton;
 
     public float fovMultiplicatorWhileCharging = 0.8f;
-    public float lookSpeed = 0.01f, followSpeed = 0.1f, pivotSpeed = 0.007f;
+    public float lookSpeed = 0.01f, followSpeed = 4, dashFollowSpeed = 0.01f, pivotSpeed = 0.007f;
     private float defaultPosition, lookAngle, pivotAngle, targetPosition;
     public float minimumPivot = -35f, maximumPivot = 35f;
+    private float followSpeedRaw;
     private PlayerManager playerManager;
     private InputHandler inputManager;
 
@@ -28,6 +29,7 @@ public class CameraHandler : MonoBehaviour
 
     private void Awake()
     {
+        followSpeedRaw = followSpeed;
         cam = GetComponentInChildren<Camera>();
         inputManager = FindObjectOfType<InputHandler>();
         playerManager = FindObjectOfType<PlayerManager>();
@@ -58,12 +60,21 @@ public class CameraHandler : MonoBehaviour
             cameraPivotTransform.position = Vector3.Lerp(cameraPivotTransform.position, cameraFreeLookPivotPos.position, delta * 5);
             cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, inputManager.fov, delta * 5);
         }
-        
+    }
+
+    public void setDashFollowSpeed()
+    {
+        this.followSpeedRaw = dashFollowSpeed;
+    }
+
+    public void resetFollowSpeed()
+    {
+        this.followSpeedRaw = followSpeed;
     }
 
     public void FollowTarget(float delta)
     {
-        Vector3 targetPosition = Vector3.SmoothDamp(selfTransform.position, targetTransform.position, ref cameraFollowVelocity, delta / followSpeed);
+        Vector3 targetPosition = Vector3.SmoothDamp(selfTransform.position, targetTransform.position, ref cameraFollowVelocity, delta / followSpeedRaw);
         selfTransform.position = targetPosition;
 
         HandleCameraCollisions(delta);

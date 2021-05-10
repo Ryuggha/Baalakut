@@ -15,10 +15,8 @@ public class InputHandler : MonoBehaviour
     public float moveAmount;
     public float mouseX, mouseY, rStickX, rStickY;
 
-    public bool rollInput;
-    [HideInInspector] public bool rollFlag;
-    public bool jumpInput;
-    [HideInInspector] public bool jumpFlag;
+    public bool dashInput;
+    [HideInInspector] public bool dashFlag;
     public bool shotInput;
     [HideInInspector] public bool shotFlag;
     public bool menuInput;
@@ -49,10 +47,9 @@ public class InputHandler : MonoBehaviour
     public void TickInput(float delta)
     {
         MoveInput();
-        HandleRollInput();
+        HandleDashInput();
         HandleShotInput();
-        HandleJumpInput();
-        HandleMenuInput();
+        //HandleMenuInput();
     }
 
     private void MoveInput()
@@ -67,16 +64,10 @@ public class InputHandler : MonoBehaviour
         rStickY = cameraInput.y * controllerCameraSensibility;
     }
 
-    private void HandleRollInput()
+    private void HandleDashInput()
     {
-        rollInput = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;
-        if (rollInput) rollFlag = true;
-    }
-
-    private void HandleJumpInput()
-    {
-        jumpInput = inputActions.PlayerActions.Jump.phase == UnityEngine.InputSystem.InputActionPhase.Started;
-        jumpFlag = jumpInput;
+        dashInput = inputActions.PlayerActions.Dash.phase == UnityEngine.InputSystem.InputActionPhase.Started;
+        dashFlag = dashInput;
     }
 
     private void HandleShotInput()

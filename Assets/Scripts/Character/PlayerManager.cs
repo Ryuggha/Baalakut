@@ -48,9 +48,8 @@ public class PlayerManager : MonoBehaviour
         #region Handle Player Movement and Actions
 
         chargeStatus = sling.HandleShot(delta);
+        movement.HandleDashing(delta);
         movement.HandleMovement(delta);
-        movement.HandleRolling(delta);
-        movement.HandleJumping(delta);
         movement.HandleFalling(delta, movement.moveDirection);
 
         #endregion
@@ -71,11 +70,19 @@ public class PlayerManager : MonoBehaviour
 
         #region Handling Flags
 
-        inputHandler.rollFlag = false;
-
         if (isInAir && !isJumping) movement.inAirTimer += delta;
 
         #endregion
+    }
+
+    public void startDash()
+    {
+        cameraHandler.setDashFollowSpeed();
+    }
+
+    public void endDash()
+    {
+        cameraHandler.resetFollowSpeed();
     }
 
     public void takeDamage() //Unimplemented method

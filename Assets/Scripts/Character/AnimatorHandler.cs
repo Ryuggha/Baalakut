@@ -46,7 +46,7 @@ public class AnimatorHandler : MonoBehaviour
 
     private void OnAnimatorMove()
     {
-        if (playerManager.isInteracting == false) return;
+        if (!playerManager.isInteracting) return;
         playerMovement.rigidbody.drag = 0;
         Vector3 deltaPosition = anim.deltaPosition;
         deltaPosition.y = 0;

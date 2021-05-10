@@ -22,12 +22,18 @@ public class Movement : MonoBehaviour
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private float movementMultWhenCharging = 0.5f;
-    [SerializeField] private float jumpSpeed = 1f;
-    [SerializeField] private float minJumpTime = 1f;
-    [SerializeField] private float maxJumpTime = 3f;
-    [SerializeField] private float floatTimeProportion = 1f;
     [SerializeField] private float fallSpeed = 1f;
     [SerializeField] private float timeInAirToLandAnimation = 0.3f;
+
+    [Header("Dash Stats")]
+    [SerializeField] private float dashDistance = 5f;
+    [SerializeField] private float dashCastTime = 0.3f;
+    [SerializeField] private float dashRecuperationTime = 0.5f;
+    [SerializeField] private float offSetOnImpact = 0.5f;
+    private Vector3 dashTargetPos;
+    private int dashState = 0;
+    private float dashTimer;
+    [SerializeField] private LayerMask dashLayerMask;
 
     [Header("Ground Detection")]
     [SerializeField] private float groundDetectionRayStartPoint = 0.5f;
@@ -76,7 +82,7 @@ public class Movement : MonoBehaviour
 
     private void HandleRotation (float delta)
     {
-        if (inputHandler.rollFlag) return;
+        if (inputHandler.dashFlag) return;
         if (playerManager.isInteracting) return;
 
         Vector3 targetDir = Vector3.zero;
@@ -97,58 +103,54 @@ public class Movement : MonoBehaviour
         selfTransform.rotation = targetRotation;
     }
 
-    public void HandleRolling (float delta)
+    public void HandleDashing (float delta)
     {
         if (animatorHandler.anim.GetBool("IsInteracting")) return;
-        if (inputHandler.rollFlag)
+        if (inputHandler.dashFlag && dashState == 0)
         {
-            moveDirection = cameraObject.forward * inputHandler.vertical;
-            moveDirection += cameraObject.right * inputHandler.horizontal;
-            if (inputHandler.moveAmount > 0.3f)
-            {
-                animatorHandler.PlayTargetAnimation("Rolling", true);
-                moveDirection.y = 0;
-                Quaternion rollRotation = Quaternion.LookRotation(moveDirection);
-                selfTransform.rotation = rollRotation;
-            }
-        }
-    }
+            dashState = 1;
 
-    public void HandleJumping(float delta)
-    {
-        if (playerManager.isGrounded && inputHandler.jumpFlag && !playerManager.isJumping)
-        {
-            playerManager.isJumping = true;
-            playerManager.isGrounded = false;
-            playerManager.isAbleToJump = true;
+            //Anim Interacting
             playerManager.isInteracting = true;
-            this.jumpTimer = 0;
+            playerManager.startDash();
+
+            RaycastHit hit;
+            float distance = dashDistance;
+            Debug.DrawRay(gameObject.transform.position + gameObject.transform.up, gameObject.transform.forward * distance, Color.red, dashRecuperationTime + dashCastTime);
+            if (Physics.Raycast(gameObject.transform.position + gameObject.transform.up, gameObject.transform.forward, out hit, distance, dashLayerMask))
+            {
+                distance = hit.distance - offSetOnImpact;
+            }
+            
+            dashTargetPos = gameObject.transform.position + (gameObject.transform.forward * distance);
+            dashTimer = dashCastTime;
         }
-        if (playerManager.isJumping)
+        else if (dashState == 1)
         {
-            if (playerManager.isAbleToJump && (jumpTimer < minJumpTime || inputHandler.jumpFlag))
-            {
-                rigidbody.AddForce(Vector3.up * jumpSpeed * delta * 10000);
-                jumpTimer += delta;
+            dashTimer -= delta;
+            //Anim Interacting
+            playerManager.isInteracting = true;
 
-                if (jumpTimer > maxJumpTime) playerManager.isAbleToJump = false;
-            }
-            else if (playerManager.isAbleToJump && !inputHandler.jumpFlag)
+            if (dashTimer <= 0)
             {
-                playerManager.isAbleToJump = false;
-                floatTime(delta);
-            }
-            else if (!playerManager.isAbleToJump)
-            {
-                floatTime(delta);
-                if (jumpTimer < 0) playerManager.isJumping = false;
+                dashTimer = dashRecuperationTime;
+                dashState = 2;
+                gameObject.transform.position = dashTargetPos;
             }
         }
-    }
+        else if (dashState == 2)
+        {
+            dashTimer -= delta;
+            //Anim Interacting
+            playerManager.isInteracting = true;
 
-    private void floatTime(float delta)
-    {
-        this.jumpTimer -= delta / floatTimeProportion; 
+            if (dashTimer <= 0)
+            {
+                dashState = 0;
+                playerManager.isInteracting = false;
+                playerManager.endDash();
+            }
+        }
     }
 
     public void HandleFalling (float delta, Vector3 moveDirection)
@@ -205,7 +207,7 @@ public class Movement : MonoBehaviour
 
             if (playerManager.isInAir == false)
             {
-                if (playerManager.isInteracting == false)
+                if (!playerManager.isInteracting)
                 {
                     animatorHandler.PlayTargetAnimation("Falling", true);
                 }
