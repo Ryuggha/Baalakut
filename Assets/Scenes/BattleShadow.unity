@@ -1179,6 +1179,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 520354198}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &539214511 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5155741170049718835, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+  m_PrefabInstance: {fileID: 2143156559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &649108329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,13 +4022,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4430132333946165237, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 539214511}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16786146
+      value: 11.1
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4031,7 +4040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.317659
+      value: 37.68
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4065,5 +4074,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 5904456628217442805, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: body
+      value: 
+      objectReference: {fileID: 539214511}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
