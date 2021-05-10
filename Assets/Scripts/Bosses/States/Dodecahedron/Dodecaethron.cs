@@ -6,8 +6,10 @@ public class Dodecaethron : StateMachine
 {
     public float optimalMovementProbability = 0.7f;
     public float timeMoving = 1;
-    public float explotionVel = 1;
-     public Vector3 targetPos;
+    public float expantionWaveVel = 1;
+    public float minDistance;
+
+    [HideInInspector]public Vector3 targetPos;
 
     [Header("Modelos")]
     public GameObject GyroX;

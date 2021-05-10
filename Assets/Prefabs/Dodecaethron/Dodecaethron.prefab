@@ -94,9 +94,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 289301614986012343, guid: 7548ec3a03d16be4d8b71dc226da79e2, type: 3}
+  m_Mesh: {fileID: 289301614986012343, guid: d3654bafb5935c4439f48cff72402dc9, type: 3}
 --- !u!1 &8612216322102711113
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,9 +137,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8612216322120689025}
-  - component: {fileID: 6828448881842696184}
+  - component: {fileID: 6408819378735252763}
   m_Layer: 8
-  m_Name: Wait0
+  m_Name: DistanceTo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ Transform:
   m_Father: {fileID: 8612216322997632588}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6828448881842696184
+--- !u!114 &6408819378735252763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,13 +168,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8612216322120689024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a708a425a3ea40458ca04f8553d5ae7, type: 3}
+  m_Script: {fileID: 11500000, guid: 975ef231f05412c45959b4575275b303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   go: {fileID: 0}
   stateMachine: {fileID: 0}
   nextState: {fileID: 3130188648563527492}
-  timeToWait: 3
 --- !u!1 &8612216322484930265
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,11 +406,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e132e4da92bfaa418b3cb50236c670f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingState: {fileID: 6828448881842696184}
+  startingState: {fileID: 0}
   player: {fileID: 0}
   optimalMovementProbability: 0.7
   timeMoving: 0.3
-  explotionVel: 1
+  expantionWaveVel: 1
+  minDistance: 0
   targetPos: {x: 0, y: 0, z: 0}
   GyroX: {fileID: 8612216322484930265}
   GyroY: {fileID: 8612216322102711113}
