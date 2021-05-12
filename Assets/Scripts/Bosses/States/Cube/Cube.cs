@@ -18,9 +18,10 @@ public class Cube : StateMachine
     [HideInInspector] public float offSet;
 
 
-    public void setDistanceToMove(float distanceToMove)
+    public void setDistanceToMove(float distanceToMove, bool withOffsets)
     {
         offSet = distanceToMove * offSetPercentage + offSetFixed;
+        if (!withOffsets) offSet = 0;
         this.distanceToMove = distanceToMove + offSet;
         
     }

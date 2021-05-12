@@ -31,9 +31,15 @@ public class StateMachine : MonoBehaviour
             actualState = actualState.tick(delta);
     }
 
+    public void hit()
+    {
+        die();
+    }
+
     public void die()
     {
         Debug.Log("Ded");
         dead = true;
+        Destroy(gameObject, 3);
     }
 }
