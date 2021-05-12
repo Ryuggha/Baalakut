@@ -25,4 +25,21 @@ public class Dodecaethron : StateMachine
 
     [Header("No toques esto si no sabes la fórmula para calcularlo")]
     public float distanceToMove;
+
+    private bool weakState;
+
+    public override void hit()
+    {
+        if (weakState) die();
+    }
+
+    public void setWeakState()
+    {
+        Invoke("setWeakStateDelayed", 0.3f);
+    }
+
+    private void setWeakStateDelayed()
+    {
+        weakState = true;
+    }
 }
