@@ -226,6 +226,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4524202098530185703, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: dashCastTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524202098530185703, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: dashCooldown
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524202098530185703, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: dashRecuperationTime
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5944513394511067236, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: m_Name
       value: PlayerController
@@ -283,6 +295,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: timeMoving
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: minDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: expansionRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: startingRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: expantionWaveVel
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8612216323938073410, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: m_Name
       value: Dodecaethron
