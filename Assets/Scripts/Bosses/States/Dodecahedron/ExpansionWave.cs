@@ -24,6 +24,14 @@ public class ExpansionWave : MonoBehaviour
         timer = timeToDissapear;
     }
 
+    public void initialize(float timeToDissapear, float startingRadius, float expansionRate, float deathArea)
+    {
+        this.timeToDissapear = timeToDissapear;
+        this.startingRadius = startingRadius;
+        this.expansionRate = expansionRate;
+        this.deathArea = deathArea;
+    }
+
     void Update()
     {
         float delta = Time.deltaTime;

@@ -12,6 +12,6 @@ public class WeakSpot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        sm.die();
+        if (other.gameObject.layer == 7) sm.die();
     }
 }

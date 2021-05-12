@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Dodecaethron : StateMachine
 {
+    [Header("MovementStats")]
     public float optimalMovementProbability = 0.7f;
     public float timeMoving = 1;
     public float expantionWaveVel = 1;
     public float minDistance;
+
+    [Header("ExpansionWaveStats")]
+    public float timeToDissapear;
+    public float startingRadius;
+    public float expansionRate;
+    public float deathArea;
 
     [HideInInspector]public Vector3 targetPos;
 

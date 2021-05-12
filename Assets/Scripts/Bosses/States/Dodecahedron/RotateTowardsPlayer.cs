@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RotateTowardsPlayer : State
 {
-    public State nextState;
     private float timer = 0;
     public override State tick(float delta)
     {
@@ -23,7 +22,7 @@ public class RotateTowardsPlayer : State
             ((Dodecaethron)stateMachine).GyroZ.transform.rotation = auxData; //Reseting GX's world Rot
 
             go.transform.position = ((Dodecaethron)stateMachine).targetPos;
-            return nextState;
+            return stateMachine.GetComponentInChildren<ShotExpansionWave>().tick(delta);
         }
         return this;
     }
