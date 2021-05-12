@@ -15,7 +15,7 @@ public class ExpansionWave : MonoBehaviour
     public float expansionRate;
     public float deathArea;
 
-    private void Start()
+    private void Awake()
     {
         player = FindObjectOfType<PlayerManager>();
         particles = GetComponent<ParticleSystem>();
@@ -30,6 +30,8 @@ public class ExpansionWave : MonoBehaviour
         this.startingRadius = startingRadius;
         this.expansionRate = expansionRate;
         this.deathArea = deathArea;
+        tick();
+        particles.Play();
     }
 
     void Update()

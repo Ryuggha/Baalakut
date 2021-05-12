@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float movementMultWhenCharging = 0.5f;
     [SerializeField] private float fallSpeed = 1f;
     [SerializeField] private float timeInAirToLandAnimation = 0.3f;
+    private float movementModifier = 1;
 
     [Header("Dash Stats")]
     [SerializeField] private float dashDistance = 5f;
@@ -60,6 +61,11 @@ public class Movement : MonoBehaviour
         layersForGroundCheck = ~(1 << 8 | 1 << 11);
     }
 
+    public void setSpeedModifier()
+    {
+
+    }
+
     public void HandleMovement (float delta)
     {
         float velMultiplier = 1 - (playerManager.chargeStatus * movementMultWhenCharging);
@@ -68,7 +74,7 @@ public class Movement : MonoBehaviour
         moveDirection.y = 0;
 
         float speed = movementSpeed;
-        moveDirection *= speed * velMultiplier;
+        moveDirection *= speed * velMultiplier * movementModifier;
 
         Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
         rigidbody.velocity = projectedVelocity;
@@ -83,7 +89,7 @@ public class Movement : MonoBehaviour
 
     private void HandleRotation (float delta)
     {
-        if (inputHandler.dashFlag) return;
+        if (dashState == 1 || dashState == 2) return;
         if (playerManager.isInteracting) return;
 
         Vector3 targetDir = Vector3.zero;
