@@ -32,7 +32,7 @@ public class StateMachine : MonoBehaviour
             actualState = actualState.tick(delta);
     }
 
-    public void hit()
+    public virtual void hit()
     {
         die();
     }
