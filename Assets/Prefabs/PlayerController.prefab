@@ -896,7 +896,7 @@ MonoBehaviour:
   fovMultiplicatorWhileCharging: 0.8
   lookSpeed: 0.4
   followSpeed: 0.0002
-  dashFollowSpeed: 0.1
+  dashFollowSpeed: 0.06
   pivotSpeed: 0.4
   minimumPivot: -70
   maximumPivot: 40
@@ -1407,8 +1407,8 @@ MonoBehaviour:
   fallSpeed: 2
   timeInAirToLandAnimation: 0.5
   dashDistance: 5
-  dashCastTime: 0.3
-  dashRecuperationTime: 0.5
+  dashCastTime: 0.1
+  dashRecuperationTime: 0.2
   offSetOnImpact: 0.2
   dashCooldown: 1
   dashLayerMask:
