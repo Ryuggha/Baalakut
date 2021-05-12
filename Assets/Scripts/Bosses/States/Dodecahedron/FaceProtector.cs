@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class FaceProtector : MonoBehaviour
 {
+    public bool weakProtector;
     private bool isActive;
     private bool isGrounded;
 
     public void setActiveFace() 
     {
-        isActive = true;    
+        isActive = true;
+        if (weakProtector) GetComponentInParent<Dodecaethron>().setWeakState();
     }
 
     public void isTouchingGround(bool b)
