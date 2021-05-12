@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Aiming : State
 {
-    public State nextState;
 
     private Transform eye;
     private LineRenderer ray;
@@ -35,14 +34,18 @@ public class Aiming : State
         }
 
         ray.SetPosition(0, eye.transform.position);
-        ray.SetPosition(1, ((Shadow)stateMachine).player.transform.position + Vector3.up * 1f);
+        RaycastHit hit;
+        Ray auxRay = new Ray(eye.transform.position, Vector3.Normalize((((Shadow)stateMachine).player.transform.position + Vector3.up * 1f) - eye.transform.position));
+        Physics.Raycast(auxRay, out hit);
+
+        ray.SetPosition(1, hit.point);
 
         timeAiming += delta;
 
         if (timeAiming >= ((Shadow)stateMachine).AimingDuration)
         {
             aiming = false;
-            return nextState;
+            return go.GetComponentInChildren<LoadShot>();
         }
         else return this;
         

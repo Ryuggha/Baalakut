@@ -23,10 +23,9 @@ public class Shadow : StateMachine
     public float TrailSlowPower;
 
 
-   
 
-
-
-
-
+    public void MakeItVulnerable()
+    {
+        actualState = gameObject.GetComponentInChildren<Vulnerable>();
+    }
 }
