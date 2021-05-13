@@ -23,10 +23,15 @@ public class Shadow : StateMachine
     public float TrailSlowPower;
 
 
-   
 
+    public void MakeItVulnerable()
+    {
+        actualState = gameObject.GetComponentInChildren<Vulnerable>();
+    }
 
-
-
-
+    public override void hit()
+    {
+        Debug.Log("Hited");
+        if (actualState == gameObject.GetComponentInChildren<Vulnerable>()) die();
+    }
 }

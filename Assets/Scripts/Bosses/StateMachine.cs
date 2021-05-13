@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    private State actualState;
+    protected State actualState;
     private bool dead;
 
     [Header("Boss State Stats")]
     public State startingState;
 
     [HideInInspector] public PlayerManager player;
+
 
     void Awake()
     {
