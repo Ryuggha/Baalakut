@@ -24,7 +24,7 @@ public class StateMachine : MonoBehaviour
         }
     }
 
-    void Update()
+    protected virtual void Update()
     {
         float delta = Time.deltaTime;
         if (!dead)

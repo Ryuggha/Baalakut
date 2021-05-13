@@ -263,6 +263,7 @@ MonoBehaviour:
   go: {fileID: 0}
   stateMachine: {fileID: 0}
   nextState: {fileID: 3130188648563527492}
+  minDistance: 25
 --- !u!1 &8612216322484930265
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +502,6 @@ MonoBehaviour:
   optimalMovementProbability: 0.7
   timeMoving: 0.3
   expantionWaveVel: 1
-  minDistance: 25
   timeToDissapear: 18
   startingRadius: 1
   expansionRate: 5

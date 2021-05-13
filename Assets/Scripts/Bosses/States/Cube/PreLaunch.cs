@@ -20,7 +20,8 @@ public class PreLaunch : State
         RaycastHit hit;
         if (Physics.Raycast(stateMachine.gameObject.transform.position, stateMachine.transform.forward, out hit, ((Cube)stateMachine).getDistanceToMove() + ((Cube)stateMachine).front.transform.localScale.x, wallLayers))
         {
-            ((Cube)stateMachine).setDistanceToMove(Vector3.Distance(stateMachine.gameObject.transform.position, hit.point) - ((Cube)stateMachine).front.transform.localScale.x, false   );
+            ((Cube)stateMachine).setDistanceToMove(Vector3.Distance(stateMachine.gameObject.transform.position, hit.point) - ((Cube)stateMachine).front.transform.localScale.x, false);
+            go.GetComponentInChildren<Launch>().gonnaStun = true;
         }
 
         return go.GetComponentInChildren<Launch>();

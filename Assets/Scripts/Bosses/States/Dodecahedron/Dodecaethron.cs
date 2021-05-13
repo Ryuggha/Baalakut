@@ -8,7 +8,6 @@ public class Dodecaethron : StateMachine
     public float optimalMovementProbability = 0.7f;
     public float timeMoving = 1;
     public float expantionWaveVel = 1;
-    public float minDistance;
 
     [Header("ExpansionWaveStats")]
     public float timeToDissapear;
