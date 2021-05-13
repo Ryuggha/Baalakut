@@ -111,15 +111,14 @@ public class Sling : MonoBehaviour
 
     private Vector3[] calculatePoints(Vector3 velocity, float gravityModifier)
     {
-        Debug.Log("Velocity: " + velocity);
-        Debug.Log("Origin Point outsite: " + shotEmissor.position);
+       
         Vector3[] array = new Vector3[linePoints+1];
         Vector3 point;
         //Vector3 origin = shotEmissor.position;
         for (int i = 0; i<array.Length; i++) // i = tiempo en sec
         {
             point = shotEmissor.position + velocity * i * 0.05f + Physics.gravity * gravityModifier * Mathf.Pow(i*0.05f, 2) * 0.5f; 
-            Debug.Log("point "+ i +":" + point);
+            
             array[i] = point;
         }
         return array;

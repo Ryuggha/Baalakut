@@ -12,6 +12,8 @@ public class StateMachine : MonoBehaviour
 
     [HideInInspector] public PlayerManager player;
 
+    [SerializeField] private ArenaDoorsManager doorsManager;
+
 
     void Awake()
     {
@@ -41,6 +43,7 @@ public class StateMachine : MonoBehaviour
     {
         Debug.Log("Ded");
         dead = true;
+        doorsManager.endCombat();
         Destroy(gameObject, 3);
     }
 }
