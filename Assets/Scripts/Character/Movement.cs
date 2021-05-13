@@ -112,13 +112,12 @@ public class Movement : MonoBehaviour
 
     public void HandleDashing (float delta)
     {
-        if (animatorHandler.anim.GetBool("IsInteracting")) return;
-        if (inputHandler.dashFlag && dashState == 0)
+        if (!animatorHandler.anim.GetBool("IsInteracting") && inputHandler.dashFlag && dashState == 0)
         {
             dashState = 1;
 
             //Anim Interacting
-            playerManager.isInteracting = true;
+            animatorHandler.PlayTargetAnimation("StartDash", true);
             playerManager.startDash();
 
             RaycastHit hit;
@@ -140,6 +139,7 @@ public class Movement : MonoBehaviour
 
             if (dashTimer <= 0)
             {
+                animatorHandler.PlayTargetAnimation("EndDash", true);
                 dashTimer = dashRecuperationTime;
                 dashState = 2;
                 gameObject.transform.position = dashTargetPos;

@@ -30,11 +30,12 @@ public class Sling : MonoBehaviour
     private InputHandler inputHandler;
     private CameraHandler cameraHandler;
     private Rigidbody rb;
-
+    private AnimatorHandler anim;
     private LineRenderer hud;
 
     private void Start()
     {
+        anim = GetComponentInChildren<AnimatorHandler>();
         playerManager = GetComponent<PlayerManager>();
         rb = GetComponent<Rigidbody>();
         cameraHandler = FindObjectOfType<CameraHandler>();
@@ -57,7 +58,11 @@ public class Sling : MonoBehaviour
         }
         if (shotFlag)
         {
-            if (!isCharging) isCharging = true;
+            if (!isCharging)
+            {
+                anim.setCharging(true);
+                isCharging = true;
+            }
             timeCharged += delta;
             //RENDER HUD
             hud.enabled = true;
@@ -75,6 +80,7 @@ public class Sling : MonoBehaviour
             if (isCharging)
             {
                 isCharging = false;
+                anim.setCharging(false);
                 hud.enabled = false;
                 shot();
                 timeCharged = 0;

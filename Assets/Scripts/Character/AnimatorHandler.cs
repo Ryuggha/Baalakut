@@ -34,6 +34,13 @@ public class AnimatorHandler : MonoBehaviour
         anim.SetFloat(horizontal, Mathf.Clamp(horizontalMovement, -1, 1), 0.1f, Time.deltaTime);
     }
 
+    public void setCharging(bool isCharging)
+    {
+        if (isCharging) anim.Play("Charge");
+        else anim.Play("Shot");
+        anim.SetBool("Charging", isCharging);
+    }
+
     public void CanRotate()
     {
         canRotate = true;

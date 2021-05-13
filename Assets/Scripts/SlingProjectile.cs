@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SlingProjectile : MonoBehaviour
 {
+    public LayerMask layerMask;
+
     private Rigidbody rb;
     private Vector3 shotSpeed;
     private float gravity;
@@ -33,6 +35,6 @@ public class SlingProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
+        if (layerMask.value != 9) Destroy(gameObject);
     }
 }
