@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Launch : State
 {
+    [HideInInspector] public bool gonnaStun;
     public State nextState;
     public override State tick(float delta)
     {
@@ -18,7 +19,12 @@ public class Launch : State
         }
         ((Cube)stateMachine).front.transform.localPosition = aux;
 
-        if (reachedDestinacion) return nextState.tick(delta);
+        if (reachedDestinacion)
+        {
+            if (gonnaStun) ((Cube)stateMachine).stunned();
+            gonnaStun = false;
+            return nextState;
+        }
         return this;
     }
 }

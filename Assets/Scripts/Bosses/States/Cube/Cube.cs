@@ -8,7 +8,10 @@ public class Cube : StateMachine
     public float retractVelocity;
     public float offSetFixed;
     public float offSetPercentage;
-
+    public float stunTime;
+    public float explosionRange;
+    public float zarzaTimer = 0.05f;
+    public int nTimesToExplote = 4;
 
     [Header("Modelos")]
     public GameObject front;
@@ -16,6 +19,9 @@ public class Cube : StateMachine
 
     private float distanceToMove;
     [HideInInspector] public float offSet;
+
+    private bool stun;
+    private float timer;
 
 
     public void setDistanceToMove(float distanceToMove, bool withOffsets)
@@ -29,5 +35,28 @@ public class Cube : StateMachine
     public float getDistanceToMove()
     {
         return this.distanceToMove;
+    }
+
+    protected override void Update()
+    {
+        if (stun)
+        {
+            if (timer == 0) timer = stunTime;
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                timer = 0;
+                stun = false;
+            }
+        }
+        else base.Update();
+    }
+
+    public void stunned()
+    {
+        this.stun = true;
+        actualState = GetComponentInChildren<PreRetract>();
+        var aux = GetComponentInChildren<TimesLaunched>();
+        aux.counter = nTimesToExplote;
     }
 }

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PreMovement : State
 {
+
     public override State tick(float delta)
     {
        
         int random = Random.Range(0, 100);
-        if (random >= ((Shadow)stateMachine).SlowWalkChance)
+        if (random >= 100) //((Shadow)stateMachine).SlowWalkChance
         {
             return go.GetComponentInChildren<FastMovement>().tick(delta);
         }

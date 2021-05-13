@@ -5,6 +5,17 @@ using UnityEngine;
 public class Retract : State
 {
     public State nextState;
+    public GameObject zarza;
+    public GameObject zarzaGenerator;
+
+    private float timer;
+    private float zarzaTimer;
+
+    private void Start()
+    {
+        zarzaTimer = ((Cube)stateMachine).zarzaTimer;
+    }
+
     public override State tick(float delta)
     {
         Vector3 aux = ((Cube)stateMachine).back.transform.localPosition;
@@ -17,7 +28,23 @@ public class Retract : State
         }
         ((Cube)stateMachine).back.transform.localPosition = aux;
 
-        if (reachedDestinacion) return nextState;
-        return this;
+        timer += delta;
+        if (timer > zarzaTimer)
+        {
+            timer -= zarzaTimer;
+            createZarza();
+        }
+
+        if (reachedDestinacion)
+        {
+            createZarza();
+            return nextState;
+        }
+            return this;
+    }
+
+    private void createZarza()
+    {
+        Instantiate(zarza, zarzaGenerator.transform.position, zarzaGenerator.transform.rotation);
     }
 }

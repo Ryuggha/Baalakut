@@ -6,12 +6,7 @@ public class DistanceLessThan : State
 {
     public State nextState;
 
-    private float minDistance;
-
-    private void Start()
-    {
-        minDistance = ((Dodecaethron)stateMachine).minDistance;
-    }
+    public float minDistance;
 
     public override State tick(float delta)
     {

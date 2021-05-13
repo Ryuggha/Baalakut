@@ -61,9 +61,9 @@ public class Movement : MonoBehaviour
         layersForGroundCheck = ~(1 << 8 | 1 << 11);
     }
 
-    public void setSpeedModifier()
+    public void setSpeedModifier(float modifier)
     {
-
+        this.movementModifier = modifier;
     }
 
     public void HandleMovement (float delta)

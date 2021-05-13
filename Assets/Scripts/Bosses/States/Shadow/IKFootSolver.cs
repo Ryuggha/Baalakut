@@ -35,7 +35,7 @@ public class IKFootSolver : MonoBehaviour
     {
         currentPosition = transform.position;
         oldPosition = transform.position;
-        legDirection = Vector3.Normalize(currentPosition - body.position);
+        legDirection = body.InverseTransformDirection( Vector3.Normalize(currentPosition - body.position));
         legDirection.y = 0;
     }
 
@@ -45,7 +45,7 @@ public class IKFootSolver : MonoBehaviour
 
         transform.position = currentPosition;
 
-        Ray ray = new Ray(legRoot.position + (legDirection * footSpacing), Vector3.down);
+        Ray ray = new Ray(legRoot.position + (body.TransformDirection(legDirection) * footSpacing), Vector3.down);
         if (Physics.Raycast(ray, out RaycastHit info, 10,layer)){
             if (Vector3.Distance(newPosition, info.point) >= stepDistance && otherLegReference.legGrounded) 
             {

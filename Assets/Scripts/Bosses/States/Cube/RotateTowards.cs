@@ -9,8 +9,8 @@ public class RotateTowards : State
         float angleToTarget = Vector3.Angle(go.transform.forward, stateMachine.player.transform.position - go.transform.position);
         Vector3 crossToTarget = Vector3.Cross(go.transform.forward, stateMachine.player.transform.position - go.transform.position);
 
-        if (angleToTarget > 135) rotate(2);
-        else if (angleToTarget > 45)
+        //if (angleToTarget > 135) rotate(2);
+        if (angleToTarget > 45)
         {
             if (crossToTarget.y > 0) rotate(1);
             else rotate(-1);
