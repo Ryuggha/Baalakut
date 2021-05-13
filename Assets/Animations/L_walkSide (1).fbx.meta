@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: 9d2811caa3b64be43aec0fae86f640bd
+guid: 4ad8e6c073184af41b7fd7bd5598cb2d
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 1827226128182048838
-    second: Take 001
+      74: 2513766570806742659
+    second: Armature|Armature|Armature|Armature|Take 001|BaseLayer.001|Armature|Arma
+  - first:
+      74: -5701045938790110901
+    second: Armature|Armature|Armature|Armature|Take 001|BaseLayer|Armature|Armature
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
+      name: Armature|Armature|Armature|Armature|Take 001|BaseLayer.001|Armature|Arma
+      takeName: Armature|Armature|Armature|Armature|Take 001|BaseLayer.001|Armature|Arma
       internalID: 0
       firstFrame: 0
-      lastFrame: 49
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -47,6 +50,35 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Armature|Armature|Armature|Take 001|BaseLayer|Armature|Armature
+      takeName: Armature|Armature|Armature|Armature|Take 001|BaseLayer|Armature|Armature
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
