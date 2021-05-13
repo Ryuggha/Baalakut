@@ -103,9 +103,6 @@ public class Sling : MonoBehaviour
             SlingProjectile sling = projectile.GetComponent<SlingProjectile>();
             sling.setShotSpeed(shotSpeed);
             sling.setGravity(projectileGravityMultiplier);
-
-            
-            
         }
     }
 

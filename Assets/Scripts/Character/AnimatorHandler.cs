@@ -9,6 +9,7 @@ public class AnimatorHandler : MonoBehaviour
     private InputHandler inputHandler;
     private Movement playerMovement;
     private int vertical, horizontal;
+    private int verticalCharging, horizontalCharging;
     public bool canRotate;
 
     public void Initialize()
@@ -18,6 +19,8 @@ public class AnimatorHandler : MonoBehaviour
         inputHandler = GetComponentInParent<InputHandler>();
         vertical = Animator.StringToHash("Vertical");
         horizontal = Animator.StringToHash("Horizontal");
+        verticalCharging = Animator.StringToHash("VerticalCharging");
+        horizontalCharging = Animator.StringToHash("HorizontalCharging");
         playerMovement = GetComponentInParent<Movement>();
     }
 
@@ -33,11 +36,24 @@ public class AnimatorHandler : MonoBehaviour
         anim.SetFloat(vertical, Mathf.Clamp(verticalMovement, -1, 1), 0.1f, Time.deltaTime);
         anim.SetFloat(horizontal, Mathf.Clamp(horizontalMovement, -1, 1), 0.1f, Time.deltaTime);
     }
+    public void UpdateAnimatorChargingValues(float horizontalMovement, float verticalMovement)
+    {
+        anim.SetFloat(verticalCharging, Mathf.Clamp(verticalMovement, -1, 1), 0.1f, Time.deltaTime);
+        anim.SetFloat(horizontalCharging, Mathf.Clamp(horizontalMovement, -1, 1), 0.1f, Time.deltaTime);
+    }
 
     public void setCharging(bool isCharging)
     {
-        if (isCharging) anim.Play("Charge");
-        else anim.Play("Shot");
+        if (isCharging)
+        {
+            canRotate = false;
+            anim.Play("Charge");
+        }
+        else
+        {
+            canRotate = true;
+            anim.Play("Shot");
+        }
         anim.SetBool("Charging", isCharging);
     }
 

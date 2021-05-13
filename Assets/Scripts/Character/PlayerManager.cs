@@ -87,6 +87,13 @@ public class PlayerManager : MonoBehaviour
 
     public void takeDamage() //Unimplemented method
     {
-        Debug.Log("Probably, this will simply kill the player, but for now, it only shows a Log");
+        isInteracting = true;
+        Invoke("restartScene", 0.2f);
+        //Debug.Log("Probably, this will simply kill the player, but for now, it only shows a Log");
+    }
+
+    public void restartScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 }
