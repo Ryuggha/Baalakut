@@ -11,7 +11,7 @@ public class SlowTrigger : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.GetMask("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             other.gameObject.GetComponentInChildren<Movement>().setSpeedModifier(slowPower);
         }
@@ -19,7 +19,7 @@ public class SlowTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.GetMask("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             other.gameObject.GetComponentInChildren<Movement>().setSpeedModifier(1f);
         }
