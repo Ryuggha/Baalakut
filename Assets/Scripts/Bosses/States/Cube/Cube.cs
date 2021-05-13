@@ -55,7 +55,8 @@ public class Cube : StateMachine
     public void stunned()
     {
         this.stun = true;
+        actualState = GetComponentInChildren<PreRetract>();
         var aux = GetComponentInChildren<TimesLaunched>();
-        aux.counter = 0;
+        aux.counter = nTimesToExplote;
     }
 }
