@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hierbajo
-  m_Shader: {fileID: 4800000, guid: d116c9690d0155e478fecd1b99b03c65, type: 3}
+  m_Name: Water
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,18 +55,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _WindDistortionMap:
-        m_Texture: {fileID: 2800000, guid: 57b83cf629c66a340b2a69e2a97af17f, type: 3}
-        m_Scale: {x: 0.01, y: 0.01}
-        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BendRotationRandom: 0
-    - _BladeCurve: 2
-    - _BladeForward: 0.38
-    - _BladeHeight: 0.59
-    - _BladeHeightRandom: 0.16
-    - _BladeWidth: 0.05
-    - _BladeWidthRandom: 0.02
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -81,15 +70,9 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TessellationUniform: 2.1
-    - _TranslucentGain: 0.534
     - _UVSec: 0
-    - _WindStrength: 1
     - _ZWrite: 1
     m_Colors:
-    - _BottomColor: {r: 0.0627451, g: 0.3764706, b: 0.07058824, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.67209816, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _TopColor: {r: 0.5803922, g: 0.84705883, b: 0.32941177, a: 1}
-    - _WindFrequency: {r: 0.05, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
