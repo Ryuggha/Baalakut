@@ -448,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Doors:
   - {fileID: 1895785928}
+  - {fileID: 1362142368}
 --- !u!4 &109090577
 Transform:
   m_ObjectHideFlags: 0
@@ -3773,8 +3774,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895785928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 7.57, z: 18.32}
-  m_LocalScale: {x: 6.3947, y: 6.3947, z: 6.3947}
+  m_LocalPosition: {x: -0.41, y: 3.14, z: -8.46}
+  m_LocalScale: {x: 14.44, y: 6.3947, z: 6.3947}
   m_Children: []
   m_Father: {fileID: 109090577}
   m_RootOrder: 0
@@ -3910,7 +3911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301865438989502268, guid: 089f04d934acff64488951b97def8db8, type: 3}
       propertyPath: sceneName
-      value: 
+      value: HubAlpha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089f04d934acff64488951b97def8db8, type: 3}
@@ -4793,6 +4794,14 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8257754485990688938, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257754485990688938, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
 --- !u!1 &2133571228
@@ -4930,7 +4939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.69
+      value: -20.7
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4938,7 +4947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.48
+      value: 20.3
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171180998494, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4971,6 +4980,10 @@ PrefabInstance:
     - target: {fileID: 5155741171180998495, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_Name
       value: The Shadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155741171180998495, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5155741171542393630, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_IsActive
