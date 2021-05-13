@@ -80,6 +80,7 @@ public class Movement : MonoBehaviour
         rigidbody.velocity = projectedVelocity;
 
         animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount * velMultiplier, 0);
+        animatorHandler.UpdateAnimatorChargingValues(inputHandler.horizontal, inputHandler.vertical);
 
         if (animatorHandler.canRotate)
         {
@@ -225,7 +226,7 @@ public class Movement : MonoBehaviour
             {
                 if (!playerManager.isInteracting)
                 {
-                    animatorHandler.PlayTargetAnimation("Falling", true);
+                    //animatorHandler.PlayTargetAnimation("Falling", true);
                 }
 
                 Vector3 vel = rigidbody.velocity;
