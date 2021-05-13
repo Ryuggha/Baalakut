@@ -42,4 +42,8 @@ public class LoadShot : State
         return this;
     }
 
+    public void setActive(bool var)
+    {
+        active = var;
+    }
 }

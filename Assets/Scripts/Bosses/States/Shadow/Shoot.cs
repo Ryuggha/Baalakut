@@ -63,6 +63,9 @@ public class Shoot : State
         
     }
 
+    public void setShootting(bool var)
+    {
+        shootting = var;
+    }
 
-    
 }

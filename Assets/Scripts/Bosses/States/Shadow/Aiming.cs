@@ -53,5 +53,10 @@ public class Aiming : State
         
     }
 
-  
+    public void setAiming(bool var)
+    {
+        aiming = var;
+    }
+
+
 }

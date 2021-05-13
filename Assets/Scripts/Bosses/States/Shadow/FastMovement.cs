@@ -69,4 +69,9 @@ public class FastMovement : State
 
         return this;
     }
+
+    public void setWalking(bool var)
+    {
+        walking = var;
+    }
 }
