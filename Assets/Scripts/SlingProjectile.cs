@@ -14,10 +14,10 @@ public class SlingProjectile : MonoBehaviour
         rb.AddForce(shotSpeed, ForceMode.Impulse);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 rbVel = rb.velocity;
-        rbVel.y += gravity * Time.deltaTime * Physics.gravity.y;
+        rbVel.y += gravity * Time.fixedDeltaTime * Physics.gravity.y;
         rb.velocity = rbVel;
     }
 
