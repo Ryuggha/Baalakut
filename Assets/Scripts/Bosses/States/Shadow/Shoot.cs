@@ -43,7 +43,7 @@ public class Shoot : State
             
             if (Physics.Raycast(rayCast, out hit, 100, LayerMask.GetMask("Player")))
             {
-                Debug.Log("PLayer hitted");
+                ((Shadow)stateMachine).player.GetComponentInChildren<PlayerManager>().takeDamage();
             }
 
             
