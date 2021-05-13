@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 2080368558}
   - component: {fileID: 2080368557}
   - component: {fileID: 2080368556}
+  - component: {fileID: 2080368560}
   m_Layer: 0
   m_Name: Fuego
   m_TagString: Untagged
@@ -635,3 +636,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2080368560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080368555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

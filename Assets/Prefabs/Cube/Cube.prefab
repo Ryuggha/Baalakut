@@ -4890,6 +4890,7 @@ GameObject:
   - component: {fileID: 5044999521011160464}
   - component: {fileID: 8585772341932454148}
   - component: {fileID: 8686911209248488512}
+  - component: {fileID: 6070749032713284989}
   m_Layer: 8
   m_Name: ModelBack
   m_TagString: Untagged
@@ -4974,6 +4975,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 0.97895503}
   m_Center: {x: 0, y: 0, z: -0.5105225}
+--- !u!114 &6070749032713284989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180629711061975009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2910413278006243788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4988,6 +5001,7 @@ GameObject:
   - component: {fileID: 8561196678130448176}
   - component: {fileID: 8384928523322077943}
   - component: {fileID: 596439892598853421}
+  - component: {fileID: 2962148710777919448}
   m_Layer: 8
   m_Name: ModelFront
   m_TagString: Untagged
@@ -5095,6 +5109,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e46499f1bba935c4cbc46c5bbfdf52e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2962148710777919448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910413278006243788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3170531500501241302
