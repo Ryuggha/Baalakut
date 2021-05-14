@@ -512,6 +512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingState: {fileID: 6408819378735252763}
   player: {fileID: 0}
+  doorsManager: {fileID: 0}
   optimalMovementProbability: 0.7
   timeMoving: 0.3
   expantionWaveVel: 1
@@ -627,7 +628,7 @@ MonoBehaviour:
   go: {fileID: 0}
   stateMachine: {fileID: 0}
   nextState: {fileID: 3130188648563527492}
-  timeToWait: 0.3
+  timeToWait: 0.8
 --- !u!1001 &1076231893652134438
 PrefabInstance:
   m_ObjectHideFlags: 0
