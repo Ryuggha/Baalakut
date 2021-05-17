@@ -512,9 +512,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: deathArea
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: timeMoving
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: doorsManager
       value: 
       objectReference: {fileID: 2010425085}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: expansionRate
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: timeToDissapear
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: optimalMovementProbability
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 8612216323938073410, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: m_Name
       value: Dodecaethron
