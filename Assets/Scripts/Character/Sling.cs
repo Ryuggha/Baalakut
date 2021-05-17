@@ -22,6 +22,8 @@ public class Sling : MonoBehaviour
 
     [Header("HUD")]
     [SerializeField] private int linePoints = 5;
+    [SerializeField] private Color startColor;
+    [SerializeField] private Color endColor;
 
     private bool shotFlag;
     private bool isCharging;
@@ -40,7 +42,7 @@ public class Sling : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         cameraHandler = FindObjectOfType<CameraHandler>();
         inputHandler = GetComponent<InputHandler>();
-        hud = GetComponent<LineRenderer>();
+        hud = GetComponentInChildren<LineRenderer>();
     }
 
     public float HandleShot(float delta) //returns a multiplier to modify the movement Speed
@@ -65,13 +67,16 @@ public class Sling : MonoBehaviour
             }
             timeCharged += delta;
             //RENDER HUD
-            hud.enabled = true;
             float shotModule = maxSpeed;
             if (timeCharged < maxTimeCharging)
                 shotModule = minSpeed + ((maxSpeed - minSpeed) * ((timeCharged - minTimeCharging) / (maxTimeCharging - minTimeCharging)));
             Vector3 shotSpeed = cameraHandler.getCameraTransform().forward * shotModule;
             shotSpeed += rb.velocity * inertiaMultiplier;
-            renderHud(shotSpeed, projectileGravityMultiplier);
+            if (timeCharged >= minTimeCharging)
+            {
+                hud.enabled = true;
+                renderHud(shotSpeed, projectileGravityMultiplier);
+            }
 
             return Mathf.Clamp01(timeCharged / minTimeCharging);
         }
@@ -87,7 +92,6 @@ public class Sling : MonoBehaviour
             }
             return 0f;
         }
-        
     }
 
     private void shot()
@@ -110,20 +114,25 @@ public class Sling : MonoBehaviour
     {
         hud.positionCount = linePoints + 1;
         hud.SetPositions(calculatePoints(velocity, gravityModifier));
+        colorSetting();
     }
 
     private Vector3[] calculatePoints(Vector3 velocity, float gravityModifier)
     {
-       
         Vector3[] array = new Vector3[linePoints+1];
         Vector3 point;
-        //Vector3 origin = shotEmissor.position;
         for (int i = 0; i<array.Length; i++) // i = tiempo en sec
         {
             point = shotEmissor.position + velocity * i * 0.05f + Physics.gravity * gravityModifier * Mathf.Pow(i*0.05f, 2) * 0.5f; 
-            
             array[i] = point;
         }
         return array;
+    }
+
+    private void colorSetting() 
+    {
+        Color auxColor = Color.Lerp(startColor, endColor, (timeCharged - minTimeCharging) / (maxTimeCharging - minTimeCharging));
+        hud.startColor = auxColor;
+        hud.endColor = auxColor;
     }
 }
