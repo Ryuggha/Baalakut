@@ -5418,7 +5418,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.22
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7738297459186424677, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
 --- !u!1001 &810918229
 PrefabInstance:
@@ -13858,8 +13859,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &2130981756
 Transform:
   m_ObjectHideFlags: 0
