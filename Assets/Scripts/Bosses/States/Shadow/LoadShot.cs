@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LoadShot : State
 {
-    
 
     private float timeLeft;
     private bool active = false;
@@ -29,8 +28,6 @@ public class LoadShot : State
         RaycastHit hit;
         Physics.Raycast(rayCast, out hit);
         ray.SetPosition(1, hit.point);
-
-        Debug.Log(hit.point);
 
         timeLeft -= delta;
 

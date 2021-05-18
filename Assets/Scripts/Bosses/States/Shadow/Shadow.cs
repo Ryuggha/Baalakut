@@ -31,7 +31,6 @@ public class Shadow : StateMachine
 
     public override void hit()
     {
-        Debug.Log("Hited");
         if (actualState == gameObject.GetComponentInChildren<Vulnerable>()) die();
     }
 }
