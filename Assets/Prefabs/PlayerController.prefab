@@ -224,8 +224,8 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   normalCamera: {fileID: 0}
   movementSpeed: 7
-  rotationSpeed: 15
-  movementMultWhenCharging: 0.5
+  rotationSpeed: 20
+  movementMultWhenCharging: 0.3
   fallSpeed: 2
   timeInAirToLandAnimation: 0.5
   dashDistance: 5
@@ -255,9 +255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotEmissor: {fileID: 1574255925960216770}
   projectilePrefab: {fileID: 1320371861094819994, guid: 1ecde55b4c4732245ba1d371d6fca42d, type: 3}
-  minSpeed: 10
-  maxSpeed: 25
-  minTimeCharging: 0.3
+  minSpeed: 15
+  maxSpeed: 40
+  minTimeCharging: 0.15
   maxTimeCharging: 1
   inertiaMultiplier: 0.5
   projectileGravityMultiplier: 1

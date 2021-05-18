@@ -933,8 +933,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: movementSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: rotationSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: dashRecuperationTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508415795372290112, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: maxSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508415795372290112, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: minTimeCharging
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8257754485990688938, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: m_RootOrder

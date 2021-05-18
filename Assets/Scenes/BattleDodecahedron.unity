@@ -525,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 2010425085}
     - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: expansionRate
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: timeToDissapear
@@ -691,6 +691,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: rotationSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: movementMultWhenCharging
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508415795372290112, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: maxSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3508415795372290112, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: minTimeCharging
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8257754485990688938, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: m_RootOrder
       value: 2
