@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 8d93cb5276738a147bba9085017b0a9a, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 72ef814016263f64ea05f4d5cbf3d2ab, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -789,7 +789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: timeToDissapear
-      value: 12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: optimalMovementProbability

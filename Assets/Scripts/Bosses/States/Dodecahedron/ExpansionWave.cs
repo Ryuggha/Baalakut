@@ -9,6 +9,7 @@ public class ExpansionWave : MonoBehaviour
     private PlayerManager player;
     private float radius;
     private float timer;
+    private bool isDestroyed;
 
     public float timeToDissapear;
     public float startingRadius;
@@ -27,6 +28,7 @@ public class ExpansionWave : MonoBehaviour
     public void initialize(float timeToDissapear, float startingRadius, float expansionRate, float deathArea)
     {
         this.timeToDissapear = timeToDissapear;
+	timer = timeToDissapear;
         this.startingRadius = startingRadius;
         this.expansionRate = expansionRate;
         this.deathArea = deathArea;
@@ -40,12 +42,12 @@ public class ExpansionWave : MonoBehaviour
         timer -= delta;
         if (timer < 0)
         {
+	    isDestroyed = true;
             particles.Stop();
             Destroy(gameObject, 5);
         }
         radius += delta * expansionRate;
-        
-        tick();
+        if (!isDestroyed ) tick();
     }
 
     private void tick()
