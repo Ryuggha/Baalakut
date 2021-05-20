@@ -9,6 +9,8 @@ public class ArenaDoorsManager : MonoBehaviour
 
     public GameObject[] Doors;
 
+    public bool startsActive = false;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,14 +20,14 @@ public class ArenaDoorsManager : MonoBehaviour
 
                 foreach (GameObject go in Doors)
 
-                    go.SetActive(!go.active);
+                    go.SetActive(!startsActive);
     }
 
     public void endCombat()
     {
         foreach (GameObject go in Doors)
 
-                go.SetActive(!go.active);
+                go.SetActive(startsActive);
         
         combatOver = true;
     }
