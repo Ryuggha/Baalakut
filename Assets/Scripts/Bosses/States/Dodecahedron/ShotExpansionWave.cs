@@ -10,7 +10,8 @@ public class ShotExpansionWave : State
     private FaceProtector[] protectors;
     private float timeToDissapear;
     private float startingRadius;
-    private float expansionRate;
+    private float expansionRateMin;
+    private float expansionRateMax;
     private float deathArea;
 
     private void Start()
@@ -19,7 +20,8 @@ public class ShotExpansionWave : State
         Dodecaethron d = (Dodecaethron)stateMachine;
         timeToDissapear = d.timeToDissapear;
         startingRadius = d.startingRadius;
-        expansionRate = d.expansionRate;
+        expansionRateMin = d.expansionRateMin;
+        expansionRateMax = d.expansionRateMax;
         deathArea = d.deathArea;
     }
 
@@ -46,6 +48,6 @@ public class ShotExpansionWave : State
     public void shootExpansionWave()
     {
         ExpansionWave auxWave = Instantiate(expansionWave, gameObject.transform.position, Quaternion.identity).GetComponent<ExpansionWave>();
-        auxWave.initialize(timeToDissapear, startingRadius, expansionRate, deathArea);
+        auxWave.initialize(timeToDissapear, startingRadius, expansionRateMin, expansionRateMax, deathArea);
     }
 }

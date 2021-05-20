@@ -611,8 +611,9 @@ MonoBehaviour:
   expantionWaveVel: 1
   timeToDissapear: 18
   startingRadius: 1
-  expansionRate: 5
-  deathArea: 0.4
+  expansionRateMin: 5
+  expansionRateMax: 13
+  deathArea: 0.2
   targetPos: {x: 0, y: 0, z: 0}
   GyroX: {fileID: 8612216322484930265}
   GyroY: {fileID: 8612216322102711113}

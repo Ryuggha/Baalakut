@@ -155,7 +155,7 @@ public class Movement : MonoBehaviour
             if (dashTimer <= 0)
             {
                 dashState = 3;
-                playerManager.isInteracting = false;
+                animatorHandler.setIsInteracting(false);
                 playerManager.endDash();
                 dashTimer = dashCooldown;
             }

@@ -39,7 +39,7 @@ public class StateMachine : MonoBehaviour
         die();
     }
 
-    public void die()
+    public virtual void die()
     {
         Debug.Log("Ded");
         dead = true;

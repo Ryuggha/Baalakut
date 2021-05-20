@@ -532,7 +532,7 @@ MonoBehaviour:
   fovMultiplicatorWhileCharging: 0.8
   lookSpeed: 0.4
   followSpeed: 0.0002
-  dashFollowSpeed: 0.06
+  dashFollowSpeed: 0.07
   pivotSpeed: 0.4
   minimumPivot: -70
   maximumPivot: 40
@@ -596,7 +596,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 842551522453263155}
+  - {fileID: 8598304486290457113}
   m_Father: {fileID: 842551521621108640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -629,7 +629,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -3.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 842551522183268708}
+  m_Father: {fileID: 8598304486290457113}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 9.397, y: 0, z: 0}
 --- !u!20 &842551522453263152
@@ -3013,6 +3013,37 @@ Transform:
   m_Children:
   - {fileID: 2826545902031857252}
   m_Father: {fileID: 3623960605413830573}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6057446330534700261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8598304486290457113}
+  m_Layer: 10
+  m_Name: CameraMovement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8598304486290457113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057446330534700261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 842551522453263155}
+  m_Father: {fileID: 842551522183268708}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6207486320904553229

@@ -5163,6 +5163,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2177902746546352964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6891857325592018752}
+  - component: {fileID: 245183373442056400}
+  m_Layer: 8
+  m_Name: ThornAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6891857325592018752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177902746546352964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3432581412150049109}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245183373442056400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2177902746546352964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2442219b581ce60499c927f8c7ca29bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 0}
+  stateMachine: {fileID: 0}
+  nextState: {fileID: 4112007236735686827}
+  Thorn: {fileID: 9102679643216409337, guid: 4a5fb9cc263bcb040a98e27c36a69d7d, type: 3}
 --- !u!1 &2910413278006243788
 GameObject:
   m_ObjectHideFlags: 0
@@ -5423,6 +5470,8 @@ Transform:
   - {fileID: 2285247891123864639}
   - {fileID: 471078984618562108}
   - {fileID: 9085595673924861502}
+  - {fileID: 5734817519562771139}
+  - {fileID: 6891857325592018752}
   m_Father: {fileID: 3432581413877754224}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5755,17 +5804,68 @@ MonoBehaviour:
   startingState: {fileID: 5165920634343104038}
   player: {fileID: 0}
   doorsManager: {fileID: 0}
-  launchVelocity: 40
+  launchVelocity: 49
   retractVelocity: 60
   offSetFixed: 0.3
   offSetPercentage: 0.2
   stunTime: 1
   explosionRange: 10
-  zarzaTimer: 0.1
+  distanceToDestroyThorns: 10
+  zarzaSpawnTimer: 0.1
   nTimesToExplote: 6
+  nTimesToThornAttack: 4
+  durationOfAttack: 10
+  periodOfThornAttackSpawn: 1
   front: {fileID: 2910413278006243788}
   back: {fileID: 1180629711061975009}
   offSet: 0
+--- !u!1 &4725846307357735109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5734817519562771139}
+  - component: {fileID: 3314322684602828064}
+  m_Layer: 8
+  m_Name: Wait4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5734817519562771139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725846307357735109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3432581412150049109}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3314322684602828064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725846307357735109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a708a425a3ea40458ca04f8553d5ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  go: {fileID: 0}
+  stateMachine: {fileID: 0}
+  nextState: {fileID: 245183373442056400}
+  timeToWait: 1
 --- !u!1 &5272722467833074116
 GameObject:
   m_ObjectHideFlags: 0
@@ -5869,9 +5969,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   go: {fileID: 0}
   stateMachine: {fileID: 0}
-  counter: 0
+  explosionCounter: 0
+  thornCounter: 0
   resetState: {fileID: 4112007236735686827}
   explosionState: {fileID: 4830437230304675386}
+  thornAttackState: {fileID: 3314322684602828064}
 --- !u!1 &7918236649664377929
 GameObject:
   m_ObjectHideFlags: 0

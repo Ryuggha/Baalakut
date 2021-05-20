@@ -25,12 +25,12 @@ public class ExpansionWave : MonoBehaviour
         timer = timeToDissapear;
     }
 
-    public void initialize(float timeToDissapear, float startingRadius, float expansionRate, float deathArea)
+    public void initialize(float timeToDissapear, float startingRadius, float expansionRateMin, float expansionRateMax, float deathArea)
     {
         this.timeToDissapear = timeToDissapear;
-	timer = timeToDissapear;
+	    timer = timeToDissapear;
         this.startingRadius = startingRadius;
-        this.expansionRate = expansionRate;
+        this.expansionRate = Random.Range(expansionRateMin, expansionRateMax);
         this.deathArea = deathArea;
         tick();
         particles.Play();
@@ -42,9 +42,7 @@ public class ExpansionWave : MonoBehaviour
         timer -= delta;
         if (timer < 0)
         {
-	    isDestroyed = true;
-            particles.Stop();
-            Destroy(gameObject, 5);
+            this.destroy();
         }
         radius += delta * expansionRate;
         if (!isDestroyed ) tick();
@@ -55,5 +53,12 @@ public class ExpansionWave : MonoBehaviour
         shape.radius = radius;
         float playerDistance = Vector3.Distance(gameObject.transform.position, player.transform.position);
         if (Mathf.Abs(playerDistance - radius) < deathArea) player.takeDamage();
+    }
+
+    public void destroy()
+    {
+        isDestroyed = true;
+        particles.Stop();
+        Destroy(gameObject, 3);
     }
 }

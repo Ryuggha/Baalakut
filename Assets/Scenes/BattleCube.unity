@@ -734,6 +734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Doors:
   - {fileID: 2119185982}
+  startsActive: 0
 --- !u!4 &201547965
 Transform:
   m_ObjectHideFlags: 0
@@ -1137,25 +1138,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
-      propertyPath: zarzaTimer
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
       propertyPath: doorsManager
       value: 
       objectReference: {fileID: 201547964}
-    - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
-      propertyPath: launchVelocity
-      value: 49
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
-      propertyPath: nTimesToExplote
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2778863043545632687, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
-      propertyPath: timeToWait
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 3432581413877753998, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -1203,10 +1188,6 @@ PrefabInstance:
     - target: {fileID: 3432581413877754224, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4830437230304675386, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
-      propertyPath: timeToWait
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
@@ -6159,10 +6140,6 @@ PrefabInstance:
       propertyPath: rotationSpeed
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
-      propertyPath: dashRecuperationTime
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3508415795372290112, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: maxSpeed
       value: 40
@@ -6217,7 +6194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8732122472658165562, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: m_Name
-      value: PlayerController (1)
+      value: PlayerController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}

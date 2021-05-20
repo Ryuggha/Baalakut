@@ -12,7 +12,8 @@ public class Dodecaethron : StateMachine
     [Header("ExpansionWaveStats")]
     public float timeToDissapear;
     public float startingRadius;
-    public float expansionRate;
+    public float expansionRateMin;
+    public float expansionRateMax;
     public float deathArea;
 
     [HideInInspector]public Vector3 targetPos;
@@ -29,7 +30,13 @@ public class Dodecaethron : StateMachine
 
     public override void hit()
     {
-        if (weakState) die();
+        if (weakState)
+        {
+            var aux = FindObjectsOfType<ExpansionWave>();
+            foreach (ExpansionWave ew in aux) ew.destroy();
+            base.hit();
+            die();
+        }
     }
 
     public void setWeakState()

@@ -76,4 +76,9 @@ public class AnimatorHandler : MonoBehaviour
         Vector3 velocity = deltaPosition / Time.deltaTime;
         playerMovement.rigidbody.velocity = velocity;
     }
+
+    public void setIsInteracting(bool b)
+    {
+        anim.SetBool("IsInteracting", b);
+    }
 }

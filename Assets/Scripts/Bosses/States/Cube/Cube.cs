@@ -10,8 +10,12 @@ public class Cube : StateMachine
     public float offSetPercentage;
     public float stunTime;
     public float explosionRange;
-    public float zarzaTimer = 0.05f;
+    public float distanceToDestroyThorns = 15;
+    public float zarzaSpawnTimer = 0.1f;
     public int nTimesToExplote = 4;
+    public int nTimesToThornAttack = 4;
+    public float durationOfAttack;
+    public float periodOfThornAttackSpawn;
 
     [Header("Modelos")]
     public GameObject front;
@@ -29,7 +33,6 @@ public class Cube : StateMachine
         offSet = distanceToMove * offSetPercentage + offSetFixed;
         if (!withOffsets) offSet = 0;
         this.distanceToMove = distanceToMove + offSet;
-        
     }
 
     public float getDistanceToMove()
@@ -52,11 +55,18 @@ public class Cube : StateMachine
         else base.Update();
     }
 
+    public override void hit()
+    {
+        var aux = FindObjectsOfType<Zarza>();
+        foreach (Zarza zarza in aux) zarza.destroy(4);
+        base.hit();
+    }
+
     public void stunned()
     {
         this.stun = true;
         actualState = GetComponentInChildren<PreRetract>();
         var aux = GetComponentInChildren<TimesLaunched>();
-        aux.counter = nTimesToExplote;
+        aux.explosionCounter = nTimesToExplote;
     }
 }

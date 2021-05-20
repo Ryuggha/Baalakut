@@ -13,7 +13,7 @@ public class Retract : State
 
     private void Start()
     {
-        zarzaTimer = ((Cube)stateMachine).zarzaTimer;
+        zarzaTimer = ((Cube)stateMachine).zarzaSpawnTimer;
     }
 
     public override State tick(float delta)
@@ -40,7 +40,7 @@ public class Retract : State
             createZarza();
             return nextState;
         }
-            return this;
+        return this;
     }
 
     private void createZarza()

@@ -16,8 +16,13 @@ public class Zarza : MonoBehaviour
         model.transform.localPosition = aux;
     }
 
+    public void destroy(float time)
+    {
+        Destroy(gameObject, Random.Range(0.1f, 0.3f) + time);
+    }
+
     public void destroy()
     {
-        Destroy(gameObject, Random.Range(0.1f, 0.3f));
+        this.destroy(0);
     }
 }
