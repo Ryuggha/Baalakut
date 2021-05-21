@@ -685,7 +685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301865438989502268, guid: 089f04d934acff64488951b97def8db8, type: 3}
       propertyPath: sceneName
-      value: HubAlpha
+      value: Hub
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089f04d934acff64488951b97def8db8, type: 3}
@@ -1143,11 +1143,15 @@ PrefabInstance:
       objectReference: {fileID: 201547964}
     - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
       propertyPath: explosionRange
-      value: 15
+      value: 12.5
       objectReference: {fileID: 0}
     - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
       propertyPath: durationOfAttack
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
+      propertyPath: nTimesToThornAttack
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1340371830364198500, guid: 5f08f38000ce4bc4ca48e4387a3d0a1a, type: 3}
       propertyPath: distanceToDestroyThorns
