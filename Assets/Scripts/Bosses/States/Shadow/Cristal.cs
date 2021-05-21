@@ -5,53 +5,62 @@ using UnityEngine;
 public class Cristal : MonoBehaviour
 {
     public float timeActive;
-    public float timeLeft = 0;
+    private float timeLeft = 0;
 
-    private BoxCollider[] triggers;
+    public List<GameObject> trajectoryPoints;
+    public int startingPoint;
+    private int actualPoint = 0;
+    public float vel = 1f;
+
+    private Shadow shadow;
+
     private bool active = false;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        triggers = GetComponents<BoxCollider>();
+        shadow = FindObjectOfType<Shadow>();
+        actualPoint = startingPoint;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (active)
-        {
-            timeLeft -= Time.deltaTime;
-            if (timeLeft <= 0)
-            {
-                foreach (BoxCollider trigger in triggers)   trigger.enabled = false;
-
-                active = false;
-            }
-        }
+        float delta = Time.deltaTime;
+        activeTick(delta);
+        move(delta);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        foreach(BoxCollider trigger in  triggers)
+        if (collision.gameObject.layer == 7)
         {
-            trigger.enabled = true;
+            Debug.Log("Activated");
             timeLeft = timeActive;
             active = true;
-            
-
+            shadow.addActiveCrystals(1);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void activeTick(float delta)
     {
-        Shadow shadow;
-        
-        if (other.gameObject.TryGetComponent<Shadow>(out shadow))
+        if (active)
         {
-            shadow.MakeItVulnerable();
-            foreach (BoxCollider trigger in triggers)   trigger.enabled = false;
-            
+            timeLeft -= delta;
+            if (timeLeft <= 0)
+            {
+                active = false;
+                shadow.addActiveCrystals(-1);
+            }
         }
+    }
 
+    private void move(float delta)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, trajectoryPoints[actualPoint].transform.position, vel * delta);
+
+        if (Vector3.Distance(transform.position, trajectoryPoints[actualPoint].transform.position) < 0.3f)
+        {
+            actualPoint++;
+            if (actualPoint >= trajectoryPoints.Count) actualPoint = 0;
+        }
     }
 }

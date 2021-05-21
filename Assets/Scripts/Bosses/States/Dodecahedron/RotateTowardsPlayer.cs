@@ -5,6 +5,15 @@ using UnityEngine;
 public class RotateTowardsPlayer : State
 {
     private float timer = 0;
+    private CameraShake shake;
+    public float shakeDuration = 0.15f;
+    public float shakeForce = 0.4f;
+
+    private void Start()
+    {
+        shake = FindObjectOfType<CameraShake>();
+    }
+
     public override State tick(float delta)
     {
         rotate(delta);
@@ -22,6 +31,9 @@ public class RotateTowardsPlayer : State
             ((Dodecaethron)stateMachine).GyroZ.transform.rotation = auxData; //Reseting GX's world Rot
 
             go.transform.position = ((Dodecaethron)stateMachine).targetPos;
+
+            StartCoroutine(shake.shake(shakeDuration, shakeForce));
+
             return stateMachine.GetComponentInChildren<ShotExpansionWave>().tick(delta);
         }
         return this;

@@ -113,7 +113,7 @@ public class Movement : MonoBehaviour
 
     public void HandleDashing (float delta)
     {
-        if (!animatorHandler.anim.GetBool("IsInteracting") && inputHandler.dashFlag && dashState == 0)
+        if (!animatorHandler.anim.GetBool("IsInteracting") && inputHandler.dashFlag && dashState == 0 && movementModifier >= 1)
         {
             dashState = 1;
 

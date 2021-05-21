@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Shoot : State
 {
-    
-
     private Transform eye;
     private LineRenderer ray;
 
@@ -13,7 +11,10 @@ public class Shoot : State
 
     private bool shootting = false;
 
-
+    [Header("DarkenssTrail")]
+    public float minLastingTime;
+    public float maxLastingTime;
+    public GameObject trigger;
 
     private void Start()
     {
@@ -34,22 +35,20 @@ public class Shoot : State
             ray.startWidth = ((Shadow)stateMachine).ShotRayWidth;
             ray.endWidth = ((Shadow)stateMachine).ShotRayWidth;
 
-            
-
             rayCast = new Ray(ray.GetPosition(0), ray.GetPosition(1)-ray.GetPosition(0));
-            
 
-            
-            
+            float distance = Vector3.Distance(ray.GetPosition(0), ray.GetPosition(1));
+            for (int i = 0; i < distance/1; i++)
+            {
+                GameObject obj = (GameObject)Instantiate(trigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i, Quaternion.identity);
+                StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
+            }
+
             if (Physics.Raycast(rayCast, out hit, 100, LayerMask.GetMask("Player")))
             {
                 ((Shadow)stateMachine).player.GetComponentInChildren<PlayerManager>().takeDamage();
             }
-
-            
         }
-
-        
 
         timeShot += delta;
        
@@ -60,7 +59,6 @@ public class Shoot : State
             return go.GetComponentInChildren<PreMovement>();
         }
         else return this;
-        
     }
 
     public void setShootting(bool var)
@@ -68,4 +66,11 @@ public class Shoot : State
         shootting = var;
     }
 
+    public IEnumerator destroy(GameObject obj, float timeToLive)
+    {
+        yield return new WaitForSeconds(timeToLive);
+        obj.GetComponent<ParticleSystem>().Stop();
+        obj.GetComponent<SlowTrigger>().stop();
+        Destroy(obj, 3);
+    }
 }

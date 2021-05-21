@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class SlowTrigger : MonoBehaviour
 {
-    private float slowPower = 1;
-    public void setSlowPower(float var)
+    private bool hasStoped;
+    private PlayerManager player;
+
+    private void Start()
     {
-        slowPower = var;
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            other.gameObject.GetComponentInChildren<Movement>().setSpeedModifier(slowPower);
-        }
+        player = FindObjectOfType<PlayerManager>();
     }
 
-    private void OnTriggerExit(Collider other)
+    private void Update()
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
-        {
-            other.gameObject.GetComponentInChildren<Movement>().setSpeedModifier(1f);
-        }
+        if (Vector3.Distance(transform.position, player.transform.position) <= 3 && !hasStoped) player.darknessTrigger();
+    }
+
+    public void stop()
+    {
+        hasStoped = true;
     }
 }

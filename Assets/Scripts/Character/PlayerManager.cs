@@ -9,6 +9,10 @@ public class PlayerManager : MonoBehaviour
     private Animator anim;
     private CameraHandler cameraHandler;
     private Movement movement;
+    private DarknessUI dUI;
+
+    private bool darkened;
+    private float darkenedTimer;
 
     [Header("Flags")]
     public bool isInteracting;
@@ -18,8 +22,13 @@ public class PlayerManager : MonoBehaviour
     public bool isAbleToJump;
     public bool isJumping;
 
+    [Header("ShadowDarkness")]
+    public float timeToDieFromDarkness;
+    public float darknessSlow;
+
     private void Start()
     {
+        dUI = FindObjectOfType<DarknessUI>();
         sling = GetComponent<Sling>();
         inputHandler = GetComponent<InputHandler>();
         anim = GetComponentInChildren<Animator>();
@@ -34,7 +43,7 @@ public class PlayerManager : MonoBehaviour
         if (inputHandler.menuFlag) UnityEngine.SceneManagement.SceneManager.LoadScene(0);
 
         #region Handle Player State
-
+        
         isInteracting = anim.GetBool("IsInteracting");
 
         #endregion
@@ -58,6 +67,27 @@ public class PlayerManager : MonoBehaviour
     private void LateUpdate()
     {
         float delta = Time.deltaTime;
+
+        #region ShadowDarkness
+
+        if (dUI != null)
+        {
+            if (darkened)
+            {
+                movement.setSpeedModifier(darknessSlow);
+                darkenedTimer += delta;
+            }
+            else
+            {
+                movement.setSpeedModifier(1);
+                darkenedTimer -= delta;
+                if (darkenedTimer < 0) darkenedTimer = 0;
+            }
+            if (darkenedTimer > timeToDieFromDarkness) takeDamage();
+            darkened = false;
+            dUI.setImageAlpha(darkenedTimer / timeToDieFromDarkness);
+        }
+        #endregion
 
         #region Move the Camera
         if (cameraHandler != null)
@@ -95,5 +125,10 @@ public class PlayerManager : MonoBehaviour
     public void restartScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void darknessTrigger()
+    {
+        darkened = true;
     }
 }

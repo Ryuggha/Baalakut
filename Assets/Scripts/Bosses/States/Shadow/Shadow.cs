@@ -10,17 +10,21 @@ public class Shadow : StateMachine
     public float SlowMovementDuration;
     public float FastMovementDuration;
     public float SlowWalkChance;
+
     [Header("Shoot Attack")]
     public float AimingDuration;
     public float AimingRayWidth;
     public float ShotRayWidth;
     public float TimeBetweenAimingAndShots;
     public float ShotDuration;
+
     [Header("Vulneravility")]
-    public float VulnerabilityDuration;
+    public int numberOfCrystals;
+    public float stunTime = 2;
+    private int activeCrystals = 0;
+
     [Header("Trail Attack")]
     public float TrailDuration = 10; //Time in seconds
-    public float TrailSlowPower;
 
 
 
@@ -31,6 +35,16 @@ public class Shadow : StateMachine
 
     public override void hit()
     {
-        if (actualState == gameObject.GetComponentInChildren<Vulnerable>()) die();
+        if (activeCrystals >= numberOfCrystals) die();
+    }
+
+    public void addActiveCrystals(int i)
+    {
+        activeCrystals += 1;
+        
+        if (activeCrystals >= numberOfCrystals)
+        {
+            MakeItVulnerable();
+        }
     }
 }

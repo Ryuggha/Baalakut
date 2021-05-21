@@ -13,9 +13,7 @@ public class FastMovement : State
     private bool walking = false;
     private Vector3 direction;
 
-    private float[] zAxis = { 19f, 4.5f, 8f, -20f };
-    private float[] xAxis = { 20f, 1f, 22f };
-    private float yAxis = 0.2f;
+    public List<Vector3> posiblePositions;
     private NavMeshAgent agent;
 
 
@@ -53,18 +51,16 @@ public class FastMovement : State
         if (walking == false)
         {
             walking = true;
-            direction = new Vector3(xAxis[Random.Range(0, 3)], yAxis, zAxis[Random.Range(0, 4)]);
+            direction = posiblePositions[Random.Range(0, posiblePositions.Count)];
             agent.speed = distance / duration;
             agent.SetDestination(direction);
             agent.isStopped = false;
         }
-
-        else if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0)
+        else if (agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= 0)
         {
             walking = false;
             agent.isStopped = true;
             return go.GetComponentInChildren<PosMovement>();
-
         }
 
         return this;

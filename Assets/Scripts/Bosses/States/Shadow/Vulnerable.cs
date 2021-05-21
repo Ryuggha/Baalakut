@@ -32,7 +32,7 @@ public class Vulnerable : State
         }
 
         time += delta;
-        if (time >= ((Shadow)stateMachine).VulnerabilityDuration)
+        if (time >= ((Shadow)stateMachine).stunTime)
         {
             isVunerable = false;
             return go.GetComponentInChildren<FastMovement>();
