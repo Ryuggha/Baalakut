@@ -15,8 +15,13 @@ public class ProtectorActivation : MonoBehaviour
     {
         if (other.gameObject.layer == 7)
         {
-            fp.setActiveFace();
-            Destroy(gameObject);
+            activate();
         }
+    }
+
+    public void activate()
+    {
+        fp.setActiveFace();
+        Destroy(gameObject);
     }
 }
