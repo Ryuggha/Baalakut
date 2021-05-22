@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Cristal : MonoBehaviour
 {
+    public Material def, act;
+
+    private MeshRenderer meshRenderer;
     public float timeActive;
     private float timeLeft = 0;
 
@@ -20,6 +23,8 @@ public class Cristal : MonoBehaviour
     {
         shadow = FindObjectOfType<Shadow>();
         actualPoint = startingPoint;
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material = def;
     }
 
     void Update()
@@ -33,10 +38,14 @@ public class Cristal : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            Debug.Log("Activated");
-            timeLeft = timeActive;
-            active = true;
-            shadow.addActiveCrystals(1);
+            if (!active)
+            {
+                Debug.Log("Activated");
+                timeLeft = timeActive;
+                active = true;
+                meshRenderer.material = act;
+                shadow.addActiveCrystals(1);
+            }
         }
     }
 
@@ -48,6 +57,7 @@ public class Cristal : MonoBehaviour
             if (timeLeft <= 0)
             {
                 active = false;
+                meshRenderer.material = def;
                 shadow.addActiveCrystals(-1);
             }
         }
