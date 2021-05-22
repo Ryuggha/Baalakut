@@ -44,7 +44,7 @@ public class Shoot : State
                 StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
             }
 
-            if (Physics.Raycast(rayCast, out hit, 100, LayerMask.GetMask("Player")))
+            if (Physics.Raycast(rayCast, out hit, distance, LayerMask.GetMask("Player")))
             {
                 ((Shadow)stateMachine).player.GetComponentInChildren<PlayerManager>().takeDamage();
             }
