@@ -24,7 +24,6 @@ public class Vulnerable : State
             time = 0;
             agent.isStopped = true;
             ray.enabled = false;
-            go.GetComponentInChildren<SlowMovement>().setWalking(false);
             go.GetComponentInChildren<FastMovement>().setWalking(false);
             go.GetComponentInChildren<Shoot>().setShootting(false);
             go.GetComponentInChildren<LoadShot>().setActive(false);
