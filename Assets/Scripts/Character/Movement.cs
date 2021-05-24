@@ -21,6 +21,7 @@ public class Movement : MonoBehaviour
     [Header("Movement Stats")]
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float rotationSpeed = 10f;
+    [SerializeField] private float chargingRotationModifier = 0.3f;
     [SerializeField] private float movementMultWhenCharging = 0.5f;
     [SerializeField] private float fallSpeed = 1f;
     [SerializeField] private float timeInAirToLandAnimation = 0.3f;
@@ -84,8 +85,24 @@ public class Movement : MonoBehaviour
 
         if (animatorHandler.canRotate)
         {
-            HandleRotation(Time.deltaTime);
+            HandleRotation(delta);
         }
+        else if (animatorHandler.isCharging)
+        {
+            HandleChargingRotation(delta);
+        }
+    }
+
+    private void HandleChargingRotation(float delta)
+    {
+        Vector3 targetDir = cameraObject.forward + cameraObject.right * 0.16f;
+        targetDir = targetDir.normalized;
+        targetDir.y = 0;
+
+        Quaternion tr = Quaternion.LookRotation(targetDir);
+        Quaternion targetRotation = Quaternion.Slerp(selfTransform.rotation, tr, rotationSpeed * delta * chargingRotationModifier);
+
+        selfTransform.rotation = targetRotation;
     }
 
     private void HandleRotation (float delta)

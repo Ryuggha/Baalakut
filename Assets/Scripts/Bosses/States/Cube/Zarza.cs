@@ -25,4 +25,10 @@ public class Zarza : MonoBehaviour
     {
         this.destroy(0);
     }
+
+    public void retract(float time)
+    {
+        var animator = GetComponentInParent<Animator>();
+        animator.Play("Retract");
+    }
 }

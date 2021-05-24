@@ -58,7 +58,7 @@ public class Cube : StateMachine
     public override void hit()
     {
         var aux = FindObjectsOfType<Zarza>();
-        foreach (Zarza zarza in aux) zarza.destroy(4);
+        foreach (Zarza zarza in aux) zarza.retract(4);
         base.hit();
     }
 

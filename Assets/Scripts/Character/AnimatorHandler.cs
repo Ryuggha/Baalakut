@@ -11,6 +11,7 @@ public class AnimatorHandler : MonoBehaviour
     private int vertical, horizontal;
     private int verticalCharging, horizontalCharging;
     public bool canRotate;
+    public bool isCharging;
 
     public void Initialize()
     {
@@ -46,11 +47,13 @@ public class AnimatorHandler : MonoBehaviour
     {
         if (isCharging)
         {
+            this.isCharging = true;
             canRotate = false;
             anim.Play("Charge");
         }
         else
         {
+            this.isCharging = false;
             canRotate = true;
             anim.Play("Shot");
         }
