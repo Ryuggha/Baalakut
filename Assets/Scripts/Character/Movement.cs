@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float groundDetectionRayStartPoint = 0.5f;
     [SerializeField] private float minimumDistanceNeededToBeginFall = 1f;
     [SerializeField] private float groundDirectionRayDistance = 0.05f;
-    private LayerMask layersForGroundCheck;
+    [SerializeField] private LayerMask layersForGroundCheck;
 
     [Header("Movement Flags")]
     public float inAirTimer;
@@ -59,7 +59,6 @@ public class Movement : MonoBehaviour
         animatorHandler = GetComponentInChildren<AnimatorHandler>();
         animatorHandler.Initialize();
         playerManager.isGrounded = true;
-        layersForGroundCheck = ~(1 << 8 | 1 << 11);
     }
 
     public void setSpeedModifier(float modifier)

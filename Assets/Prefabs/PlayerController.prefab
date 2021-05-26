@@ -242,6 +242,9 @@ MonoBehaviour:
   groundDetectionRayStartPoint: 0.5
   minimumDistanceNeededToBeginFall: 1
   groundDirectionRayDistance: 0.05
+  layersForGroundCheck:
+    serializedVersion: 2
+    m_Bits: 4097
   inAirTimer: 0
   jumpTimer: 0
 --- !u!114 &3508415795372290112
@@ -2660,6 +2663,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   canRotate: 1
   isCharging: 0
+  timeToResetShotAnimation: 0.6
+  timeToSetShotAnimation: 0.1
 --- !u!95 &4811272633940922374
 Animator:
   serializedVersion: 3
