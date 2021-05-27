@@ -86,7 +86,8 @@ public class PlayerManager : MonoBehaviour
                 darkenedTimer -= delta;
                 if (darkenedTimer < 0) darkenedTimer = 0;
             }
-            if (darkenedTimer > timeToDieFromDarkness) takeDamage();
+            //if (darkenedTimer > timeToDieFromDarkness) takeDamage();
+            if (darkenedTimer > timeToDieFromDarkness) darkenedTimer = timeToDieFromDarkness;
             darkened = false;
             dUI.setImageAlpha(darkenedTimer / timeToDieFromDarkness);
         }

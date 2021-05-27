@@ -210,25 +210,28 @@ public class Movement : MonoBehaviour
 
         Debug.DrawRay(origin, -Vector3.up * minimumDistanceNeededToBeginFall, Color.red, 0.1f, false);
         if (!playerManager.isJumping && Physics.Raycast(origin, -Vector3.up, out hit, minimumDistanceNeededToBeginFall, layersForGroundCheck))
-        {
-            normalVector = hit.normal;
-            Vector3 tp = hit.point;
-            playerManager.isGrounded = true;
-            targetPosition.y = tp.y;
-
-            if (playerManager.isInAir)
+        { 
+            if (hit.transform.gameObject.tag != "HurtBox")
             {
-                if (inAirTimer > timeInAirToLandAnimation)
-                {
-                    animatorHandler.PlayTargetAnimation("Land", true);
-                }
-                else
-                {
-                    animatorHandler.PlayTargetAnimation("Movement", false);
-                }
+                normalVector = hit.normal;
+                Vector3 tp = hit.point;
+                playerManager.isGrounded = true;
+                targetPosition.y = tp.y;
 
-                inAirTimer = 0;
-                playerManager.isInAir = false;
+                if (playerManager.isInAir)
+                {
+                    if (inAirTimer > timeInAirToLandAnimation)
+                    {
+                        animatorHandler.PlayTargetAnimation("Land", true);
+                    }
+                    else
+                    {
+                        animatorHandler.PlayTargetAnimation("Movement", false);
+                    }
+
+                    inAirTimer = 0;
+                    playerManager.isInAir = false;
+                }
             }
         }
         else
