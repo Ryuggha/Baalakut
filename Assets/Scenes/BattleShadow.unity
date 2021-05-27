@@ -1410,6 +1410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1556184601903961785, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
+      propertyPath: dashCastTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6822412490803717759, guid: f9bbaf320ac3a0b4f9f570d00f16b3db, type: 3}
       propertyPath: timeToDieFromDarkness
       value: 2
@@ -4228,6 +4232,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332480481}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1345421450 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5155741170701264907, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+  m_PrefabInstance: {fileID: 2143156559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1355575425
 GameObject:
   m_ObjectHideFlags: 0
@@ -6630,16 +6639,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: eye
+      value: 
+      objectReference: {fileID: 1345421450}
+    - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: stunTime
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: doorsManager
       value: 
       objectReference: {fileID: 109090576}
     - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: vulnerableLight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: numberOfCrystals
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: standardMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 962e3bd0b9fed22429204e8e0309695e, type: 2}
+    - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: vulnerableMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 7d1b489b4500457468af6fd8ebd887b2, type: 2}
+    - target: {fileID: 2287518157163644542, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
+      propertyPath: TimeBetweenAimingAndShots
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5155741169731611664, guid: d47b23f4d9c52084c84bcd7fccd275a5, type: 3}
       propertyPath: m_IsActive
