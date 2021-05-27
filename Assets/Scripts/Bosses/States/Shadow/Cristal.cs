@@ -40,7 +40,6 @@ public class Cristal : MonoBehaviour
         {
             if (!active)
             {
-                Debug.Log("Activated");
                 timeLeft = timeActive;
                 active = true;
                 meshRenderer.material = act;

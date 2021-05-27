@@ -125,6 +125,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8191846814231280056}
   - {fileID: 5300387480668408511}
   - {fileID: 116232385595185675}
   m_Father: {fileID: 8257754485990688938}
@@ -242,6 +243,9 @@ MonoBehaviour:
   groundDetectionRayStartPoint: 0.5
   minimumDistanceNeededToBeginFall: 1
   groundDirectionRayDistance: 0.05
+  layersForGroundCheck:
+    serializedVersion: 2
+    m_Bits: 4097
   inAirTimer: 0
   jumpTimer: 0
 --- !u!114 &3508415795372290112
@@ -1251,7 +1255,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 842551521411020490}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &2011525823962772053
 LineRenderer:
@@ -2643,7 +2647,7 @@ Transform:
   - {fileID: 1407289524861157253}
   - {fileID: 2207559053234823367}
   m_Father: {fileID: 842551521411020490}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4811272633940922375
 MonoBehaviour:
@@ -2660,6 +2664,8 @@ MonoBehaviour:
   anim: {fileID: 0}
   canRotate: 1
   isCharging: 0
+  timeToResetShotAnimation: 0.6
+  timeToSetShotAnimation: 0.1
 --- !u!95 &4811272633940922374
 Animator:
   serializedVersion: 3
@@ -2811,9 +2817,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8191846814231280056}
   - component: {fileID: 1480336306555448624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HurtBox
-  m_TagString: Untagged
+  m_TagString: HurtBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2825,12 +2831,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5267465559434931656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8257754485990688938}
-  m_RootOrder: 2
+  m_Father: {fileID: 842551521411020490}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1480336306555448624
 SphereCollider:
@@ -4011,7 +4017,6 @@ Transform:
   m_Children:
   - {fileID: 842551521411020490}
   - {fileID: 842551521621108640}
-  - {fileID: 8191846814231280056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

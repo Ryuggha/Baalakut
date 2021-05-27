@@ -55,6 +55,7 @@ public class Sling : MonoBehaviour
     {
         if (playerManager.isInteracting)
         {
+            if (isCharging) stopCharging();
             timeCharged = 0;
             return 0f;
         }
@@ -84,14 +85,19 @@ public class Sling : MonoBehaviour
         {
             if (isCharging)
             {
-                isCharging = false;
-                anim.setCharging(false);
-                hud.enabled = false;
+                stopCharging();
                 shot();
                 timeCharged = 0;
             }
             return 0f;
         }
+    }
+
+    private void stopCharging()
+    {
+        isCharging = false;
+        anim.setCharging(false);
+        hud.enabled = false;
     }
 
     private void shot()

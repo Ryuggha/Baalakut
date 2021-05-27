@@ -12,6 +12,10 @@ public class AnimatorHandler : MonoBehaviour
     private int verticalCharging, horizontalCharging;
     public bool canRotate;
     public bool isCharging;
+    private float timer;
+    private bool layerWeightAscending;
+    public float timeToResetShotAnimation = 0.6f;
+    public float timeToSetShotAnimation = 0.1f;
 
     public void Initialize()
     {
@@ -50,14 +54,37 @@ public class AnimatorHandler : MonoBehaviour
             this.isCharging = true;
             canRotate = false;
             anim.Play("Charge");
+            anim.SetLayerWeight(1, 1);
+            timer = timeToSetShotAnimation;
+            layerWeightAscending = true;
         }
         else
         {
             this.isCharging = false;
             canRotate = true;
             anim.Play("Shot");
+            anim.Play("Movement");
+            timer = timeToResetShotAnimation;
+            layerWeightAscending = false;
         }
         anim.SetBool("Charging", isCharging);
+    }
+
+    public void postShot(float delta) 
+    {
+        if (layerWeightAscending && timer > 0)
+        {
+            timer -= delta;
+            if (timer < 0) timer = 0;
+            anim.SetLayerWeight(1, 1 - (timer / timeToSetShotAnimation));
+        }
+        else if (!layerWeightAscending && timer > 0)
+        {
+            timer -= delta;
+            if (timer < 0) timer = 0;
+            anim.SetLayerWeight(1, timer/timeToResetShotAnimation);
+        }
+        
     }
 
     public void CanRotate()

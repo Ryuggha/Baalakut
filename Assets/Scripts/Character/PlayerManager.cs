@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     private InputHandler inputHandler;
     private Sling sling;
     private Animator anim;
+    private AnimatorHandler animatorHandler;
     private CameraHandler cameraHandler;
     private Movement movement;
     private DarknessUI dUI;
@@ -28,6 +29,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        animatorHandler = GetComponentInChildren<AnimatorHandler>();
         dUI = FindObjectOfType<DarknessUI>();
         sling = GetComponent<Sling>();
         inputHandler = GetComponent<InputHandler>();
@@ -60,6 +62,7 @@ public class PlayerManager : MonoBehaviour
         chargeStatus = sling.HandleShot(delta);
         movement.HandleMovement(delta);
         movement.HandleFalling(delta, movement.moveDirection);
+        animatorHandler.postShot(delta);
 
         #endregion
     }
@@ -83,7 +86,8 @@ public class PlayerManager : MonoBehaviour
                 darkenedTimer -= delta;
                 if (darkenedTimer < 0) darkenedTimer = 0;
             }
-            if (darkenedTimer > timeToDieFromDarkness) takeDamage();
+            //if (darkenedTimer > timeToDieFromDarkness) takeDamage();
+            if (darkenedTimer > timeToDieFromDarkness) darkenedTimer = timeToDieFromDarkness;
             darkened = false;
             dUI.setImageAlpha(darkenedTimer / timeToDieFromDarkness);
         }
