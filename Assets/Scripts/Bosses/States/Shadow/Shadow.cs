@@ -10,6 +10,7 @@ public class Shadow : StateMachine
     public float SlowMovementDuration;
     public float FastMovementDuration;
     public float SlowWalkChance;
+    public int movementsToSweep;
 
     [Header("Shoot Attack")]
     public float AimingDuration;
@@ -17,6 +18,14 @@ public class Shadow : StateMachine
     public float ShotRayWidth;
     public float TimeBetweenAimingAndShots;
     public float ShotDuration;
+    public float minDarknessLastingTime = 8;
+    public float maxDarknessLastingTime = 12;
+    public Color aimingColor;
+    public Color shotColor;
+
+    [Header("Sweep Attack")]
+    public float angleToShot;
+    public float sweepAcceleration;
 
     [Header("Vulneravility")]
     public int numberOfCrystals;

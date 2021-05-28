@@ -5,9 +5,11 @@ using UnityEngine.AI;
 
 public class FastMovement : State
 {
-
+    public State sweepAttack;
     private float distance;
     private float duration;
+    private int movementsDone;
+    private int movementsToSeep;
 
     private Vector3 origin;
     private bool walking = false;
@@ -22,7 +24,7 @@ public class FastMovement : State
         distance = ((Shadow)stateMachine).SlowMovementDistance;
         duration = ((Shadow)stateMachine).SlowMovementDuration;
         agent = go.GetComponent<NavMeshAgent>();
-
+        movementsToSeep = ((Shadow)stateMachine).movementsToSweep;
 
     }
     public override State tick(float delta)
@@ -60,6 +62,12 @@ public class FastMovement : State
         {
             walking = false;
             agent.isStopped = true;
+            movementsDone++;
+            if (movementsDone >= movementsToSeep)
+            {
+                movementsDone = 0;
+                return sweepAttack.tick(delta);
+            }
             return go.GetComponentInChildren<PosMovement>();
         }
 

@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class Aiming : State
 {
-
     private Transform eye;
     private LineRenderer ray;
 
     private float timeAiming = 0f;
 
     private bool aiming = false;
-
-    
+    private Color color;
 
     private void Start()
     {
         eye = go.transform.GetChild(0);
         ray = eye.gameObject.GetComponent<LineRenderer>();
+        color = ((Shadow)stateMachine).aimingColor;
     }
 
     public override State tick(float delta)
@@ -26,6 +25,8 @@ public class Aiming : State
 
         if (!aiming)
         {
+            ray.startColor = color;
+            ray.endColor = color;
             aiming = true;
             timeAiming = 0f;
             eye.gameObject.GetComponent<LineRenderer>().enabled = true;

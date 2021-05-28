@@ -12,14 +12,18 @@ public class Shoot : State
     private bool shootting = false;
 
     [Header("DarkenssTrail")]
-    public float minLastingTime;
-    public float maxLastingTime;
+    private float minLastingTime;
+    private float maxLastingTime;
     public GameObject trigger;
+    private Color color;
 
     private void Start()
     {
+        color = ((Shadow)stateMachine).shotColor;
         eye = go.transform.GetChild(0);
         ray = eye.gameObject.GetComponent<LineRenderer>();
+        minLastingTime = ((Shadow)stateMachine).minDarknessLastingTime;
+        maxLastingTime = ((Shadow)stateMachine).maxDarknessLastingTime;
     }
 
     public override State tick(float delta)
@@ -29,6 +33,8 @@ public class Shoot : State
 
         if (!shootting)
         {
+            ray.startColor = color;
+            ray.endColor = color;
             shootting = true;
             timeShot = 0f;
             eye.gameObject.GetComponent<LineRenderer>().enabled = true;
@@ -40,7 +46,8 @@ public class Shoot : State
             float distance = Vector3.Distance(ray.GetPosition(0), ray.GetPosition(1));
             for (int i = 0; i < distance/1; i++)
             {
-                GameObject obj = (GameObject)Instantiate(trigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i, Quaternion.identity);
+                Debug.Log("sasda");
+                GameObject obj = Instantiate(trigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i, Quaternion.identity);
                 StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
             }
 
