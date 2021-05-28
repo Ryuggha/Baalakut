@@ -46,7 +46,6 @@ public class Shoot : State
             float distance = Vector3.Distance(ray.GetPosition(0), ray.GetPosition(1));
             for (int i = 0; i < distance/1; i++)
             {
-                Debug.Log("sasda");
                 GameObject obj = Instantiate(trigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i, Quaternion.identity);
                 StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
             }
