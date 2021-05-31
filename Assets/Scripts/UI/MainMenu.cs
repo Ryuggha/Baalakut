@@ -2,29 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    
-    public void CubeBotton()
+    public Button button;
+
+    private void OnEnable()
+    {
+        button.Select();
+    }
+
+    public void PlayButton()
     {
         SceneManager.LoadScene(1);
     }
-    public void ShadowBotton()
+    public void OptionsButton()
     {
-        SceneManager.LoadScene(2);
-    }
-    public void DodecahedrionBotton()
-    {
-        SceneManager.LoadScene(3);
-    }
-    public void TotemBotton()
-    {
-        SceneManager.LoadScene(4);
-    }
-    public void EyeBotton()
-    {
-        SceneManager.LoadScene(5);
+
     }
     public void QuitBotton()
     {

@@ -21,6 +21,8 @@ public class InputHandler : MonoBehaviour
     [HideInInspector] public bool shotFlag;
     public bool menuInput;
     [HideInInspector] public bool menuFlag;
+    public bool submitInput;
+    [HideInInspector] public bool submitFlag;
 
     PlayerControls inputActions;
     CameraHandler cameraHandler;
@@ -49,7 +51,8 @@ public class InputHandler : MonoBehaviour
         MoveInput();
         HandleDashInput();
         HandleShotInput();
-        //HandleMenuInput();
+        HandleMenuInput();
+        HandleSubmitInput();
     }
 
     private void MoveInput()
@@ -78,7 +81,30 @@ public class InputHandler : MonoBehaviour
 
     private void HandleMenuInput()
     {
+        bool aux = menuInput;
         menuInput = inputActions.PlayerActions.Menu.phase == UnityEngine.InputSystem.InputActionPhase.Started;
-        menuFlag = menuInput;
+        if (aux)
+        {
+            menuFlag = false;
+        }
+        else
+        {
+            menuFlag = menuInput;
+        }
+        
+    }
+
+    private void HandleSubmitInput()
+    {
+        bool aux = submitInput;
+        submitInput = inputActions.PlayerActions.Submit.phase == UnityEngine.InputSystem.InputActionPhase.Started;
+        if (aux)
+        {
+            submitFlag = false;
+        }
+        else
+        {
+            submitFlag = submitInput;
+        }
     }
 }

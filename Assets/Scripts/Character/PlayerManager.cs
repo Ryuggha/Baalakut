@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     private CameraHandler cameraHandler;
     private Movement movement;
     private DarknessUI dUI;
+    private InGameMenu menu;
 
     private bool darkened;
     private float darkenedTimer;
@@ -29,6 +30,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        menu = FindObjectOfType<InGameMenu>();
         animatorHandler = GetComponentInChildren<AnimatorHandler>();
         dUI = FindObjectOfType<DarknessUI>();
         sling = GetComponent<Sling>();
@@ -42,11 +44,9 @@ public class PlayerManager : MonoBehaviour
     {
         float delta = Time.deltaTime;
 
-        if (inputHandler.menuFlag) UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-
         #region Handle Player State
         
-        isInteracting = anim.GetBool("IsInteracting");
+        if (!menu.getPaused()) isInteracting = anim.GetBool("IsInteracting");
 
         #endregion
 
@@ -58,11 +58,14 @@ public class PlayerManager : MonoBehaviour
 
         #region Handle Player Movement and Actions
 
-        movement.HandleDashing(delta);
-        chargeStatus = sling.HandleShot(delta);
-        movement.HandleMovement(delta);
-        movement.HandleFalling(delta, movement.moveDirection);
-        animatorHandler.postShot(delta);
+        if (!menu.getPaused())
+        {
+            movement.HandleDashing(delta);
+            chargeStatus = sling.HandleShot(delta);
+            movement.HandleMovement(delta);
+            movement.HandleFalling(delta, movement.moveDirection);
+            animatorHandler.postShot(delta);
+        }    
 
         #endregion
     }
@@ -71,42 +74,46 @@ public class PlayerManager : MonoBehaviour
     {
         float delta = Time.deltaTime;
 
-        #region ShadowDarkness
-
-        if (dUI != null)
+        if (!menu.getPaused())
         {
-            if (darkened)
+
+            #region ShadowDarkness
+
+            if (dUI != null)
             {
-                movement.setSpeedModifier(darknessSlow);
-                darkenedTimer += delta;
+                if (darkened)
+                {
+                    movement.setSpeedModifier(darknessSlow);
+                    darkenedTimer += delta;
+                }
+                else
+                {
+                    movement.setSpeedModifier(1);
+                    darkenedTimer -= delta;
+                    if (darkenedTimer < 0) darkenedTimer = 0;
+                }
+                if (darkenedTimer > timeToDieFromDarkness) darkenedTimer = timeToDieFromDarkness;
+                darkened = false;
+                dUI.setImageAlpha(darkenedTimer / timeToDieFromDarkness);
             }
-            else
+            #endregion
+
+            #region Move the Camera
+            if (cameraHandler != null)
             {
-                movement.setSpeedModifier(1);
-                darkenedTimer -= delta;
-                if (darkenedTimer < 0) darkenedTimer = 0;
+                cameraHandler.adjustPivotTransformPosition(delta);
+                cameraHandler.FollowTarget(delta);
+                cameraHandler.HandleCameraRotation(inputHandler.mouseX, inputHandler.mouseY, inputHandler.rStickX * delta, inputHandler.rStickY * delta);
             }
-            //if (darkenedTimer > timeToDieFromDarkness) takeDamage();
-            if (darkenedTimer > timeToDieFromDarkness) darkenedTimer = timeToDieFromDarkness;
-            darkened = false;
-            dUI.setImageAlpha(darkenedTimer / timeToDieFromDarkness);
+            #endregion
+
+            #region Handling Flags
+
+            if (isInAir && !isJumping) movement.inAirTimer += delta;
+
+            #endregion
+
         }
-        #endregion
-
-        #region Move the Camera
-        if (cameraHandler != null)
-        {
-            cameraHandler.adjustPivotTransformPosition(delta);
-            cameraHandler.FollowTarget(delta);
-            cameraHandler.HandleCameraRotation(inputHandler.mouseX, inputHandler.mouseY, inputHandler.rStickX * delta, inputHandler.rStickY * delta);
-        }
-        #endregion
-
-        #region Handling Flags
-
-        if (isInAir && !isJumping) movement.inAirTimer += delta;
-
-        #endregion
     }
 
     public void startDash()
