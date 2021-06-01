@@ -21,11 +21,8 @@ public class InputHandler : MonoBehaviour
     [HideInInspector] public bool shotFlag;
     public bool menuInput;
     [HideInInspector] public bool menuFlag;
-    public bool submitInput;
-    [HideInInspector] public bool submitFlag;
 
     PlayerControls inputActions;
-    CameraHandler cameraHandler;
 
     Vector2 movementInput, cameraInput, cameraMouseInput;
 
@@ -46,13 +43,32 @@ public class InputHandler : MonoBehaviour
         inputActions.Disable();
     }
 
-    public void TickInput(float delta)
+    public void flagsToZero()
     {
-        MoveInput();
-        HandleDashInput();
-        HandleShotInput();
+        horizontal = 0;
+        vertical = 0;
+        moveAmount = 0;
+        mouseX = 0;
+        mouseY = 0;
+        rStickX = 0;
+        rStickY = 0;
+        dashFlag = false;
+        shotFlag = false;
+        menuFlag = false;
+    }
+
+
+    public void TickInput(float delta, bool dead)
+    {
+        flagsToZero();
+        if (!dead)
+        {
+            MoveInput();
+            HandleDashInput();
+            HandleShotInput();
+        }
+        cameraInputs();
         HandleMenuInput();
-        HandleSubmitInput();
     }
 
     private void MoveInput()
@@ -60,7 +76,10 @@ public class InputHandler : MonoBehaviour
         horizontal = movementInput.x;
         vertical = movementInput.y;
         moveAmount = Mathf.Clamp01(Mathf.Abs(horizontal) + Mathf.Abs(vertical));
+    }
 
+    private void cameraInputs()
+    {
         mouseX = cameraMouseInput.x / 20f * mouseCameraSensibility;
         mouseY = cameraMouseInput.y / 20f * mouseCameraSensibility;
         rStickX = cameraInput.x * controllerCameraSensibility;
@@ -92,19 +111,5 @@ public class InputHandler : MonoBehaviour
             menuFlag = menuInput;
         }
         
-    }
-
-    private void HandleSubmitInput()
-    {
-        bool aux = submitInput;
-        submitInput = inputActions.PlayerActions.Submit.phase == UnityEngine.InputSystem.InputActionPhase.Started;
-        if (aux)
-        {
-            submitFlag = false;
-        }
-        else
-        {
-            submitFlag = submitInput;
-        }
     }
 }

@@ -12,6 +12,9 @@ public class PlayerManager : MonoBehaviour
     private Movement movement;
     private DarknessUI dUI;
     private InGameMenu menu;
+    private RagdollController ragdoll;
+
+    private bool dead;
 
     private bool darkened;
     private float darkenedTimer;
@@ -30,6 +33,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        ragdoll = GetComponentInChildren<RagdollController>();
         menu = FindObjectOfType<InGameMenu>();
         animatorHandler = GetComponentInChildren<AnimatorHandler>();
         dUI = FindObjectOfType<DarknessUI>();
@@ -44,30 +48,31 @@ public class PlayerManager : MonoBehaviour
     {
         float delta = Time.deltaTime;
 
-        #region Handle Player State
         
-        if (!menu.getPaused()) isInteracting = anim.GetBool("IsInteracting");
+            #region Handle Player State
+
+            if (!menu.getPaused()) isInteracting = anim.GetBool("IsInteracting");
+
+            #endregion
+
+            #region Update all the Inputs
+
+            inputHandler.TickInput(delta, dead);
 
         #endregion
 
-        #region Update all the Inputs
+            #region Handle Player Movement and Actions
 
-        inputHandler.TickInput(delta);
+            if (!menu.getPaused())
+            {
+                movement.HandleDashing(delta);
+                chargeStatus = sling.HandleShot(delta);
+                movement.HandleMovement(delta);
+                movement.HandleFalling(delta, movement.moveDirection);
+                animatorHandler.postShot(delta);
+            }
 
-        #endregion
-
-        #region Handle Player Movement and Actions
-
-        if (!menu.getPaused())
-        {
-            movement.HandleDashing(delta);
-            chargeStatus = sling.HandleShot(delta);
-            movement.HandleMovement(delta);
-            movement.HandleFalling(delta, movement.moveDirection);
-            animatorHandler.postShot(delta);
-        }    
-
-        #endregion
+            #endregion
     }
 
     private void LateUpdate()
@@ -128,8 +133,9 @@ public class PlayerManager : MonoBehaviour
 
     public void takeDamage() //Unimplemented method
     {
-        isInteracting = true;
-        Invoke("restartScene", 0.2f);
+        dead = true;
+        ragdoll.ragdollEnabled(true);
+        Invoke("restartScene", 5f);
         //Debug.Log("Probably, this will simply kill the player, but for now, it only shows a Log");
     }
 
