@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HierbaShader
+  m_Name: HierbaPlano2
   m_Shader: {fileID: 4800000, guid: e32eef440522a98458c52896cffef7a5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -81,10 +81,10 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TessellationUniform: 1
+    - _TessellationUniform: 12
     - _TranslucentGain: 0.5
     - _UVSec: 0
-    - _WindStrength: 0.05
+    - _WindStrength: 1
     - _ZWrite: 1
     m_Colors:
     - _BottomColor: {r: 0.0627451, g: 0.3764706, b: 0.07058824, a: 1}
