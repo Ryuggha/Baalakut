@@ -29996,6 +29996,7 @@ GameObject:
   - component: {fileID: 4789281107977071377}
   - component: {fileID: 5277411067176563125}
   - component: {fileID: 5277411067176563124}
+  - component: {fileID: 2737328325064162580}
   m_Layer: 31
   m_Name: character_Beta_model
   m_TagString: Untagged
@@ -30082,6 +30083,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2737328325064162580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5277411067176563115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5588570b484a9d4293b7de30e88d972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5290760262504853383
 GameObject:
   m_ObjectHideFlags: 0
@@ -33472,6 +33485,7 @@ GameObject:
   - component: {fileID: 8613337129885506759}
   - component: {fileID: 4904580520161670762}
   - component: {fileID: 7005447944667828371}
+  - component: {fileID: 6498265161899858173}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -33639,6 +33653,18 @@ MonoBehaviour:
   linePoints: 20
   startColor: {r: 0.49381453, g: 0.712204, b: 0.764151, a: 1}
   endColor: {r: 0.7735849, g: 0.31266928, b: 0.14960839, a: 1}
+--- !u!114 &6498265161899858173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6158483811018137416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b2cb54ed877324093c0d5b2685c5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6171580068849332081
 GameObject:
   m_ObjectHideFlags: 0

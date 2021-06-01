@@ -1,5 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9078494466907455286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-8882977513203336624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-8234003840058262365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21,6 +61,72 @@ MonoBehaviour:
   - Name: Desktop
     Value: 742
   Exists: 1
+--- !u!114 &-8071206966506676644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/WalkStep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/WalkStep
+  guid: 9aa50eadfc7d2c43abf51c18f66dc5cc
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7783341181987370465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-6831893285714226291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/ShadowDeath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/ShadowDeath
+  guid: d95396c4567186459294ea5d8ec4e268
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6294114591782906299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,10 +142,142 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637569795055643325
+  lastModified: 637581150043902151
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-5801935702439648016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/Cave
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/Cave
+  guid: 3b6ebbfa229b664084bde102e5fdfb8f
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5748043514916701725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/CharacterDeath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/CharacterDeath
+  guid: a1aeb649a5a97648b4cd9f4c24d3dca0
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5332630546739614035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-5178397228895138881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/WaveSound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/WaveSound
+  guid: f75a3ac225ca2041a2d781bee0f428a9
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4947392355280244794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-4702476652757747577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/ShadowMovement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/ShadowMovement
+  guid: 8e5e35e36d28574aba225ffc96169897
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4669818161627350487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,12 +293,127 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637569795055643325
+  lastModified: 637581150043932390
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 792
+    Value: 2476
   Exists: 1
+--- !u!114 &-4430930822263093963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/ShadowVulnerable
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/ShadowVulnerable
+  guid: e852b2a75b3e9c418b7941b6c1318847
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4045066887490691885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/DodecahedronMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/DodecahedronMusic
+  guid: 236a08c464f8f7418d8334afff174a26
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 57640
+--- !u!114 &-4038641286139519450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/CreateWave
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/CreateWave
+  guid: c5baf4932f84614e9baa197ac4d16f76
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3715046159235909230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/Forest
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/Forest
+  guid: 6d26f61a250b77479757a3196f683379
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2963230936933293467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/Volcano
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/Volcano
+  guid: 9f6dc1e7c221dd428ca008ee195e7ce2
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2762374597978070454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +454,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1772573819332683387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-1068800339443438926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +493,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-110154286111752007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/ShadowStep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/ShadowStep
+  guid: f86edbf3659225418eae636d40f95faa
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,16 +531,459 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -4669818161627350487}
   - {fileID: -6294114591782906299}
-  - {fileID: -1799739961170670446}
   EditorEvents:
-  - {fileID: 6861879844502538209}
+  - {fileID: 1785226644690506044}
+  - {fileID: 4340227678019096383}
+  - {fileID: 5428650498141466334}
+  - {fileID: 6244098730619326457}
+  - {fileID: -4045066887490691885}
+  - {fileID: 2504440001632724785}
+  - {fileID: -5801935702439648016}
+  - {fileID: 2619197264665974446}
+  - {fileID: 2228916692865704129}
+  - {fileID: 8723811169191580523}
+  - {fileID: 9073352505411623869}
+  - {fileID: 5239509884569298121}
+  - {fileID: -3715046159235909230}
+  - {fileID: 8798929156568535317}
+  - {fileID: 8373144211233060469}
+  - {fileID: 352430279854279533}
+  - {fileID: 3749065632686257540}
+  - {fileID: 7822150010940508903}
+  - {fileID: -4702476652757747577}
+  - {fileID: 4999450907281135206}
+  - {fileID: 925923182822287510}
+  - {fileID: -8071206966506676644}
+  - {fileID: -2963230936933293467}
+  - {fileID: -5748043514916701725}
+  - {fileID: -4038641286139519450}
+  - {fileID: 3946177377423635593}
+  - {fileID: 6342792958489499702}
+  - {fileID: -6831893285714226291}
+  - {fileID: 8182987211603025553}
+  - {fileID: -4430930822263093963}
+  - {fileID: 676334374585546594}
+  - {fileID: 7574021022204293489}
+  - {fileID: -5178397228895138881}
+  - {fileID: -110154286111752007}
+  - {fileID: 5134096309264610640}
+  - {fileID: 7103202644584857885}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6294114591782906299}
   StringsBanks:
   - {fileID: -4669818161627350487}
-  stringsBankWriteTime: 637569795055643325
+  stringsBankWriteTime: 637581150043932390
   cacheVersion: 6
+--- !u!114 &352430279854279533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/DodecahedronDeath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/DodecahedronDeath
+  guid: 85436b4e5701ce41a1c19dac9fde3e1f
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &676334374585546594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/HubMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/HubMusic
+  guid: eea0810d357d8b439630a0adfd09701a
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 90007
+--- !u!114 &925923182822287510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu/ClickButtonIn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu/ClickButtonIn
+  guid: 94b3c56c9c588f45b68b98b6d59a3b35
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1785226644690506044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ShadowMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ShadowMusic
+  guid: 26b41dec67f8764bac4f5f56d729f14f
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 119466
+--- !u!114 &2113233061225445436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &2228916692865704129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/PortectionBreak
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/PortectionBreak
+  guid: 4b198e292deb074f90a8905b6cbb2b17
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2504440001632724785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/CubeMovement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/CubeMovement
+  guid: 23c354b30c518b46a5ec90f06067945c
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2619197264665974446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/ProjectileImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/ProjectileImpact
+  guid: 479c194d6b69e6409e8fe79d89dc22ff
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3749065632686257540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MenuMusic
+  guid: 8666e78ce7f8674bafd76a4aace9b016
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 210000
+--- !u!114 &3946177377423635593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/RunStep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/RunStep
+  guid: cc6dc22603725049b2f17f7395a42490
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4340227678019096383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/ProjectileShot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/ProjectileShot
+  guid: 07f68a309424424a87a81dcc91f4e46e
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4999450907281135206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/LaserShot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/LaserShot
+  guid: 8f65d1fbf86c054ba366268b0f15a691
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5134096309264610640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/ProjectileCharge
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/ProjectileCharge
+  guid: fd970153f5d39743b599e123eef9bf6b
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2113233061225445436}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3672
+--- !u!114 &5239509884569298121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/ThornImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/ThornImpact
+  guid: 69734876077fc547a8bc42625f20b493
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5428650498141466334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu/ClickButttonOut
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu/ClickButttonOut
+  guid: 129618e33e9781428f047673b461202d
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5874986449158945265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &6244098730619326457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/ThornBreak
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/ThornBreak
+  guid: 13c8ac59208b7d4183aa89225a1226e6
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6342792958489499702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu/HoverButton
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu/HoverButton
+  guid: d8ba3c5947a04b4caadb774e524ff3d7
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &6861879844502538209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,8 +998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Test
   guid: d7007d81a01f2448b3e98b3653147413
-  Banks:
-  - {fileID: -1799739961170670446}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -187,6 +1025,92 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7103202644584857885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/ImpactBetweenParts
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/ImpactBetweenParts
+  guid: ff4a3e9cfc63cd4598f82ee50869c1ba
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7515724511740577809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4059704695
+    data2: 1952857701
+  Exists: 0
+--- !u!114 &7574021022204293489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/WallImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/WallImpact
+  guid: f0e8a7ecea4d344c8c0f57ba0c6a4fc1
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7597170887549041246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7721350978349712869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +1127,144 @@ MonoBehaviour:
   guid: c2a1993cbb43bd4baaf25f0b3c974108
   Banks:
   - {fileID: -1068800339443438926}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7822150010940508903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/CubeDeath
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/CubeDeath
+  guid: 8c784db11546c24382600259e4092881
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8182987211603025553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/Dash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/Dash
+  guid: e0d06b66b2d0aa41a89d8a8f9b93adb0
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 602
+--- !u!114 &8373144211233060469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/CubeMusic
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CubeMusic
+  guid: 8508f50aa2094c48a9a8bbff1e90b84c
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 99312
+--- !u!114 &8723811169191580523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/DodecahedronMovement
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/DodecahedronMovement
+  guid: 525b26a07be2894c86e03012f4dd1753
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8798929156568535317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/ProjectileSound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/ProjectileSound
+  guid: 805d40749c8bc047aba8101f8dfdf625
+  Banks:
+  - {fileID: -6294114591782906299}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3672
+--- !u!114 &9073352505411623869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/LaserAim
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/LaserAim
+  guid: 5ad6461d2fb0df448ec091a2a88851f6
+  Banks:
+  - {fileID: -6294114591782906299}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
