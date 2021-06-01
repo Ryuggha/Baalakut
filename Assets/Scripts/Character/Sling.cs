@@ -7,6 +7,7 @@ public class Sling : MonoBehaviour
 {
     public Transform shotEmissor;
     public GameObject projectilePrefab;
+    public ParticleSystem chargeParticles;
 
     [Header("ShotStats")]
     public float minSpeed = 10f;
@@ -65,6 +66,7 @@ public class Sling : MonoBehaviour
             {
                 anim.setCharging(true);
                 isCharging = true;
+                chargeParticles.Play();
             }
             timeCharged += delta;
             //RENDER HUD
@@ -98,6 +100,7 @@ public class Sling : MonoBehaviour
         isCharging = false;
         anim.setCharging(false);
         hud.enabled = false;
+        chargeParticles.Stop();
     }
 
     private void shot()
