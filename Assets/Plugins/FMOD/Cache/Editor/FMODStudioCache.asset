@@ -124,6 +124,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-7303724130451314637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-6831893285714226291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +182,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< Updated upstream
   lastModified: 637581602496871263
+=======
+  lastModified: 637581494713674491
+>>>>>>> Stashed changes
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -313,7 +337,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 637581602496880851
+=======
+  lastModified: 637581494713684204
+>>>>>>> Stashed changes
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -613,7 +641,11 @@ MonoBehaviour:
   - {fileID: -6294114591782906299}
   StringsBanks:
   - {fileID: -4669818161627350487}
+<<<<<<< Updated upstream
   stringsBankWriteTime: 637581602496880851
+=======
+  stringsBankWriteTime: 637581494713684204
+>>>>>>> Stashed changes
   cacheVersion: 6
 --- !u!114 &352430279854279533
 MonoBehaviour:
@@ -908,7 +940,11 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
+<<<<<<< Updated upstream
   - {fileID: -8097525049355574176}
+=======
+  - {fileID: -7303724130451314637}
+>>>>>>> Stashed changes
   MinDistance: 1
   MaxDistance: 20
   Length: 3672
