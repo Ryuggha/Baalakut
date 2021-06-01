@@ -21,11 +21,13 @@ public class Cristal : MonoBehaviour
 
     private void Start()
     {
-        shadow = FindObjectOfType<Shadow>();
+        
         actualPoint = startingPoint;
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = def;
     }
+
+    private bool shadowSpawned = false;
 
     void Update()
     {
@@ -43,6 +45,11 @@ public class Cristal : MonoBehaviour
                 timeLeft = timeActive;
                 active = true;
                 meshRenderer.material = act;
+                if (!shadowSpawned)
+                {
+                    shadowSpawned = true;
+                    shadow = FindObjectOfType<Shadow>();
+                }
                 shadow.addActiveCrystals(1);
             }
         }
