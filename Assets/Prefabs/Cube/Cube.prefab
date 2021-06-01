@@ -5062,8 +5062,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7986112535499697370}
-  - component: {fileID: 5044999521011160464}
-  - component: {fileID: 8585772341932454148}
   - component: {fileID: 8686911209248488512}
   - component: {fileID: 6070749032713284989}
   m_Layer: 8
@@ -5089,55 +5087,6 @@ Transform:
   m_Father: {fileID: 3432581413877754224}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5044999521011160464
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180629711061975009}
-  m_Mesh: {fileID: -2432090755550338912, guid: a37f02cb9910b634e9562d528e01e7a4, type: 3}
---- !u!23 &8585772341932454148
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180629711061975009}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 962e3bd0b9fed22429204e8e0309695e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &8686911209248488512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5219,7 +5168,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6257173385101075191}
-  - component: {fileID: 5703641218072411945}
   - component: {fileID: 8561196678130448176}
   - component: {fileID: 8384928523322077943}
   - component: {fileID: 596439892598853421}
@@ -5247,47 +5195,6 @@ Transform:
   m_Father: {fileID: 3432581413877754224}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &5703641218072411945
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2910413278006243788}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 962e3bd0b9fed22429204e8e0309695e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &8561196678130448176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5384,7 +5291,7 @@ MonoBehaviour:
   go: {fileID: 0}
   stateMachine: {fileID: 0}
   nextState: {fileID: 4112007236735686827}
-  minDistance: 15
+  minDistance: 30
 --- !u!1 &3432581412087625196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,7 +5715,7 @@ MonoBehaviour:
   retractVelocity: 60
   offSetFixed: 0.3
   offSetPercentage: 0.2
-  stunTime: 1
+  stunTime: 1.5
   explosionRange: 12.5
   distanceToDestroyThorns: 20
   zarzaSpawnTimer: 0.1

@@ -640,13 +640,13 @@ MonoBehaviour:
   startingState: {fileID: 6408819378735252763}
   player: {fileID: 0}
   doorsManager: {fileID: 0}
-  optimalMovementProbability: 0.7
-  timeMoving: 0.3
+  optimalMovementProbability: 0.75
+  timeMoving: 0.35
   expantionWaveVel: 1
-  timeToDissapear: 18
+  timeToDissapear: 10
   startingRadius: 1
   expansionRateMin: 5
-  expansionRateMax: 13
+  expansionRateMax: 5
   deathArea: 0.2
   targetPos: {x: 0, y: 0, z: 0}
   GyroX: {fileID: 8612216322484930265}
@@ -956,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 404496650276221240, guid: 39cb043f1683c1e49b885948facbd226, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638654236595860830, guid: 39cb043f1683c1e49b885948facbd226, type: 3}
+      propertyPath: startsDeactivated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4673542647614220246, guid: 39cb043f1683c1e49b885948facbd226, type: 3}
       propertyPath: m_Name
@@ -1598,6 +1602,10 @@ PrefabInstance:
     - target: {fileID: 404496650276221240, guid: 39cb043f1683c1e49b885948facbd226, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 638654236595860830, guid: 39cb043f1683c1e49b885948facbd226, type: 3}
+      propertyPath: startsDeactivated
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4673542647614220246, guid: 39cb043f1683c1e49b885948facbd226, type: 3}
       propertyPath: m_Name

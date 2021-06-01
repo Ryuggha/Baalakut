@@ -929,7 +929,7 @@ MonoBehaviour:
   SlowMovementDuration: 3
   FastMovementDuration: 1.5
   SlowWalkChance: 65
-  movementsToSweep: 5
+  movementsToSweep: 3
   AimingDuration: 2.5
   AimingRayWidth: 0.1
   ShotRayWidth: 1
@@ -939,8 +939,8 @@ MonoBehaviour:
   maxDarknessLastingTime: 12
   aimingColor: {r: 1, g: 0, b: 0, a: 1}
   shotColor: {r: 0.8263159, g: 0, b: 1, a: 1}
-  angleToShot: 45
-  sweepAcceleration: 2
+  angleToShot: 50
+  sweepAcceleration: 10
   numberOfCrystals: 3
   stunTime: 2
   standardMaterial: {fileID: 2100000, guid: 962e3bd0b9fed22429204e8e0309695e, type: 2}

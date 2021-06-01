@@ -28,6 +28,7 @@ public class InGameMenu : MonoBehaviour
     }
     public void QuitBotton()
     {
+        toggleActive();
         SceneManager.LoadScene(0);
     }
 
