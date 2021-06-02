@@ -21,7 +21,10 @@ public class RagdollController : MonoBehaviour
 
         foreach (Rigidbody rb in rigidbodies)
         {
+            if (b) rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+            else rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
             rb.isKinematic = isKinematic;
+            
             if (b) rb.gameObject.layer = 9;
         }
         anim.enabled = !b;

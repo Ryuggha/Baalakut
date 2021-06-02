@@ -19,6 +19,8 @@ public class SlowTrigger : MonoBehaviour
 
     public void stop()
     {
+        GetComponent<ParticleSystem>().Stop();
         hasStoped = true;
+        Destroy(gameObject, 6);
     }
 }

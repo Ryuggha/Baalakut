@@ -35,8 +35,6 @@ public class TrailSlow : MonoBehaviour
     public IEnumerator destroy(GameObject obj, float timeToLive)
     {
         yield return new WaitForSeconds(timeToLive);
-        obj.GetComponent<ParticleSystem>().Stop();
         obj.GetComponent<SlowTrigger>().stop();
-        Destroy(obj, 3);
     }
 }

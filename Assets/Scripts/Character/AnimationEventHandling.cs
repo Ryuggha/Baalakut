@@ -18,9 +18,4 @@ public class AnimationEventHandling : MonoBehaviour
     {
         sh.playSound(STEP);
     }
-
-    public void shotRelease()
-    {
-        sh.playSound(SHOT);
-    }
 }

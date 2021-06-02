@@ -36,6 +36,7 @@ public class CameraHandler : MonoBehaviour
         singleton = this;
         selfTransform = transform;
         defaultPosition = cameraTransform.localPosition.z;
+        lookAngle = selfTransform.eulerAngles.y;
     }
 
     private void OnEnable()
