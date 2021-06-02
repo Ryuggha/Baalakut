@@ -29,7 +29,9 @@ public class ThornAttack : State
         if (periodTimer <= 0)
         {
             periodTimer = periodOfThornAttackSpawn;
-            Instantiate(Thorn, stateMachine.player.gameObject.transform.position, Quaternion.identity);
+            Vector3 target = stateMachine.player.gameObject.transform.position;
+            target.y = 0;
+            Instantiate(Thorn, target, Quaternion.identity);
         }
 
         if (globalTimer <= 0) 
