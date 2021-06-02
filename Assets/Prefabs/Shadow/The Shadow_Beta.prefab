@@ -177,7 +177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4935491541724758905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0.2, z: 0.3}
+  m_LocalPosition: {x: 0.09, y: -0.41, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7250997970242808328}
@@ -452,7 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7250997970242808328
 Transform:
   m_ObjectHideFlags: 0
@@ -1040,7 +1040,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7250997971390873446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1423,18 +1423,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7250997970242808328}
     m_Modifications:
-    - target: {fileID: 2182583114429258704, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182583114429258704, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182583114429258704, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6275469273141523858, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1482,18 +1470,6 @@ PrefabInstance:
     - target: {fileID: 6655513905697845032, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
       propertyPath: m_Name
       value: shadow_leg
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655513905697845032, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7370810214849171766, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
-      propertyPath: body
-      value: 
-      objectReference: {fileID: 7250997971390873445}
-    - target: {fileID: 7370810214849171766, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
-      propertyPath: otherLegReference
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8320843323257917628, guid: 6bebb83a778bf2745b47b48d340930d2, type: 3}
       propertyPath: body

@@ -15239,10 +15239,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3370002571806089265, guid: 141f00f62b842c14facc775559066fd2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.41
-      objectReference: {fileID: 0}
     - target: {fileID: 7250997970242808328, guid: 141f00f62b842c14facc775559066fd2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -15291,18 +15287,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: The Shadow_Beta
       objectReference: {fileID: 0}
-    - target: {fileID: 7250997970242808329, guid: 141f00f62b842c14facc775559066fd2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250997971390873451, guid: 141f00f62b842c14facc775559066fd2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9008430673458504692, guid: 141f00f62b842c14facc775559066fd2, type: 3}
-      propertyPath: body
-      value: 
-      objectReference: {fileID: 2043567677}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 141f00f62b842c14facc775559066fd2, type: 3}
 --- !u!1 &1571515020
@@ -19254,11 +19238,6 @@ MeshFilter:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6360481737595075713, guid: 37e320aef798d964788df4e64506cf5e, type: 3}
   m_PrefabInstance: {fileID: 81590315}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2043567677 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7250997971390873445, guid: 141f00f62b842c14facc775559066fd2, type: 3}
-  m_PrefabInstance: {fileID: 1568951193}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2044031852
 PrefabInstance:
