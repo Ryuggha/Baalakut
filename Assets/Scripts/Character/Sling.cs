@@ -121,18 +121,34 @@ public class Sling : MonoBehaviour
 
     private void renderHud(Vector3 velocity, float gravityModifier)
     {
-        hud.positionCount = linePoints + 1;
-        hud.SetPositions(calculatePoints(velocity, gravityModifier));
+        Vector3[] array = calculatePoints(velocity, gravityModifier);
+        hud.positionCount = array.Length;
+        hud.SetPositions(array);
         colorSetting();
     }
 
     private Vector3[] calculatePoints(Vector3 velocity, float gravityModifier)
     {
-        Vector3[] array = new Vector3[linePoints+1];
+        Vector3[] array = new Vector3[linePoints];
         Vector3 point;
         for (int i = 0; i<array.Length; i++) // i = tiempo en sec
         {
-            point = shotEmissor.position + velocity * i * 0.05f + Physics.gravity * gravityModifier * Mathf.Pow(i*0.05f, 2) * 0.5f; 
+            point = shotEmissor.position + velocity * i * 0.05f + Physics.gravity * gravityModifier * Mathf.Pow(i*0.05f, 2) * 0.5f;
+
+            Collider[] hitColliders = Physics.OverlapSphere(point, 0.1f);
+            foreach (var hitCollider in hitColliders)
+            {
+                if (hitCollider.gameObject.layer == 12)
+                {
+                    Vector3[] subArray = new Vector3[i];
+                    for (int j = 0; j < subArray.Length; j++)
+                    {
+                        subArray[j] = array[j];
+                    }
+                    return subArray;
+                }
+            }
+
             array[i] = point;
         }
         return array;
