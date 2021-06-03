@@ -8,6 +8,7 @@ public class ArenaDoorsManager : MonoBehaviour
     private bool combatOver = false;
 
     public GameObject[] Doors;
+    public GameObject portalLock;
 
     public bool startsActive = false;
 
@@ -28,7 +29,8 @@ public class ArenaDoorsManager : MonoBehaviour
         foreach (GameObject go in Doors)
 
                 go.SetActive(startsActive);
-        
+
+        if(portalLock) portalLock.SetActive(false);
         combatOver = true;
     }
 }
