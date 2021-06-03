@@ -15,6 +15,6 @@ public class PlayerChaser : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, player.position, velocity * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, player.position, velocity * Time.fixedDeltaTime);
     }
 }

@@ -41,7 +41,6 @@ public class StateMachine : MonoBehaviour
 
     public virtual void die()
     {
-        Debug.Log("Ded");
         dead = true;
         doorsManager.endCombat();
         Destroy(gameObject, 3);
