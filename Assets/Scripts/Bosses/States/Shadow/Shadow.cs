@@ -22,6 +22,8 @@ public class Shadow : StateMachine
     public float maxDarknessLastingTime = 12;
     public Color aimingColor;
     public Color shotColor;
+    public GameObject playerChaser;
+    public float playerChaser_Speed;
 
     [Header("Sweep Attack")]
     public float angleToShot;
