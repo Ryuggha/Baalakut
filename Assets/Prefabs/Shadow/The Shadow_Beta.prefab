@@ -510,6 +510,8 @@ MonoBehaviour:
   maxDarknessLastingTime: 12
   aimingColor: {r: 1, g: 0, b: 0, a: 1}
   shotColor: {r: 0.8263159, g: 0, b: 1, a: 1}
+  playerChaser: {fileID: 0}
+  playerChaser_Speed: 8
   angleToShot: 50
   sweepAcceleration: 10
   numberOfCrystals: 3
@@ -898,6 +900,10 @@ MonoBehaviour:
   go: {fileID: 0}
   stateMachine: {fileID: 0}
   trigger: {fileID: 6310889964385686733, guid: eb5bce1a23b75214fbe96c8625309529, type: 3}
+  deathTrigger: {fileID: 2789559587209259394, guid: e0bc36251ec0a624b817be23dfaebb29, type: 3}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &7250997971115205571
 GameObject:
   m_ObjectHideFlags: 0

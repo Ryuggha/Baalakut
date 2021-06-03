@@ -5,10 +5,11 @@ using UnityEngine;
 public class DeathTriggerBeam : MonoBehaviour
 {
     public PlayerManager player;
+    public float distance = 1;
 
     void Start()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) <= 1) player.takeDamage();
+        if (Vector3.Distance(transform.position, player.transform.position) <= distance) player.takeDamage();
         Destroy(gameObject);
     }
 }
