@@ -6409,6 +6409,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8057904894609720852, guid: 20834eca687b88c4292319f92e50db15, type: 3}
   m_PrefabInstance: {fileID: 552387578}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &610558415 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5444314136072608401, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+  m_PrefabInstance: {fileID: 1568951193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &615121123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15535,6 +15540,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2534514471250210891, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534514471250210891, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Range
+      value: 6.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534514471250210891, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534514471250210891, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534514471250210891, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534514471250210891, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534514471250210893, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364694883357811496, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: eye
+      value: 
+      objectReference: {fileID: 610558415}
     - target: {fileID: 4364694883357811496, guid: 141f00f62b842c14facc775559066fd2, type: 3}
       propertyPath: doorsManager
       value: 
@@ -15590,6 +15627,10 @@ PrefabInstance:
     - target: {fileID: 7250997970242808329, guid: 141f00f62b842c14facc775559066fd2, type: 3}
       propertyPath: m_Name
       value: The Shadow_Beta
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250997970242808329, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 141f00f62b842c14facc775559066fd2, type: 3}

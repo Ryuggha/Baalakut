@@ -1100,10 +1100,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1085922388352550426, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085922388352550426, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1750042664686040997, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: startsDeactivated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3436023242319602543, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: doorsManager
       value: 
       objectReference: {fileID: 2010425085}
+    - target: {fileID: 8215597556026903958, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.506
+      objectReference: {fileID: 0}
     - target: {fileID: 8612216323938073410, guid: d83542feb35c9fc43b38818e556e94d1, type: 3}
       propertyPath: m_Name
       value: Dodecaedron
