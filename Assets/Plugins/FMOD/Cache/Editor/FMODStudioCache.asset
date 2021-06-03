@@ -215,6 +215,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-2766157993736747432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ProjectileCharge/Charging
+  m_EditorClassIdentifier: 
+  Name: Charging
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-1307449703322469997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +384,7 @@ MonoBehaviour:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637581602496880851
+  stringsBankWriteTime: 637581150043932390
   cacheVersion: 6
 --- !u!114 &184281997272600534
 MonoBehaviour:
@@ -381,7 +401,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637581602496880851
+  lastModified: 637581150043932390
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -473,7 +493,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 5676311840901115472}
+  - {fileID: -2766157993736747432}
   MinDistance: 1
   MaxDistance: 20
   Length: 3672
@@ -1012,7 +1032,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637581602496871263
+  lastModified: 637581150043902151
   LoadResult: 0
   FileSizes: []
   Exists: 1

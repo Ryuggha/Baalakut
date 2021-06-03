@@ -55,6 +55,7 @@ public class SweepAttack : State
             if (positiveAcceleration) actualAngle = -angleToShot;
             else actualAngle = angleToShot;
 
+            eye.localRotation = Quaternion.identity;
             ray.SetPosition(0, eye.transform.position);
             ray.enabled = true;
         }

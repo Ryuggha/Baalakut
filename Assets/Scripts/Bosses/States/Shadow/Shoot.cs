@@ -15,6 +15,8 @@ public class Shoot : State
     private float minLastingTime;
     private float maxLastingTime;
     public GameObject trigger;
+    public GameObject deathTrigger;
+    public LayerMask layerMask;
     private Color color;
 
     private void Start()
@@ -40,6 +42,7 @@ public class Shoot : State
             eye.gameObject.GetComponent<LineRenderer>().enabled = true;
             ray.startWidth = ((Shadow)stateMachine).ShotRayWidth;
             ray.endWidth = ((Shadow)stateMachine).ShotRayWidth;
+            ray.SetPosition(1, ray.transform.position + ((ray.GetPosition(1) - ray.GetPosition(0)).normalized * 40));
 
             rayCast = new Ray(ray.GetPosition(0), ray.GetPosition(1)-ray.GetPosition(0));
 
@@ -49,10 +52,13 @@ public class Shoot : State
                 GameObject obj = Instantiate(trigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i, Quaternion.identity);
                 StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
             }
-
-            if (Physics.Raycast(rayCast, out hit, distance, LayerMask.GetMask("Player")))
+            Physics.Raycast(rayCast, out hit, distance, layerMask);
+            for (int i = 0; i < (hit.point - eye.position).magnitude * 4; i++)
             {
-                ((Shadow)stateMachine).player.GetComponentInChildren<PlayerManager>().takeDamage();
+                var auxPos = ray.GetPosition(0) + ((ray.GetPosition(1) - ray.GetPosition(0)).normalized * (i / 4));
+                auxPos.y = 0;
+                GameObject auxObj = Instantiate(deathTrigger, auxPos, Quaternion.identity);
+                auxObj.GetComponent<DeathTriggerBeam>().player = stateMachine.player;
             }
         }
 
@@ -60,7 +66,7 @@ public class Shoot : State
        
         if (timeShot >= ((Shadow)stateMachine).ShotDuration)
         {
-            eye.gameObject.GetComponent<LineRenderer>().enabled = false;
+            ray.enabled = false;
             shootting = false;
             return go.GetComponentInChildren<PreMovement>();
         }
