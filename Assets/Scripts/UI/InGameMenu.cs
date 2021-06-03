@@ -8,14 +8,22 @@ public class InGameMenu : MonoBehaviour
 {
     private InputHandler inputs;
     private bool active;
+    private bool dead;
+    private float deathTime;
+    private float timer;
+
+    public float textDeathTimer = 1;
 
     public Button menuFirstButton;
     public GameObject inGameMenu;
     public GameObject optionsMenu;
+    public Image deathPanel;
+    public Image deathText;
 
     private void Start()
     {
         inputs = FindObjectOfType<InputHandler>();
+        deathTime = FindObjectOfType<PlayerManager>().deathTimer;
     }
 
     public void PlayButton()
@@ -51,10 +59,27 @@ public class InGameMenu : MonoBehaviour
     private void LateUpdate()
     {
         if (inputs.menuFlag) toggleActive();
+        if (dead)
+        {
+            timer += Time.deltaTime;
+            Color color = deathPanel.color;
+            color.a = Mathf.Clamp01(timer / deathTime);
+            deathPanel.color = color;
+
+            color = deathText.color;
+            color.a = Mathf.Clamp01(timer);
+            deathText.color = color;
+        }
     }
 
     public bool getPaused()
     {
         return active;
     }
+    public void die()
+    {
+        dead = true;
+        timer = 0;
+    }
+
 }

@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour
 
     private bool dead;
 
+    public float deathTimer = 3f;
+
     private bool darkened;
     private float darkenedTimer;
 
@@ -133,10 +135,13 @@ public class PlayerManager : MonoBehaviour
 
     public void takeDamage() //Unimplemented method
     {
-        dead = true;
-        ragdoll.ragdollEnabled(true);
-        Invoke("restartScene", 5f);
-        //Debug.Log("Probably, this will simply kill the player, but for now, it only shows a Log");
+        if (!dead)
+        {
+            dead = true;
+            ragdoll.ragdollEnabled(true);
+            menu.die();
+            Invoke("restartScene", deathTimer);
+        }
     }
 
     public void restartScene()
