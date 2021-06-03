@@ -36,7 +36,7 @@ public class Shadow : StateMachine
     public Material standardMaterial;
     public Material vulnerableMaterial;
     public Light vulnerableLight;
-    public MeshRenderer eye;
+    public MeshRenderer[] eye;
 
     [Header("Trail Attack")]
     public float TrailDuration = 10; //Time in seconds
@@ -67,13 +67,19 @@ public class Shadow : StateMachine
         
         if (activeCrystals >= numberOfCrystals)
         {
-            eye.material = vulnerableMaterial;
+            foreach (var mesh in eye)
+            {
+                mesh.material = vulnerableMaterial;
+            }
             vulnerableLight.enabled = true;
             MakeItVulnerable();
         }
         else
         {
-            eye.material = standardMaterial;
+            foreach (var mesh in eye)
+            {
+                mesh.material = standardMaterial;
+            }
             vulnerableLight.enabled = false;
         }
     }
