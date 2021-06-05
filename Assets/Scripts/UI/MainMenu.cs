@@ -15,14 +15,21 @@ public class MainMenu : MonoBehaviour
 
     public void PlayButton()
     {
+        SoundHandler.playSound("event:/SFX/Menu/ClickButtonIn", Vector3.zero);
         SceneManager.LoadScene(1);
     }
     public void OptionsButton()
     {
-
+        SoundHandler.playSound("event:/SFX/Menu/ClickButtonIn", Vector3.zero);
     }
     public void QuitBotton()
     {
+        SoundHandler.playSound("event:/SFX/Menu/ClickButtonOut", Vector3.zero);
         Application.Quit();
+    }
+
+    public void Hover()
+    {
+        SoundHandler.playSound("event:/SFX/Menu/HoverButton", Vector3.zero);
     }
 }

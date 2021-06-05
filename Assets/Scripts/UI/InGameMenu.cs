@@ -28,14 +28,16 @@ public class InGameMenu : MonoBehaviour
 
     public void PlayButton()
     {
+        SoundHandler.playSound("event:/SFX/Menu/ClickButtonIn", Vector3.zero);
         toggleActive();
     }
     public void OptionsButton()
     {
-
+        SoundHandler.playSound("event:/SFX/Menu/ClickButtonIn", Vector3.zero);
     }
     public void QuitBotton()
     {
+        SoundHandler.playSound("event:/SFX/Menu/ClickButtonOut", Vector3.zero);
         toggleActive();
         SceneManager.LoadScene(0);
     }
@@ -80,6 +82,11 @@ public class InGameMenu : MonoBehaviour
     {
         dead = true;
         timer = 0;
+    }
+
+    public void hover()
+    {
+        SoundHandler.playSound("event:/SFX/Menu/HoverButton", Vector3.zero);
     }
 
 }
