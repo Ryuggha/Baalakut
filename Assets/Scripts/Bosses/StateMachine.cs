@@ -41,6 +41,7 @@ public class StateMachine : MonoBehaviour
 
     public virtual void die()
     {
+        SoundHandler.playSound("event:/SFX/Character/CriticalHit", transform.position);
         dead = true;
         doorsManager.endCombat();
         Destroy(gameObject, 3);

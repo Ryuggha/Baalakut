@@ -135,6 +135,7 @@ public class Movement : MonoBehaviour
 
             //Anim Interacting
             animatorHandler.PlayTargetAnimation("StartDash", true);
+            SoundHandler.playSound("event:/SFX/Character/Dash", transform.position);
             playerManager.startDash();
 
             RaycastHit hit;

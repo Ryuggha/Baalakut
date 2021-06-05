@@ -59,11 +59,15 @@ public class Cube : StateMachine
     {
         var aux = FindObjectsOfType<Zarza>();
         foreach (Zarza zarza in aux) zarza.retract(4);
+        SoundHandler.playSound("event:/SFX/Cube/CubeDeath", transform.position);
+        GetComponentInChildren<Launch>().stopSound();
+        GetComponentInChildren<Retract>().stopSound();
         base.hit();
     }
 
     public void stunned()
     {
+        GetComponentInChildren<Launch>().stopSound();
         this.stun = true;
         actualState = GetComponentInChildren<PreRetract>();
         var aux = GetComponentInChildren<TimesLaunched>();

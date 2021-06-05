@@ -7,7 +7,6 @@ public class AnimationEventHandling : MonoBehaviour
     private SoundHandler sh;
 
     private const string STEP = "event:/SFX/Character/RunStep";
-    private const string SHOT = "event:/SFX/Character/ProjectileShot";
 
     private void Start()
     {
@@ -16,6 +15,6 @@ public class AnimationEventHandling : MonoBehaviour
 
     public void step()
     {
-        sh.playSound(STEP);
+        SoundHandler.playSound(STEP, transform.position);
     }
 }

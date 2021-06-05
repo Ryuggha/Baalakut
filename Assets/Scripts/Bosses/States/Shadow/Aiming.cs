@@ -33,6 +33,7 @@ public class Aiming : State
 
         if (!aiming)
         {
+            SoundHandler.playSound("event:/SFX/Shadow/LaserAim", transform.position);
             ray.startColor = color;
             ray.endColor = color;
             aiming = true;

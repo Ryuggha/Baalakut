@@ -136,6 +136,8 @@ public class PremovementCalculations : State
 
         ((Dodecaethron)stateMachine).targetPos = go.transform.position + (((Dodecaethron)stateMachine).GyroX.transform.forward * ((Dodecaethron)stateMachine).distanceToMove);
 
+        SoundHandler.playSound("event:/SFX/Dodecahedron/DodecahedronMovement", transform.position);
+
         return go.GetComponentInChildren<RotateTowardsPlayer>().tick(delta);
     }
 }

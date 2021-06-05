@@ -35,6 +35,7 @@ public class Shoot : State
 
         if (!shootting)
         {
+            SoundHandler.playSound("event:/SFX/Shadow/LaserShot", transform.position);
             ray.startColor = color;
             ray.endColor = color;
             shootting = true;

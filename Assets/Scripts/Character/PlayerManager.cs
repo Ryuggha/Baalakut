@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
     private DarknessUI dUI;
     private InGameMenu menu;
     private RagdollController ragdoll;
+    private SoundHandler sound;
 
     private bool dead;
 
@@ -35,6 +36,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        sound = GetComponent<SoundHandler>();
         ragdoll = GetComponentInChildren<RagdollController>();
         menu = FindObjectOfType<InGameMenu>();
         animatorHandler = GetComponentInChildren<AnimatorHandler>();
@@ -140,6 +142,7 @@ public class PlayerManager : MonoBehaviour
             dead = true;
             ragdoll.ragdollEnabled(true);
             menu.die();
+            SoundHandler.playSound("event:/SFX/Character/CharacterDeath", transform.position);
             Invoke("restartScene", deathTimer);
         }
     }

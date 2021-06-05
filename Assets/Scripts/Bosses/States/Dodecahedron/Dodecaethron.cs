@@ -36,6 +36,7 @@ public class Dodecaethron : StateMachine
             foreach (ExpansionWave ew in aux) ew.destroy();
             base.hit();
             die();
+            SoundHandler.playSound("event:/SFX/Dodecahedron/DodecahedronDeath", transform.position);
         }
     }
 

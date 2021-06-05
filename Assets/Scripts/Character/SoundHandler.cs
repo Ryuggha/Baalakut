@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SoundHandler : MonoBehaviour
 {
-    public void playSound(string path)
+
+    public static void playSound(string path, Vector3 position)
     {
-        //FMODUnity.RuntimeManager.PlayOneShot(path, transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot(path, position);
     }
 }

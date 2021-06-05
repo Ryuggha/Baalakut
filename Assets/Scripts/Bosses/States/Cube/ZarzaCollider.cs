@@ -9,6 +9,7 @@ public class ZarzaCollider : MonoBehaviour
         if (other.gameObject.layer == 13)
         {
             GetComponentInParent<Cube>().stunned();
+            SoundHandler.playSound("event:/SFX/Cube/ThornImpact", transform.position);
         }
     }
 }

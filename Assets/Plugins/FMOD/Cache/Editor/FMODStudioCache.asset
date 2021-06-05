@@ -85,7 +85,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 602
+  Length: 0
 --- !u!114 &-5726579748236594118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,8 +150,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MaxDistance: 10000
+  Length: 12171
 --- !u!114 &-4877055628939683215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 518
 --- !u!114 &-3413093660973180388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +338,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1097631751036759474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/CriticalHit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/CriticalHit
+  guid: 7e0056bad1fc3e4ba1a072f9c4e2b4c5
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 1400
+  Length: 0
 --- !u!114 &-789505576198480546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,8 +382,31 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 550
   Length: 0
+--- !u!114 &-592411766309886966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/DodecahedronLavaStep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/DodecahedronLavaStep
+  guid: 7c5d381137e8c749b7de5874437a3292
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1104
 --- !u!114 &-478187660337932101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +491,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 700
   Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -499,12 +545,14 @@ MonoBehaviour:
   - {fileID: 1860686305072061738}
   - {fileID: 1549046636179581679}
   - {fileID: -789505576198480546}
+  - {fileID: -592411766309886966}
+  - {fileID: -1097631751036759474}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637581150043932390
+  stringsBankWriteTime: 637584626133868597
   cacheVersion: 6
 --- !u!114 &184281997272600534
 MonoBehaviour:
@@ -521,11 +569,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637581150043932390
+  lastModified: 637584626133868597
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2476
+    Value: 2518
   Exists: 1
 --- !u!114 &811118871826658994
 MonoBehaviour:
@@ -583,16 +631,16 @@ MonoBehaviour:
   m_Name: event:/SFX/Shadow/LaserShot
   m_EditorClassIdentifier: 
   Path: event:/SFX/Shadow/LaserShot
-  guid: 8f65d1fbf86c054ba366268b0f15a691
+  guid: 210dae4bb249f843b1b07efdf5425675
   Banks:
   - {fileID: 7675014413968261407}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
+  MinDistance: 1
+  MaxDistance: 950
+  Length: 2519
 --- !u!114 &1242204229191683336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,12 +679,11 @@ MonoBehaviour:
   - {fileID: 7675014413968261407}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 5027651248606691817}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3672
+  Length: 1464
 --- !u!114 &1776807097506058110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,7 +751,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 10000
   Length: 0
 --- !u!114 &2226386715752761956
 MonoBehaviour:
@@ -750,7 +797,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 800
   Length: 0
 --- !u!114 &3077703872621802996
 MonoBehaviour:
@@ -831,16 +878,16 @@ MonoBehaviour:
   m_Name: event:/SFX/Cube/CubeMovement
   m_EditorClassIdentifier: 
   Path: event:/SFX/Cube/CubeMovement
-  guid: 23c354b30c518b46a5ec90f06067945c
+  guid: d46dfa3e1199fd4db7431d4686275f64
   Banks:
   - {fileID: 7675014413968261407}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MinDistance: 0
+  MaxDistance: 65
+  Length: 1457
 --- !u!114 &4578873162243116916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +964,7 @@ MonoBehaviour:
   m_Name: event:/SFX/Dodecahedron/DodecahedronDeath
   m_EditorClassIdentifier: 
   Path: event:/SFX/Dodecahedron/DodecahedronDeath
-  guid: 85436b4e5701ce41a1c19dac9fde3e1f
+  guid: 50e20f03d74e93429edcc34a0bbffcc9
   Banks:
   - {fileID: 7675014413968261407}
   IsStream: 0
@@ -925,8 +972,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MaxDistance: 10000
+  Length: 10871
 --- !u!114 &5027651248606691817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,15 +1007,15 @@ MonoBehaviour:
   m_Name: event:/SFX/Character/CharacterDeath
   m_EditorClassIdentifier: 
   Path: event:/SFX/Character/CharacterDeath
-  guid: a1aeb649a5a97648b4cd9f4c24d3dca0
+  guid: a2b535943d014c44bdcf603b43c77fb6
   Banks:
   - {fileID: 7675014413968261407}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 0
 --- !u!114 &5394987242196563268
 MonoBehaviour:
@@ -1089,16 +1136,16 @@ MonoBehaviour:
   m_Name: event:/SFX/Shadow/LaserAim
   m_EditorClassIdentifier: 
   Path: event:/SFX/Shadow/LaserAim
-  guid: 5ad6461d2fb0df448ec091a2a88851f6
+  guid: efe212ac56957344bd317afec413409d
   Banks:
   - {fileID: 7675014413968261407}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
+  MinDistance: 1
+  MaxDistance: 1400
+  Length: 6803
 --- !u!114 &6441126016358319147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,7 +1168,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3672
+  Length: 1929
 --- !u!114 &6728132758664759154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1244,16 +1291,16 @@ MonoBehaviour:
   m_Name: event:/SFX/Shadow/ShadowDeath
   m_EditorClassIdentifier: 
   Path: event:/SFX/Shadow/ShadowDeath
-  guid: d95396c4567186459294ea5d8ec4e268
+  guid: 2e5b5a178136704c8584d72cae722be0
   Banks:
   - {fileID: 7675014413968261407}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MinDistance: 0
+  MaxDistance: 10000
+  Length: 10871
 --- !u!114 &7422557597105870188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1292,7 +1339,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637581150043902151
+  lastModified: 637584626133838677
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1400,7 +1447,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 900
   Length: 0
 --- !u!114 &8933397854092223930
 MonoBehaviour:

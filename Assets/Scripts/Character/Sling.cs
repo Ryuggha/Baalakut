@@ -67,6 +67,7 @@ public class Sling : MonoBehaviour
                 anim.setCharging(true);
                 isCharging = true;
                 chargeParticles.Play();
+                SoundHandler.playSound("event:/SFX/Character/ProjectileCharge", transform.position);
             }
             timeCharged += delta;
             //RENDER HUD
@@ -107,6 +108,7 @@ public class Sling : MonoBehaviour
     {
         if (timeCharged >= minTimeCharging)
         {
+            SoundHandler.playSound("event:/SFX/Character/ProjectileShot", transform.position);
             float shotModule = maxSpeed;
             if (timeCharged < maxTimeCharging)
                 shotModule = minSpeed + ((maxSpeed - minSpeed) * ((timeCharged - minTimeCharging) / (maxTimeCharging - minTimeCharging)));

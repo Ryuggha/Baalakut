@@ -18,6 +18,7 @@ public class FaceProtector : MonoBehaviour
     {
         isActive = true;
         if (weakProtector) GetComponentInParent<Dodecaethron>().setWeakState();
+        if (!startsDeactivated) SoundHandler.playSound("event:/SFX/Dodecahedron/PortectionBreak", transform.position);
     }
 
     public void isTouchingGround(bool b)

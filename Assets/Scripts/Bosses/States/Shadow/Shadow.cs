@@ -57,6 +57,7 @@ public class Shadow : StateMachine
             {
                 s.stop();
             }
+            SoundHandler.playSound("event:/SFX/Shadow/ShadowDeath", transform.position);
             die();
         }
     }
@@ -73,6 +74,7 @@ public class Shadow : StateMachine
             }
             vulnerableLight.enabled = true;
             MakeItVulnerable();
+            SoundHandler.playSound("event:/SFX/Shadow/ShadowVulnerable", transform.position);
         }
         else
         {

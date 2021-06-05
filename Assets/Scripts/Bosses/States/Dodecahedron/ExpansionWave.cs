@@ -10,6 +10,7 @@ public class ExpansionWave : MonoBehaviour
     private float radius;
     private float timer;
     private bool isDestroyed;
+    private FMOD.Studio.EventInstance waveSound;
 
     public float timeToDissapear;
     public float startingRadius;
@@ -34,6 +35,10 @@ public class ExpansionWave : MonoBehaviour
         this.deathArea = deathArea;
         tick();
         particles.Play();
+        SoundHandler.playSound("event:/SFX/Dodecahedron/CreateWave", transform.position);
+        waveSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Dodecahedron/WaveSound");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(waveSound, transform, new Rigidbody());
+        waveSound.start();
     }
 
     void Update()
@@ -57,6 +62,7 @@ public class ExpansionWave : MonoBehaviour
 
     public void destroy()
     {
+        waveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         isDestroyed = true;
         particles.Stop();
         Destroy(gameObject, 3);

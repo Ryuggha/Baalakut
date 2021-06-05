@@ -18,6 +18,7 @@ public class Zarza : MonoBehaviour
 
     public void destroy(float time)
     {
+        SoundHandler.playSound("event:/SFX/Cube/ThornBreak", transform.position);
         Destroy(gameObject, Random.Range(0.1f, 0.3f) + time);
     }
 

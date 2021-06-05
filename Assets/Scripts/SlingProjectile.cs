@@ -35,6 +35,10 @@ public class SlingProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (layerMask.value != 9) Destroy(gameObject);
+        if (layerMask.value != 9)
+        {
+            SoundHandler.playSound("event:/SFX/Character/ProjectileImpact", transform.position);
+            Destroy(gameObject);
+        }
     }
 }
