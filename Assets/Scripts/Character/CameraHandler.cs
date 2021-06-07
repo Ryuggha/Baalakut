@@ -17,6 +17,7 @@ public class CameraHandler : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     [HideInInspector] public static CameraHandler singleton;
 
+    private float originalFov = 60;
     public float fovMultiplicatorWhileCharging = 0.8f;
     public float lookSpeed = 0.01f, followSpeed = 4, dashFollowSpeed = 0.01f, pivotSpeed = 0.007f;
     private float defaultPosition, lookAngle, pivotAngle, targetPosition;
@@ -37,6 +38,7 @@ public class CameraHandler : MonoBehaviour
         selfTransform = transform;
         defaultPosition = cameraTransform.localPosition.z;
         lookAngle = selfTransform.eulerAngles.y;
+        originalFov = cam.fieldOfView;
     }
 
     private void OnEnable()
@@ -54,12 +56,12 @@ public class CameraHandler : MonoBehaviour
         if (playerManager.chargeStatus > 0)
         {
             cameraPivotTransform.position = Vector3.Lerp(cameraPivotTransform.position, cameraChargingPivotPos.position, delta);
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, inputManager.fov * fovMultiplicatorWhileCharging, delta);
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, originalFov * fovMultiplicatorWhileCharging, delta);
         }
         else
         {
             cameraPivotTransform.position = Vector3.Lerp(cameraPivotTransform.position, cameraFreeLookPivotPos.position, delta * 5);
-            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, inputManager.fov, delta * 5);
+            cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, originalFov, delta * 5);
         }
     }
 

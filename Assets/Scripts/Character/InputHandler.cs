@@ -7,7 +7,6 @@ public class InputHandler : MonoBehaviour
     [Header("Camera Options")]
     [SerializeField] [Range(0, 5)] private float mouseCameraSensibility = 1f;
     [SerializeField] [Range(0, 5)] private float controllerCameraSensibility = 1f;
-    [HideInInspector] public float fov = 60;
 
     [Header("Debug flags")]
     public float horizontal;
