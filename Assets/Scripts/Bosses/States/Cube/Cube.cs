@@ -20,6 +20,7 @@ public class Cube : StateMachine
     [Header("Modelos")]
     public GameObject front;
     public GameObject back;
+    public GameObject deadCube;
 
     private float distanceToMove;
     [HideInInspector] public float offSet;
@@ -63,6 +64,7 @@ public class Cube : StateMachine
         GetComponentInChildren<Launch>().stopSound();
         GetComponentInChildren<Retract>().stopSound();
         base.hit();
+        Invoke("instantiateAfterHit", 2.9f);
     }
 
     public void stunned()
@@ -72,5 +74,10 @@ public class Cube : StateMachine
         actualState = GetComponentInChildren<PreRetract>();
         var aux = GetComponentInChildren<TimesLaunched>();
         aux.explosionCounter = nTimesToExplote;
+    }
+
+    public void instantiateAfterHit()
+    {
+        GameObject.Instantiate(deadCube, transform.position, Quaternion.identity);
     }
 }
