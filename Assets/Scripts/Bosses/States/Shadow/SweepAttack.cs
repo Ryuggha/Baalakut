@@ -78,11 +78,11 @@ public class SweepAttack : State
         actualAcceleration += actualAcceleration * delta;
 
         float period = Vector3.Distance(ray.GetPosition(0), ray.GetPosition(1));
-        for (int i = 0; i < period / 4; i++)
+        /*for (int i = 0; i < period / 4; i++)
         {
             GameObject obj = (GameObject)Instantiate(slowTrigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i*4, Quaternion.identity);
             StartCoroutine(destroy(obj, Random.Range(minLastingTime/10, maxLastingTime/10)));
-        }
+        }*/
         for (int i = 0; i < (hit.point - eye.position).magnitude * 4; i++)
         {
             var auxPos = ray.GetPosition(0) + ((ray.GetPosition(1) - ray.GetPosition(0)).normalized * (i / 4));

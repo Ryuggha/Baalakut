@@ -53,10 +53,9 @@ public class Shoot : State
                 GameObject obj = Instantiate(trigger, ray.GetPosition(0) + (ray.GetPosition(1) - ray.GetPosition(0)).normalized * i, Quaternion.identity);
                 StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
             }
-            Physics.Raycast(rayCast, out hit, distance, layerMask);
-            for (int i = 0; i < (hit.point - eye.position).magnitude * 4; i++)
+            for (int i = 0; i < distance * 8; i++)
             {
-                var auxPos = ray.GetPosition(0) + ((ray.GetPosition(1) - ray.GetPosition(0)).normalized * (i / 4));
+                var auxPos = ray.GetPosition(0) + ((ray.GetPosition(1) - ray.GetPosition(0)).normalized * (i / 8));
                 auxPos.y = 0;
                 GameObject auxObj = Instantiate(deathTrigger, auxPos, Quaternion.identity);
                 auxObj.GetComponent<DeathTriggerBeam>().player = stateMachine.player;
