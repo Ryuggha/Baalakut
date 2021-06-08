@@ -38,6 +38,7 @@ public class SweepAttack : State
     {
         if (!shooting)
         {
+            SoundHandler.playSound("event:/SFX/Shadow/Spweep", transform.position);
             ray.startColor = color;
             ray.endColor = color;
             actualVelocity = 0;

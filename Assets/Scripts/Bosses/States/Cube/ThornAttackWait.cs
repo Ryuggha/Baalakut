@@ -21,6 +21,7 @@ public class ThornAttackWait : State
     {
         if (!active)
         {
+            stateMachine.GetComponentInChildren<ThornAttack>().startSound();
             particles.transform.position = go.transform.position;
             particles.GetComponent<ParticleSystem>().Play();
             active = true;
