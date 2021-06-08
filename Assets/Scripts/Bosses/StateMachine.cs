@@ -9,6 +9,7 @@ public class StateMachine : MonoBehaviour
 
     [Header("Boss State Stats")]
     public State startingState;
+    public GameObject deathAnimationPrefab;
 
     [HideInInspector] public PlayerManager player;
 
@@ -44,6 +45,18 @@ public class StateMachine : MonoBehaviour
         SoundHandler.playSound("event:/SFX/Character/CriticalHit", transform.position);
         dead = true;
         doorsManager.endCombat();
-        Destroy(gameObject, 3);
+        Invoke("destroyGO", 3);
+    }
+
+    private void destroyGO()
+    {
+        deathAnimation();
+        Destroy(gameObject);
+    }
+
+    public virtual void deathAnimation()
+    {
+        if (deathAnimationPrefab != null)
+            Instantiate(deathAnimationPrefab, gameObject.transform.position, gameObject.transform.rotation);
     }
 }

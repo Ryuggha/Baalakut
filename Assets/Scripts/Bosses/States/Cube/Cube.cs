@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cube : StateMachine
 {
+    public GameObject backDeathAnimationPrefab;
     public float launchVelocity;
     public float retractVelocity;
     public float offSetFixed;
@@ -63,6 +64,7 @@ public class Cube : StateMachine
         GetComponentInChildren<Launch>().stopSound();
         GetComponentInChildren<Retract>().stopSound();
         base.hit();
+        Invoke("instantiateAfterHit", 2.9f);
     }
 
     public void stunned()
@@ -72,5 +74,11 @@ public class Cube : StateMachine
         actualState = GetComponentInChildren<PreRetract>();
         var aux = GetComponentInChildren<TimesLaunched>();
         aux.explosionCounter = nTimesToExplote;
+    }
+
+    public override void deathAnimation()
+    {
+        Instantiate(deathAnimationPrefab, front.transform.position, front.transform.rotation);
+        Instantiate(backDeathAnimationPrefab, back.transform.position, back.transform.rotation);
     }
 }

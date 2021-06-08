@@ -54,7 +54,7 @@ public class Shoot : State
                 StartCoroutine(destroy(obj, Random.Range(minLastingTime, maxLastingTime)));
             }
             for (int i = 0; i < distance * 8; i++)
-            {
+           {
                 var auxPos = ray.GetPosition(0) + ((ray.GetPosition(1) - ray.GetPosition(0)).normalized * (i / 8));
                 auxPos.y = 0;
                 GameObject auxObj = Instantiate(deathTrigger, auxPos, Quaternion.identity);
