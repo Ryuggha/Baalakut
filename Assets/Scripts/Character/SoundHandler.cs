@@ -9,4 +9,9 @@ public class SoundHandler : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot(path, position);
     }
+
+    public void thornSound()
+    {
+        SoundHandler.playSound("event:/SFX/Cube/ThornAppear", transform.position);
+    }
 }

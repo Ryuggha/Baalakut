@@ -26,6 +26,7 @@ public class Retract : State
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(moveSound, stateMachine.gameObject.transform, stateMachine.GetComponent<Rigidbody>());
             moveSound.start();
             mooving = true;
+            SoundHandler.playSound("event:/SFX/Cube/CubeRetraction", transform.position);
         }
         Vector3 aux = ((Cube)stateMachine).back.transform.localPosition;
         aux.z += ((Cube)stateMachine).retractVelocity * delta;

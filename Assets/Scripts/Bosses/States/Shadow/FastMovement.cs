@@ -52,6 +52,7 @@ public class FastMovement : State
         return this;*/
         if (walking == false)
         {
+            if (Random.Range(0, 3) == 0) SoundHandler.playSound("event:/SFX/Shadow/ShadowMovement", transform.position);
             walking = true;
             direction = posiblePositions[Random.Range(0, posiblePositions.Count)];
             agent.speed = distance / duration;
