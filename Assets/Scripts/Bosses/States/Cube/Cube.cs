@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cube : StateMachine
 {
+    public GameObject backDeathAnimationPrefab;
     public float launchVelocity;
     public float retractVelocity;
     public float offSetFixed;
@@ -20,7 +21,6 @@ public class Cube : StateMachine
     [Header("Modelos")]
     public GameObject front;
     public GameObject back;
-    public GameObject deadCube;
 
     private float distanceToMove;
     [HideInInspector] public float offSet;
@@ -76,8 +76,9 @@ public class Cube : StateMachine
         aux.explosionCounter = nTimesToExplote;
     }
 
-    public void instantiateAfterHit()
+    public override void deathAnimation()
     {
-        GameObject.Instantiate(deadCube, transform.position, Quaternion.identity);
+        Instantiate(deathAnimationPrefab, front.transform.position, front.transform.rotation);
+        Instantiate(backDeathAnimationPrefab, back.transform.position, back.transform.rotation);
     }
 }
