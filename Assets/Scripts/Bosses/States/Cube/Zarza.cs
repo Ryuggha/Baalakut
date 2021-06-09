@@ -32,4 +32,9 @@ public class Zarza : MonoBehaviour
         var animator = GetComponentInParent<Animator>();
         animator.Play("Retract");
     }
+
+    public void playSound()
+    {
+        SoundHandler.playSound("event:/SFX/Cube/ThornAppear", transform.position);
+    }
 }

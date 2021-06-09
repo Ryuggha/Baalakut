@@ -22,6 +22,7 @@ public class Launch : State
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(moveSound, stateMachine.gameObject.transform, stateMachine.GetComponent<Rigidbody>());
             moveSound.start();
             mooving = true;
+            SoundHandler.playSound("event:/SFX/Cube/CubeLaunch", transform.position);
         }
         
         Vector3 aux = ((Cube)stateMachine).front.transform.localPosition;
@@ -38,7 +39,11 @@ public class Launch : State
         if (reachedDestinacion)
         {
             stopSound();
-            if (gonnaStun) ((Cube)stateMachine).stunned();
+            if (gonnaStun)
+            {
+                SoundHandler.playSound("event:/SFX/Cube/WallImpact", transform.position);
+                ((Cube)stateMachine).stunned();
+            }
             gonnaStun = false;
             return nextState;
         }

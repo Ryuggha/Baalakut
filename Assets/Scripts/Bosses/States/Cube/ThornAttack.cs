@@ -9,12 +9,14 @@ public class ThornAttack : State
     private ThornGeneratorParticles particles;
     private float durationOfAttack;
     private float periodOfThornAttackSpawn;
+    private FMOD.Studio.EventInstance attackSound;
 
     private float globalTimer;
     private float periodTimer;
 
     private void Start()
     {
+        attackSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cube/ThornAttack");
         particles = FindObjectOfType<ThornGeneratorParticles>();
         durationOfAttack = ((Cube)stateMachine).durationOfAttack;
         periodOfThornAttackSpawn = ((Cube)stateMachine).periodOfThornAttackSpawn;
@@ -36,6 +38,7 @@ public class ThornAttack : State
 
         if (globalTimer <= 0) 
         {
+            attackSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             particles.GetComponent<ParticleSystem>().Stop();
             globalTimer = durationOfAttack;
             return nextState.tick(delta);
@@ -43,4 +46,11 @@ public class ThornAttack : State
 
         return this;
     }
+
+    public void startSound()
+    {
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(attackSound, stateMachine.gameObject.transform, stateMachine.GetComponent<Rigidbody>());
+        attackSound.start();
+    }
 }
+

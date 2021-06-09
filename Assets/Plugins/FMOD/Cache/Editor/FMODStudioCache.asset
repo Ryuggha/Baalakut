@@ -152,6 +152,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 10000
   Length: 0
+--- !u!114 &-4915949025740546657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/ThornAppear
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/ThornAppear
+  guid: 1f5d920f36957e4fb1b290aaf8c17c7a
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 65
+  Length: 0
 --- !u!114 &-4877055628939683215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +238,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-3180938817539363921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/CubeLaunch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/CubeLaunch
+  guid: 14cf38902f89574081249041bc0324e2
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 65
+  Length: 1014
 --- !u!114 &-2935472733895909552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,8 +427,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 550
+  MinDistance: 0
+  MaxDistance: 65
   Length: 0
 --- !u!114 &-592411766309886966
 MonoBehaviour:
@@ -547,13 +593,41 @@ MonoBehaviour:
   - {fileID: -592411766309886966}
   - {fileID: -1097631751036759474}
   - {fileID: 5696082873867687408}
+  - {fileID: -4915949025740546657}
+  - {fileID: 14642404424588950}
+  - {fileID: 4378927636192972758}
+  - {fileID: -3180938817539363921}
+  - {fileID: 8736400736296620543}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637584645626471517
+  stringsBankWriteTime: 637587817237517773
   cacheVersion: 6
+--- !u!114 &14642404424588950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/Spweep
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/Spweep
+  guid: 56442cb5d4ab99448b93180bd458740b
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 500
+  Length: 3360
 --- !u!114 &184281997272600534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,11 +643,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637584645626471517
+  lastModified: 637587817237517773
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2514
+    Value: 2726
   Exists: 1
 --- !u!114 &811118871826658994
 MonoBehaviour:
@@ -616,8 +690,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  MaxDistance: 65
+  Length: 4653
 --- !u!114 &1187457674064103693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,8 +713,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 950
-  Length: 0
+  MaxDistance: 4600
+  Length: 3500
 --- !u!114 &1242204229191683336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,7 +757,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3672
+  Length: 0
 --- !u!114 &1776807097506058110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,13 +774,13 @@ MonoBehaviour:
   guid: 3b6ebbfa229b664084bde102e5fdfb8f
   Banks:
   - {fileID: 7675014413968261407}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 108211
 --- !u!114 &1860686305072061738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +802,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 40
   Length: 0
 --- !u!114 &2098348057845858357
 MonoBehaviour:
@@ -774,7 +848,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 650
   Length: 0
 --- !u!114 &2268441828691217339
 MonoBehaviour:
@@ -838,13 +912,13 @@ MonoBehaviour:
   guid: 6d26f61a250b77479757a3196f683379
   Banks:
   - {fileID: 7675014413968261407}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 59874
 --- !u!114 &3923333622692416675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -887,7 +961,30 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 65
-  Length: 1120
+  Length: 0
+--- !u!114 &4378927636192972758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/CubeRetraction
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/CubeRetraction
+  guid: 5ff5ea49d9e5bb4c85adbf4a894724a0
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 65
+  Length: 1014
 --- !u!114 &4578873162243116916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,11 +1043,11 @@ MonoBehaviour:
   - {fileID: 7675014413968261407}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 471
 --- !u!114 &5018277099546390731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,7 +1178,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 65
   Length: 0
 --- !u!114 &5676311840901115472
 MonoBehaviour:
@@ -1167,8 +1264,8 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 1400
-  Length: 3815
+  MaxDistance: 950
+  Length: 5480
 --- !u!114 &6441126016358319147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1271,13 +1368,13 @@ MonoBehaviour:
   guid: 9f6dc1e7c221dd428ca008ee195e7ce2
   Banks:
   - {fileID: 7675014413968261407}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 37274
 --- !u!114 &7129332312766113391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,7 +1459,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637584645626431625
+  lastModified: 637587817237307849
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1472,6 +1569,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 900
   Length: 0
+--- !u!114 &8736400736296620543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/ThornAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/ThornAttack
+  guid: d44dab91726ec24a845ba153080b5f2f
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2677
 --- !u!114 &8933397854092223930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,7 +1613,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 65
   Length: 0
 --- !u!114 &9031939594620453599
 MonoBehaviour:

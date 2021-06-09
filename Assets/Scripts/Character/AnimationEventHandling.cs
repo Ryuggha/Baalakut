@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class AnimationEventHandling : MonoBehaviour
 {
-    private SoundHandler sh;
-
     private const string STEP = "event:/SFX/Character/RunStep";
+    private const string WALKSTEP = "event:/SFX/Character/WalkStep";
+    private InputHandler inputs;
 
     private void Start()
     {
-        sh = GetComponentInParent<SoundHandler>();
+        inputs = GetComponentInParent<InputHandler>();
     }
 
     public void step()
     {
-        SoundHandler.playSound(STEP, transform.position);
+        if (inputs.moveAmount > .4f)
+            SoundHandler.playSound(STEP, transform.position);
+    }
+
+    public void walkStep()
+    {
+        if (inputs.moveAmount > .01f && inputs.moveAmount <= 0.4f)
+            SoundHandler.playSound(WALKSTEP, transform.position);
+    }
+
+    public void chargeStep()
+    {
+        SoundHandler.playSound(WALKSTEP, transform.position);
     }
 }
