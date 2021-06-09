@@ -7,6 +7,10 @@ public class LockDoor : MonoBehaviour
     public GameObject toDestroy;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 7) Destroy(toDestroy);
+        //if (other.gameObject.layer == 7) hit();
+    }
+    public void hit()
+    {
+        Destroy(toDestroy);
     }
 }

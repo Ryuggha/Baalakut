@@ -44,4 +44,21 @@ public class SlingProjectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        WeakSpot ws = other.gameObject.GetComponentInParent<WeakSpot>();
+        if (ws != null)
+        {
+            ws.hit();
+        }
+        else
+        {
+            LockDoor ld = other.gameObject.GetComponentInParent<LockDoor>();
+            if (ld != null)
+            {
+                ld.hit();
+            }
+        }
+    }
 }

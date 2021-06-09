@@ -5063,6 +5063,7 @@ GameObject:
   - component: {fileID: 7986112535499697370}
   - component: {fileID: 8686911209248488512}
   - component: {fileID: 6070749032713284989}
+  - component: {fileID: 4285583553874079158}
   m_Layer: 8
   m_Name: ModelBack
   m_TagString: Untagged
@@ -5111,6 +5112,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &4285583553874079158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180629711061975009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 0.97895503}
+  m_Center: {x: 0, y: 0, z: -0.5105225}
 --- !u!1 &1417967019507472510
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,8 +5966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingState: {fileID: 5165920634343104038}
+  deathAnimationPrefab: {fileID: 0}
   player: {fileID: 0}
   doorsManager: {fileID: 0}
+  backDeathAnimationPrefab: {fileID: 0}
   launchVelocity: 49
   retractVelocity: 60
   offSetFixed: 0.3
