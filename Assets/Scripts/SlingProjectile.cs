@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlingProjectile : MonoBehaviour
 {
     public LayerMask layerMask;
+    public GameObject impactParticles;
 
     private Rigidbody rb;
     private Vector3 shotSpeed;
@@ -21,6 +22,7 @@ public class SlingProjectile : MonoBehaviour
         Vector3 rbVel = rb.velocity;
         rbVel.y += gravity * Time.fixedDeltaTime * Physics.gravity.y;
         rb.velocity = rbVel;
+        transform.forward = rb.velocity.normalized;
     }
 
     public void setShotSpeed(Vector3 shotSpeed)
@@ -38,6 +40,7 @@ public class SlingProjectile : MonoBehaviour
         if (layerMask.value != 9)
         {
             SoundHandler.playSound("event:/SFX/Character/ProjectileImpact", transform.position);
+            Instantiate(impactParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
