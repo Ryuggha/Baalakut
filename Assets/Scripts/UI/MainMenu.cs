@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -16,7 +15,7 @@ public class MainMenu : MonoBehaviour
     public void PlayButton()
     {
         SoundHandler.playSound("event:/SFX/Menu/ClickButtonIn", Vector3.zero);
-        SceneManager.LoadScene(1);
+        FindObjectOfType<LevelLoader>().loadLevel(1);
     }
     public void OptionsButton()
     {
