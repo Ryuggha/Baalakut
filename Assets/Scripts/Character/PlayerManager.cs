@@ -149,7 +149,7 @@ public class PlayerManager : MonoBehaviour
 
     public void restartScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+        FindObjectOfType<LevelLoader>().loadLevel(-1);
     }
 
     public void darknessTrigger()

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class InGameMenu : MonoBehaviour
 {
@@ -39,7 +38,7 @@ public class InGameMenu : MonoBehaviour
     {
         SoundHandler.playSound("event:/SFX/Menu/ClickButtonOut", Vector3.zero);
         toggleActive();
-        SceneManager.LoadScene(0);
+        FindObjectOfType<LevelLoader>().loadLevel(0);
     }
 
     public void toggleActive()
