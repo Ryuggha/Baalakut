@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739619347229507029}
   - component: {fileID: 569650289914098878}
-  - component: {fileID: 4717019343757330382}
+  - component: {fileID: 1795537083203033044}
   m_Layer: 30
   m_Name: Lens Distortion
   m_TagString: Untagged
@@ -81,7 +81,7 @@ MonoBehaviour:
   blendDistance: 0
   weight: 0
   priority: 0
---- !u!95 &4717019343757330382
+--- !u!95 &1795537083203033044
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -89,9 +89,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346634979764546272}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d65d6a48e7f6f4f4db045aeb766b16c0, type: 2}
+  m_Controller: {fileID: 9100000, guid: f054bfadd781c3b42b26e576d4f5375c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -23741,6 +23741,8 @@ MonoBehaviour:
   isCharging: 0
   timeToResetShotAnimation: 0.6
   timeToSetShotAnimation: 0.1
+  dashAnim: {fileID: 1795537083203033044}
+  dashParticles: {fileID: 2106342156559496497}
 --- !u!114 &7125775912108917533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58572,7 +58574,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4443906660083077009}
   - component: {fileID: 1701541868436200773}
-  - component: {fileID: 5794363255317483474}
   m_Layer: 30
   m_Name: Motion Blur
   m_TagString: Untagged
@@ -58611,25 +58612,6 @@ MonoBehaviour:
   blendDistance: 5
   weight: 0
   priority: 0
---- !u!95 &5794363255317483474
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478891035881382769}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8758f35cd1bf440408c5c7afa894d4d2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4674751353179355321
 GameObject:
   m_ObjectHideFlags: 0
