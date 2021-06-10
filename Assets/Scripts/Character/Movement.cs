@@ -133,6 +133,7 @@ public class Movement : MonoBehaviour
         {
             dashState = 1;
 
+            animatorHandler.dashAnimation();
             //Anim Interacting
             animatorHandler.PlayTargetAnimation("StartDash", true);
             SoundHandler.playSound("event:/SFX/Character/Dash", transform.position);

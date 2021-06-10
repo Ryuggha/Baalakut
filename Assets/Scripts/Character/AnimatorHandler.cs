@@ -17,6 +17,9 @@ public class AnimatorHandler : MonoBehaviour
     public float timeToResetShotAnimation = 0.6f;
     public float timeToSetShotAnimation = 0.1f;
 
+    [SerializeField] Animator dashAnim;
+    [SerializeField] ParticleSystem dashParticles;
+
     public void Initialize()
     {
         playerManager = GetComponentInParent<PlayerManager>();
@@ -105,6 +108,12 @@ public class AnimatorHandler : MonoBehaviour
         deltaPosition.y = 0;
         Vector3 velocity = deltaPosition / Time.deltaTime;
         playerMovement.rigidbody.velocity = velocity;
+    }
+
+    public void dashAnimation() 
+    {
+        dashAnim.Play("DashDistortion");
+        dashParticles.Play();
     }
 
     public void setIsInteracting(bool b)
