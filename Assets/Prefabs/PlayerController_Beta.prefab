@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 739619347229507029}
   - component: {fileID: 569650289914098878}
-  - component: {fileID: 4034852403412050580}
   m_Layer: 30
   m_Name: Lens Distortion
   m_TagString: Untagged
@@ -81,18 +80,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &4034852403412050580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346634979764546272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb37595eb756bd941b0efb65ee368875, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &537061901209158400
 GameObject:
   m_ObjectHideFlags: 0
@@ -58948,7 +58935,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.8396226, b: 0.3271256, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -60087,7 +60074,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.049928803, g: 0.3207547, b: 0.08179071, a: 1}
+        key0: {r: 0, g: 0.754717, b: 0.08879032, a: 1}
         key1: {r: 0.26383945, g: 0.46226418, b: 0.28773442, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0.17254902}
         key3: {r: 1, g: 1, b: 1, a: 0}
@@ -60096,7 +60083,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 15035
+        ctime1: 42212
         ctime2: 65535
         ctime3: 65535
         ctime4: 0
@@ -60104,7 +60091,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 40285
+        atime1: 51850
         atime2: 65535
         atime3: 0
         atime4: 0
