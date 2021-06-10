@@ -133,7 +133,6 @@ public class Movement : MonoBehaviour
         {
             dashState = 1;
 
-            animatorHandler.dashAnimation();
             //Anim Interacting
             animatorHandler.PlayTargetAnimation("StartDash", true);
             SoundHandler.playSound("event:/SFX/Character/Dash", transform.position);
@@ -162,6 +161,7 @@ public class Movement : MonoBehaviour
                 dashTimer = dashRecuperationTime;
                 dashState = 2;
                 gameObject.transform.position = dashTargetPos;
+                animatorHandler.dashAnimation();
             }
         }
         else if (dashState == 2)
