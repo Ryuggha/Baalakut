@@ -44,9 +44,6 @@ public class Movement : MonoBehaviour
     [SerializeField] private float groundDirectionRayDistance = 0.05f;
     [SerializeField] private LayerMask layersForGroundCheck;
 
-    [Header("Visual Effects")]
-    [SerializeField] private ParticleSystem dashParticles;
-
     [Header("Movement Flags")]
     public float inAirTimer;
     public float jumpTimer;
@@ -136,6 +133,7 @@ public class Movement : MonoBehaviour
         {
             dashState = 1;
 
+            animatorHandler.dashAnimation();
             //Anim Interacting
             animatorHandler.PlayTargetAnimation("StartDash", true);
             SoundHandler.playSound("event:/SFX/Character/Dash", transform.position);
@@ -164,7 +162,6 @@ public class Movement : MonoBehaviour
                 dashTimer = dashRecuperationTime;
                 dashState = 2;
                 gameObject.transform.position = dashTargetPos;
-                dashParticles.Play();
             }
         }
         else if (dashState == 2)
