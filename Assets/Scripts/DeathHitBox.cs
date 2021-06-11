@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class DeathHitBox : MonoBehaviour
 {
+    public bool lavaSound;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 9) collision.gameObject.GetComponentInParent<PlayerManager>().takeDamage();
+        if (collision.gameObject.layer == 9)
+        {
+            if (lavaSound) SoundHandler.playSound("event:/SFX/Character/LavaSound", collision.gameObject.transform.position);
+            collision.gameObject.GetComponentInParent<PlayerManager>().takeDamage();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 9) other.gameObject.GetComponentInParent<PlayerManager>().takeDamage();
+        if (other.gameObject.layer == 9)
+        {
+            if (lavaSound) SoundHandler.playSound("event:/SFX/Character/LavaSound", other.gameObject.transform.position);
+            other.gameObject.GetComponentInParent<PlayerManager>().takeDamage();
+        }
     }
 }
