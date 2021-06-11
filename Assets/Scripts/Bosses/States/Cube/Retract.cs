@@ -7,6 +7,9 @@ public class Retract : State
     public State nextState;
     public GameObject zarza;
     public GameObject zarzaGenerator;
+    public CameraShake shake;
+    public float shakeDuration = 0.15f;
+    public float shakeForce = 0.1f;
 
     private bool mooving;
     private FMOD.Studio.EventInstance moveSound;
@@ -15,6 +18,7 @@ public class Retract : State
 
     private void Start()
     {
+        shake = FindObjectOfType<CameraShake>();
         moveSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cube/CubeMovement");
         zarzaTimer = ((Cube)stateMachine).zarzaSpawnTimer;
     }
@@ -50,6 +54,7 @@ public class Retract : State
             stopSound();
             SoundHandler.playSound("event:/SFX/Cube/ImpactBetweenParts", transform.position);
             createZarza();
+            StartCoroutine(shake.shake(shakeDuration, shakeForce));
             return nextState;
         }
         return this;

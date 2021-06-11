@@ -5112,6 +5112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lavaSound: 0
 --- !u!65 &4285583553874079158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5501,6 +5502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ab7ec91a0b0c542b55071f11f4f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lavaSound: 0
 --- !u!1 &3170531500501241302
 GameObject:
   m_ObjectHideFlags: 0
@@ -5731,6 +5733,9 @@ MonoBehaviour:
   nextState: {fileID: 1378226427249703313}
   zarza: {fileID: 7112951179855985173, guid: 376e89c1afea05545b676c6cb5c0c021, type: 3}
   zarzaGenerator: {fileID: 8356443542602196895}
+  shake: {fileID: 0}
+  shakeDuration: 0.15
+  shakeForce: 0.1
 --- !u!1 &3432581412661518803
 GameObject:
   m_ObjectHideFlags: 0
@@ -5918,6 +5923,9 @@ MonoBehaviour:
   stateMachine: {fileID: 0}
   gonnaStun: 0
   nextState: {fileID: 2778863043545632687}
+  shake: {fileID: 0}
+  shakeDuration: 0.15
+  shakeForce: 0.1
 --- !u!1 &3432581413877753998
 GameObject:
   m_ObjectHideFlags: 0
