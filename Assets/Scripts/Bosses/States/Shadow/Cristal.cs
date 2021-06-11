@@ -15,13 +15,15 @@ public class Cristal : MonoBehaviour
     private int actualPoint = 0;
     public float vel = 1f;
 
+    private ParticleSystem particles;
+
     private Shadow shadow;
 
     private bool active = false;
 
     private void Start()
     {
-        
+        particles = GetComponentInChildren<ParticleSystem>();
         actualPoint = startingPoint;
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = def;
@@ -40,11 +42,13 @@ public class Cristal : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
+            SoundHandler.playSound("event:/SFX/Shadow/CrystalImpact", transform.position);
             if (!active)
             {
                 timeLeft = timeActive;
                 active = true;
                 meshRenderer.material = act;
+                particles.Play();
                 if (!shadowSpawned)
                 {
                     shadowSpawned = true;
