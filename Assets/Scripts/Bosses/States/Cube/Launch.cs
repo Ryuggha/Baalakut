@@ -8,11 +8,14 @@ public class Launch : State
     public State nextState;
     private bool mooving;
     private FMOD.Studio.EventInstance moveSound;
+    public CameraShake shake;
+    public float shakeDuration = 0.15f;
+    public float shakeForce = 0.1f;
 
     private void Start()
     {
         moveSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cube/CubeMovement");
-        
+        shake = FindObjectOfType<CameraShake>();
     }
 
     public override State tick(float delta)
@@ -42,6 +45,7 @@ public class Launch : State
             if (gonnaStun)
             {
                 SoundHandler.playSound("event:/SFX/Cube/WallImpact", transform.position);
+                StartCoroutine(shake.shake(shakeDuration, shakeForce));
                 ((Cube)stateMachine).stunned();
             }
             gonnaStun = false;
