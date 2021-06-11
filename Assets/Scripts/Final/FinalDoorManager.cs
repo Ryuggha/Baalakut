@@ -1,0 +1,67 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FinalDoorManager : MonoBehaviour
+{
+    [Header("References")]
+    public GameObject shadow_Eye, dodecahedro_Eye, cube_Eye;
+    public bool isActive;
+
+    [Header("Open Portal Stats")]
+    [SerializeField]
+    private float speed = 0.2f;
+    [SerializeField]
+    private float distanceDown = 3;
+    [SerializeField]
+    private float angularSpeed = 3;
+
+    private static int shadowId, dodecahedroId, cubeId;
+    private bool shadow, dodecahedro, cube;
+    private int i = 0;
+    private bool open = false;
+    private Vector3 target;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        shadowId = shadow_Eye.GetInstanceID();
+        dodecahedroId = dodecahedro_Eye.GetInstanceID();
+        cubeId = cube_Eye.GetInstanceID();
+        target = transform.position + Vector3.down * distanceDown;
+
+    }
+
+    public void hitEye(GameObject eye)
+    {
+        
+        if (isActive)
+        {
+            if (eye.GetInstanceID() == shadowId && !shadow) i++;
+            else if(eye.GetInstanceID() ==cubeId && !cube) i++;
+            else if (eye.GetInstanceID() == dodecahedroId && !dodecahedro) i++;
+            Destroy(eye);
+            
+            if (i == 3) openPortal();
+        }
+        
+    }
+
+
+
+    private void openPortal()
+    {
+        open = true;
+    }
+
+    private void Update()
+    {
+        if (open)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            transform.Rotate(Vector3.up, angularSpeed * Time.deltaTime);
+        }
+        
+    }
+}

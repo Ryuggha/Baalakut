@@ -40,6 +40,8 @@ public class SlingProjectile : MonoBehaviour
     {
         if (layerMask.value != 9)
         {
+            LockFinalDoor lfd = collision.gameObject.GetComponent<LockFinalDoor>();
+            if (lfd != null) lfd.hit();
             SoundHandler.playSound("event:/SFX/Character/ProjectileImpact", transform.position);
             Instantiate(impactParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
@@ -60,6 +62,7 @@ public class SlingProjectile : MonoBehaviour
             {
                 ld.hit();
             }
+            
         }
     }
 }
