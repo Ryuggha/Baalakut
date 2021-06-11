@@ -15,13 +15,15 @@ public class Cristal : MonoBehaviour
     private int actualPoint = 0;
     public float vel = 1f;
 
+    private ParticleSystem particles;
+
     private Shadow shadow;
 
     private bool active = false;
 
     private void Start()
     {
-        
+        particles = GetComponentInChildren<ParticleSystem>();
         actualPoint = startingPoint;
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = def;
@@ -45,6 +47,7 @@ public class Cristal : MonoBehaviour
                 timeLeft = timeActive;
                 active = true;
                 meshRenderer.material = act;
+                particles.Play();
                 if (!shadowSpawned)
                 {
                     shadowSpawned = true;
