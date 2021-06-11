@@ -42,6 +42,7 @@ public class Cristal : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
+            SoundHandler.playSound("event:/SFX/Shadow/CrystalImpact", transform.position);
             if (!active)
             {
                 timeLeft = timeActive;
