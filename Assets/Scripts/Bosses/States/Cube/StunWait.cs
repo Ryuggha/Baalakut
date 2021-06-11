@@ -23,6 +23,7 @@ public class StunWait : State
             particles.Play();
             active = true;
             timeLeft = timeToWait;
+            SoundHandler.playSound("event:/SFX/Cube/Explosion", transform.position);
         }
 
         timeLeft -= delta;

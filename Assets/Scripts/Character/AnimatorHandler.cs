@@ -65,7 +65,8 @@ public class AnimatorHandler : MonoBehaviour
         {
             this.isCharging = false;
             canRotate = true;
-            anim.Play("Shot");
+            anim.Play("Sustain");
+            anim.Play("Release");
             anim.Play("Movement");
             timer = timeToResetShotAnimation;
             layerWeightAscending = false;

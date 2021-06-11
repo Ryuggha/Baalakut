@@ -29,6 +29,7 @@ public class Sling : MonoBehaviour
     private bool shotFlag;
     private bool isCharging;
 
+    private FMOD.Studio.EventInstance chargeShot;
     private PlayerManager playerManager;
     private InputHandler inputHandler;
     private CameraHandler cameraHandler;
@@ -44,6 +45,7 @@ public class Sling : MonoBehaviour
         cameraHandler = FindObjectOfType<CameraHandler>();
         inputHandler = GetComponent<InputHandler>();
         hud = GetComponentInChildren<LineRenderer>();
+        chargeShot = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Character/ProjectileCharge");
     }
 
     public float HandleShot(float delta) //returns a multiplier to modify the movement Speed
@@ -67,7 +69,8 @@ public class Sling : MonoBehaviour
                 anim.setCharging(true);
                 isCharging = true;
                 chargeParticles.Play();
-                SoundHandler.playSound("event:/SFX/Character/ProjectileCharge", transform.position);
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(chargeShot, transform, GetComponent<Rigidbody>());
+                chargeShot.start();
             }
             timeCharged += delta;
             //RENDER HUD
@@ -88,6 +91,7 @@ public class Sling : MonoBehaviour
         {
             if (isCharging)
             {
+                chargeShot.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 stopCharging();
                 shot();
                 timeCharged = 0;

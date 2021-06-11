@@ -151,7 +151,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 10000
-  Length: 0
+  Length: 7117
 --- !u!114 &-4915949025740546657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,12 +598,15 @@ MonoBehaviour:
   - {fileID: 4378927636192972758}
   - {fileID: -3180938817539363921}
   - {fileID: 8736400736296620543}
+  - {fileID: 2392951908595116327}
+  - {fileID: 7122629797639995534}
+  - {fileID: 6285314329489537991}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637587927643682308
+  stringsBankWriteTime: 637589753316723913
   cacheVersion: 6
 --- !u!114 &14642404424588950
 MonoBehaviour:
@@ -643,11 +646,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637587927643682308
+  lastModified: 637589753316723913
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2726
+    Value: 2850
   Exists: 1
 --- !u!114 &811118871826658994
 MonoBehaviour:
@@ -753,11 +756,11 @@ MonoBehaviour:
   - {fileID: 7675014413968261407}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 9403
 --- !u!114 &1776807097506058110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +876,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 800
   Length: 0
+--- !u!114 &2392951908595116327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Character/LavaSound
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Character/LavaSound
+  guid: 652275f13f861546905f53cd5860d1c7
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3077703872621802996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,11 +983,11 @@ MonoBehaviour:
   - {fileID: 7675014413968261407}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 65
-  Length: 0
+  Length: 1153
 --- !u!114 &4378927636192972758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,7 +1073,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 471
+  Length: 427
 --- !u!114 &5018277099546390731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,7 +1096,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 10000
-  Length: 0
+  Length: 7132
 --- !u!114 &5027651248606691817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,7 +1161,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 75
   Length: 0
 --- !u!114 &5458067767830903264
 MonoBehaviour:
@@ -1222,7 +1248,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 2865
 --- !u!114 &5856617371886228283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,6 +1269,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &6285314329489537991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/Explosion
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/Explosion
+  guid: 90f59cf8a8d68e4a989e39f5e54e759c
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 85
+  Length: 0
 --- !u!114 &6298309044865390029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,13 +1331,13 @@ MonoBehaviour:
   guid: 805d40749c8bc047aba8101f8dfdf625
   Banks:
   - {fileID: 7675014413968261407}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
-  Length: 1929
+  MaxDistance: 70
+  Length: 16576
 --- !u!114 &6728132758664759154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,6 +1424,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 37274
+--- !u!114 &7122629797639995534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/CrystalImpact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/CrystalImpact
+  guid: 71f4bbe3eee4f540844b869aa4b98216
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 65
+  Length: 0
 --- !u!114 &7129332312766113391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,7 +1492,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 10000
-  Length: 0
+  Length: 9173
 --- !u!114 &7422557597105870188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,7 +1531,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637587927643632456
+  lastModified: 637589753316354035
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1591,7 +1663,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2677
+  Length: 5355
 --- !u!114 &8933397854092223930
 MonoBehaviour:
   m_ObjectHideFlags: 0
