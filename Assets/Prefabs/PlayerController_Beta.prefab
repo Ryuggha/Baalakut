@@ -62,7 +62,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3742596010669324634}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &569650289914098878
 MonoBehaviour:
@@ -19689,8 +19689,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1136307712933550073}
   m_AABB:
-    m_Center: {x: -0.0005112733, y: 0.0015036813, z: -0.0021813978}
-    m_Extent: {x: 0.0019686886, y: 0.0021953662, z: 0.0034486633}
+    m_Center: {x: -0.0005112735, y: 0.0015036731, z: -0.0021813978}
+    m_Extent: {x: 0.0019686886, y: 0.002195366, z: 0.0034486633}
   m_DirtyAABB: 0
 --- !u!183 &1136307712808380183
 Cloth:
@@ -53473,7 +53473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3047497360315431135}
   m_LocalRotation: {x: 0.08191571, y: -0, z: -0, w: 0.9966393}
-  m_LocalPosition: {x: 0, y: 0, z: -1.368}
+  m_LocalPosition: {x: 0, y: -0.069, z: -2.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8497137797822648073}
@@ -53749,54 +53749,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &4478891035881382769
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4443906660083077009}
-  - component: {fileID: 1701541868436200773}
-  m_Layer: 30
-  m_Name: Motion Blur
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4443906660083077009
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478891035881382769}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3742596010669324634}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1701541868436200773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4478891035881382769}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 6e48ceb2bc9709d4bb2a1c42babd98e0, type: 2}
-  isGlobal: 1
-  blendDistance: 5
-  weight: 0.005
-  priority: 0
 --- !u!1 &4674751353179355321
 GameObject:
   m_ObjectHideFlags: 0
@@ -59098,7 +59050,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4443906660083077009}
   - {fileID: 739619347229507029}
   m_Father: {fileID: 919809783758066832}
   m_RootOrder: 5
@@ -59819,7 +59770,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 80
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -59977,7 +59928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8497137798627448159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.632, y: 1.41, z: -0.11}
+  m_LocalPosition: {x: 0.632, y: 1.323, z: 0.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 651312979453976099}
@@ -60009,7 +59960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8497137798937705371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.19, z: -0.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8497137798627448158}
@@ -60349,8 +60300,8 @@ MonoBehaviour:
   timeCharged: 0
   velocityMultiplier: 0
   linePoints: 20
-  startColor: {r: 0.49381453, g: 0.712204, b: 0.764151, a: 1}
-  endColor: {r: 0.7735849, g: 0.31266928, b: 0.14960839, a: 1}
+  startColor: {r: 0.8773585, g: 0.5948992, b: 0.31038627, a: 1}
+  endColor: {r: 0.8490566, g: 0.023723079, b: 0, a: 1}
 --- !u!114 &8637348890366400799
 MonoBehaviour:
   m_ObjectHideFlags: 0
