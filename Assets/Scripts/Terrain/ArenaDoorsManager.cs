@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class ArenaDoorsManager : MonoBehaviour
 {
-    
     private bool combatOver = false;
 
-    public GameObject[] Doors;
     public GameObject portalLock;
 
-    public bool startsActive = false;
+
+    private Animator animator;
+
+    public string openAnimation, closeAnimation;
+
+    private void Start() {
+        animator = GetComponentInChildren<Animator>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,16 +23,12 @@ public class ArenaDoorsManager : MonoBehaviour
 
             if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
 
-                foreach (GameObject go in Doors)
-
-                    go.SetActive(!startsActive);
+                animator.Play(openAnimation);
     }
 
     public void endCombat()
     {
-        foreach (GameObject go in Doors)
-
-                go.SetActive(startsActive);
+        animator.Play(closeAnimation);
 
         if(portalLock) portalLock.SetActive(false);
         combatOver = true;
