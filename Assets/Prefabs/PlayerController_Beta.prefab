@@ -19689,8 +19689,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1136307712933550073}
   m_AABB:
-    m_Center: {x: -0.0005112735, y: 0.0015036731, z: -0.0021813978}
-    m_Extent: {x: 0.0019686886, y: 0.002195366, z: 0.0034486633}
+    m_Center: {x: -0.00051124435, y: 0.0015037011, z: -0.002181373}
+    m_Extent: {x: 0.0019686813, y: 0.0021953734, z: 0.0034486367}
   m_DirtyAABB: 0
 --- !u!183 &1136307712808380183
 Cloth:
@@ -59881,7 +59881,7 @@ MonoBehaviour:
     m_Bits: 1073741824
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 1
+  antialiasingMode: 3
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
