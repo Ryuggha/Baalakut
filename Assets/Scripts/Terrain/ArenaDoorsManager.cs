@@ -12,7 +12,6 @@ public class ArenaDoorsManager : MonoBehaviour
 
     public bool startsActive = false;
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (!combatOver)
