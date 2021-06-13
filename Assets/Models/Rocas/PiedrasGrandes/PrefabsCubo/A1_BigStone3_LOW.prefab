@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5633977421426932851}
   - component: {fileID: 8755053785509147606}
   - component: {fileID: 6801777124725671708}
-  - component: {fileID: 5000183272715151048}
+  - component: {fileID: 8225708913248102516}
   m_Layer: 0
   m_Name: A1_BigStone3_LOW
   m_TagString: Untagged
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5000183272715151048
-BoxCollider:
+--- !u!64 &8225708913248102516
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.06766817, y: 0.03605163, z: 0.103224486}
-  m_Center: {x: 0.008179297, y: -0.0019277119, z: 0.050491218}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: 6f9d192b1f33ccd47bc91245b4f8be4a, type: 3}

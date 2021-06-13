@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 7988693263863621027}
   - component: {fileID: 6445303797948000774}
   - component: {fileID: 9121661637361295052}
-  - component: {fileID: 7590592115287573069}
-  - component: {fileID: 7590592115287573066}
+  - component: {fileID: 4210236421227598286}
   m_Layer: 0
   m_Name: A1_BigStone2_LOW
   m_TagString: Untagged
@@ -83,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7590592115287573069
-BoxCollider:
+--- !u!64 &4210236421227598286
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -93,19 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02642271, y: 0.0520867, z: 0.13102}
-  m_Center: {x: 0.008496378, y: -0.0029759048, z: 0.057960626}
---- !u!65 &7590592115287573066
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7320137879233363737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.028679155, y: 0.036436252, z: 0.09164891}
-  m_Center: {x: -0.017866349, y: -0.0009988033, z: 0.038275275}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3329902420748629119, guid: efe0c457951dad94e8a7299b48c54f14, type: 3}
