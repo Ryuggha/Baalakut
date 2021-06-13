@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 806483007654570837}
   - component: {fileID: 4368192092542641392}
   - component: {fileID: 1979922308226895930}
-  - component: {fileID: 917482498758200506}
-  - component: {fileID: 917482498758200507}
-  - component: {fileID: 917482498758200508}
+  - component: {fileID: 7065439418520509803}
   m_Layer: 0
   m_Name: A1_BigStone6_LOW
   m_TagString: Untagged
@@ -84,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &917482498758200506
-CapsuleCollider:
+--- !u!64 &7065439418520509803
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,34 +92,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.014651115
-  m_Height: 0.089853585
-  m_Direction: 2
-  m_Center: {x: -0.0024897456, y: -0.0018408346, z: 0.07147531}
---- !u!65 &917482498758200507
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34591363237671407}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.042790707, y: 0.045314316, z: 0.043706987}
-  m_Center: {x: 0.0022151517, y: 0.00039001706, z: 0.017546972}
---- !u!136 &917482498758200508
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34591363237671407}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.006452007
-  m_Height: 0.09687753
-  m_Direction: 2
-  m_Center: {x: 0.013882408, y: 0.014615951, z: 0.04246027}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -1550514412580984892, guid: 34510711d1347c941ac3e5ebc6031964, type: 3}
