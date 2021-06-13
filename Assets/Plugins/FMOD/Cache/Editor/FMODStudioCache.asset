@@ -86,6 +86,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5727572035376975758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/CubeStinger
+  m_EditorClassIdentifier: 
+  Path: event:/Music/CubeStinger
+  guid: 87c757fb21a0724eb4b7edf66e20c13e
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-5726579748236594118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +519,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-90316507766133677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/ShadowStinger
+  m_EditorClassIdentifier: 
+  Path: event:/Music/ShadowStinger
+  guid: 61bac1f5c2e6d141bb98c3e03619e61a
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-56920191139611190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,12 +647,15 @@ MonoBehaviour:
   - {fileID: 2392951908595116327}
   - {fileID: 7122629797639995534}
   - {fileID: 6285314329489537991}
+  - {fileID: 4323555698170795563}
+  - {fileID: -90316507766133677}
+  - {fileID: -5727572035376975758}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637589765962243412
+  stringsBankWriteTime: 637591490074843496
   cacheVersion: 6
 --- !u!114 &14642404424588950
 MonoBehaviour:
@@ -646,11 +695,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637589765962243412
+  lastModified: 637591490074843496
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2850
+    Value: 3000
   Exists: 1
 --- !u!114 &811118871826658994
 MonoBehaviour:
@@ -965,6 +1014,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &4323555698170795563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/DodecahedronStinger
+  m_EditorClassIdentifier: 
+  Path: event:/Music/DodecahedronStinger
+  guid: 720c7b7c41c9f546ada1286e7798375b
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &4371027451812488853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,7 +1432,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 99312
+  Length: 96000
 --- !u!114 &6770256679754617162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,7 +1603,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637589765961964164
+  lastModified: 637591490074803814
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1709,4 +1781,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 57640
+  Length: 84705

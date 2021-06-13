@@ -62,9 +62,13 @@ public class ExpansionWave : MonoBehaviour
 
     public void destroy()
     {
-        waveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         isDestroyed = true;
         particles.Stop();
         Destroy(gameObject, 3);
+    }
+
+    private void OnDestroy()
+    {
+        waveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

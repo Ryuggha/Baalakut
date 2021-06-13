@@ -70,4 +70,9 @@ public class Retract : State
         moveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         mooving = false;
     }
+
+    private void OnDestroy()
+    {
+        stopSound();
+    }
 }
