@@ -59754,7 +59754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8497137797239015028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.632, y: 1.436, z: 0.294}
+  m_LocalPosition: {x: 0.71, y: 2.08, z: 0.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8497137798937705370}
@@ -59819,7 +59819,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -59947,7 +59947,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8497137798476371487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.632, y: 1.436, z: 0.294}
+  m_LocalPosition: {x: 0.71, y: 2.08, z: 0.294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8497137798937705370}
@@ -60043,10 +60043,10 @@ MonoBehaviour:
   followSpeed: 0.0002
   dashFollowSpeed: 0.0002
   pivotSpeed: 0.4
-  minimumPivot: -70
+  minimumPivot: -50
   maximumPivot: 40
   cameraSphereRadius: 0.2
-  cameraCollisionOffSet: 0.2
+  cameraCollisionOffSet: 0.5
   minimumCollisionOffset: 0.2
 --- !u!1 &8578798459516715323
 GameObject:
