@@ -60,7 +60,7 @@ public class Cube : StateMachine
     {
         var aux = FindObjectsOfType<Zarza>();
         foreach (Zarza zarza in aux) zarza.retract(4);
-        SoundHandler.playSound("event:/SFX/Cube/CubeDeath", transform.position);
+        SoundHandler.playSound("event:/SFX/Cube/CubeDeath", front.transform.position);
         GetComponentInChildren<Launch>().stopSound();
         GetComponentInChildren<Retract>().stopSound();
         base.hit();
