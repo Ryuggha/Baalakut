@@ -65,24 +65,37 @@ public class Shadow : StateMachine
     public void addActiveCrystals(int i)
     {
         activeCrystals += i;
-        
+
         if (activeCrystals >= numberOfCrystals)
         {
             foreach (var mesh in eye)
-            {
-                mesh.material = vulnerableMaterial;
+            {   
+                if(mesh != null)
+                    mesh.material = vulnerableMaterial;
             }
-            vulnerableLight.enabled = true;
-            MakeItVulnerable();
-            SoundHandler.playSound("event:/SFX/Shadow/ShadowVulnerable", transform.position);
+            if(vulnerableLight != null) {
+                vulnerableLight.enabled = true;
+                MakeItVulnerable();
+                SoundHandler.playSound("event:/SFX/Shadow/ShadowVulnerable", transform.position);
+            }
         }
         else
         {
             foreach (var mesh in eye)
             {
-                mesh.material = standardMaterial;
+                if(mesh != null)
+                    mesh.material = standardMaterial;
             }
-            vulnerableLight.enabled = false;
+            if(vulnerableLight != null)
+                vulnerableLight.enabled = false;
         }
+    }
+
+    public override void die()
+    {
+        GameData gd = SaveSystem.LoadGame();
+        gd.shadowKilled = true;
+        SaveSystem.saveGame(gd);
+        base.die();
     }
 }

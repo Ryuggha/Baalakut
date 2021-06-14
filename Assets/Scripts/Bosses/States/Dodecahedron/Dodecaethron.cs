@@ -49,4 +49,12 @@ public class Dodecaethron : StateMachine
     {
         weakState = true;
     }
+
+    public override void die()
+    {
+        GameData gd = SaveSystem.LoadGame();
+        gd.dodecahedroKilled = true;
+        SaveSystem.saveGame(gd);
+        base.die();
+    }
 }
