@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         gameData = SaveSystem.LoadGame();
-        if (gameData == null) continueButton.enabled = false;
+        if (gameData == null) continueButton.interactable = false;
     }
     private void OnEnable()
     {
