@@ -90,4 +90,12 @@ public class Shadow : StateMachine
                 vulnerableLight.enabled = false;
         }
     }
+
+    public override void die()
+    {
+        GameData gd = SaveSystem.LoadGame();
+        gd.shadowKilled = true;
+        SaveSystem.saveGame(gd);
+        base.die();
+    }
 }
