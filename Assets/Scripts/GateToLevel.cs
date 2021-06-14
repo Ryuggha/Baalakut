@@ -10,7 +10,9 @@ public class GateToLevel : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            FindObjectOfType<LevelLoader>().loadLevel(sceneIndex);
+            GameData gd = SaveSystem.LoadGame();
+            gd.level = sceneIndex;
+            if(SaveSystem.saveGame(gd)) FindObjectOfType<LevelLoader>().loadLevel(sceneIndex);
         }
     }
 }

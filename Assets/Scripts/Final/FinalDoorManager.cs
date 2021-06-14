@@ -30,6 +30,17 @@ public class FinalDoorManager : MonoBehaviour
         dodecahedroId = dodecahedro_Eye.GetInstanceID();
         cubeId = cube_Eye.GetInstanceID();
         target = transform.position + Vector3.down * distanceDown;
+        GameData gameData = SaveSystem.LoadGame();
+
+        bool shadowKilled = gameData.shadowKilled;
+        bool cubeKilled = gameData.cubeKilled;
+        bool dodecahedroKilled = gameData.dodecahedroKilled;
+
+        shadow_Eye.SetActive(shadowKilled);
+        cube_Eye.SetActive(cubeKilled);
+        dodecahedro_Eye.SetActive(dodecahedroKilled);
+
+        isActive = shadowKilled && cubeKilled && dodecahedroKilled;
 
     }
 
