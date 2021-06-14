@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 4325987801235407580}
   - component: {fileID: 4325987801235407583}
   - component: {fileID: 835657178311883466}
+  - component: {fileID: 3975408437999040567}
   m_Layer: 13
   m_Name: Zarza
   m_TagString: Untagged
@@ -207,6 +208,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3975408437999040567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4325987801235407582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc741fffa0174dc41ba3bf9187042fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zarzas:
+  - {fileID: 4325987801235407583}
 --- !u!1 &4325987801963470024
 GameObject:
   m_ObjectHideFlags: 0
