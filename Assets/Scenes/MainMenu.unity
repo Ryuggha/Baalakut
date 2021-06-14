@@ -923,7 +923,7 @@ GameObject:
   - component: {fileID: 1519927871}
   - component: {fileID: 1519927875}
   m_Layer: 5
-  m_Name: Jugar
+  m_Name: Continuar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -958,10 +958,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 2253f40f65b1a314a81c8c51cc4a5698, type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 3855c466f573fbc4e8f3c5d8e516fac6, type: 3}
-    m_SelectedSprite: {fileID: 21300000, guid: 2253f40f65b1a314a81c8c51cc4a5698, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: ec8c4fc760c49384698f84428bb23ab1, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 9806a65ffbf097e498bee445723c9e0a, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 99ab6af3d1b374b4c9aaae866b9b7550, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 9806a65ffbf097e498bee445723c9e0a, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 5cc198771b4006e4da321628f375a60f, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec8c4fc760c49384698f84428bb23ab1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5cc198771b4006e4da321628f375a60f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1040,7 +1040,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 243, y: 116}
+  m_SizeDelta: {x: 314, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519927875
 MonoBehaviour:
