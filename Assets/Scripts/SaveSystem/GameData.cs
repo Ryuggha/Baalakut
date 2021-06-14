@@ -7,7 +7,7 @@ public class GameData
 {
     public int level;
     public bool shadowKilled, cubeKilled, dodecahedroKilled;
-    public float[3] position;
+    public float[] position;
     public float[] rotation;
 
     public GameData()
@@ -23,6 +23,14 @@ public class GameData
         this.shadowKilled = shadowKilled;
         this.cubeKilled = cubeKilled;
         this.dodecahedroKilled = dodecahedroKilled;
-        position[] = new float[3];
+        position = new float[3];
+        position[0] = player.position.x;
+        position[1] = player.position.y;
+        position[2] = player.position.z;
+
+        rotation = new float[3];
+        rotation[0] = player.transform.rotation.x;
+        rotation[1] = player.transform.rotation.y;
+        rotation[2] = player.transform.rotation.z;
     }   
 }

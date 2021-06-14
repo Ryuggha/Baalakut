@@ -79,6 +79,9 @@ public class Cube : StateMachine
     public override void deathAnimation()
     {
         Debug.Log("asdasd");
+        GameData data = SaveSystem.LoadGame();
+        data.cubeKilled = true;
+        if (SaveSystem.saveGame(data));
         Instantiate(deathAnimationPrefab, front.transform.position, front.transform.rotation);
         Instantiate(backDeathAnimationPrefab, back.transform.position, back.transform.rotation);
     }
