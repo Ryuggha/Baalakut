@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoadCube : MonoBehaviour
 {
     GameData gameData;
-    public GameObject cube, Door;
+    public GameObject cube, DoorManager, Door;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class LoadCube : MonoBehaviour
         if (gameData.cubeKilled)
         {
             cube.SetActive(false);
+            DoorManager.SetActive(false);
             Door.SetActive(false);
         }
     }

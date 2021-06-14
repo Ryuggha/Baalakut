@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoadShadow : MonoBehaviour
 {
     GameData gameData;
-    public GameObject Shadow, DoorManager;
+    public GameObject Shadow, DoorManager, Door;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class LoadShadow : MonoBehaviour
         if (gameData.shadowKilled)
         {
             Shadow.SetActive(false);
+            Door.SetActive(false);
             DoorManager.GetComponent<ArenaDoorsManager>().enabled = false;
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LoadDode : MonoBehaviour
 {
     GameData gameData;
-    public GameObject Dode, DoorManager;
+    public GameObject Dode, DoorManager, Door;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class LoadDode : MonoBehaviour
         if (gameData.dodecahedroKilled)
         {
             Dode.SetActive(false);
+            Door.SetActive(false);
             DoorManager.GetComponent<ArenaDoorsManager>().enabled = false;
         }
     }
