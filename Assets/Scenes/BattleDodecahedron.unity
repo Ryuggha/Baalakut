@@ -2214,7 +2214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22150b35c619079419394673ba4c1ba1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 22150b35c619079419394673ba4c1ba1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24921,6 +24921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portalLock: {fileID: 129902043}
+  animator: {fileID: 1829159559}
   openAnimation: ArenaRocksDisappear
   closeAnimation: ArenaRocksAppear
 --- !u!4 &2010425086

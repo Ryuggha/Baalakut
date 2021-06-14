@@ -8,20 +8,15 @@ public class ArenaDoorsManager : MonoBehaviour
 
     public GameObject portalLock;
 
-
-    private Animator animator;
+    [SerializeField] private Animator animator;
 
     public string openAnimation, closeAnimation;
-
-    private void Start() {
-        animator = GetComponentInChildren<Animator>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!combatOver)
 
-            if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
+            if (other.TryGetComponent(out PlayerManager pm))
 
                 animator.Play(openAnimation);
     }
