@@ -41,16 +41,6 @@ public class CameraHandler : MonoBehaviour
         originalFov = cam.fieldOfView;
     }
 
-    private void OnEnable()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    private void OnDisable()
-    {
-        Cursor.lockState = CursorLockMode.None;
-    }
-
     public void adjustPivotTransformPosition(float delta)
     {
         if (playerManager.chargeStatus > 0)
