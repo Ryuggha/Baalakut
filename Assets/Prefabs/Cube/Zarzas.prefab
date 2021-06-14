@@ -698,6 +698,7 @@ GameObject:
   - component: {fileID: 7112951179855985172}
   - component: {fileID: 7147295771905961800}
   - component: {fileID: 7608418249074441284}
+  - component: {fileID: 1226329842034177498}
   m_Layer: 0
   m_Name: Zarzas
   m_TagString: Untagged
@@ -753,6 +754,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b2cb54ed877324093c0d5b2685c5b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1226329842034177498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112951179855985173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc741fffa0174dc41ba3bf9187042fdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zarzas:
+  - {fileID: 2696368403446021064}
+  - {fileID: 7112951179149516737}
+  - {fileID: 5556021814777620961}
 --- !u!1 &8139744393597863618
 GameObject:
   m_ObjectHideFlags: 0
