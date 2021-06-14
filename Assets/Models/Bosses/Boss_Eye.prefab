@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 7140746225790366712}
   - component: {fileID: 3617269588788850006}
   - component: {fileID: 4213844776240258647}
-  - component: {fileID: 985507484375225656}
   m_Layer: 0
   m_Name: Boss_Eye
   m_TagString: Untagged
@@ -142,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 2652877402465243124}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 389e69e42c8bcbb47a212d401227cb84, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -165,21 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodParticles:
   - {fileID: 2973532131854458663}
---- !u!111 &985507484375225656
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2652877402465243124}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 7c34c21707dcb2a40abc9935a1b9634c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &5301318438703439551
 GameObject:
   m_ObjectHideFlags: 0
