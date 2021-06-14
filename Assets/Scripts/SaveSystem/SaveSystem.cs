@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System;
 
 public static class SaveSystem 
 {
@@ -17,6 +18,14 @@ public static class SaveSystem
         binaryFormatter.Serialize(stream, Data);
         stream.Close();
 
+        return true;
+    }
+
+    internal static bool DeleteData()
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/GameData.kut";
+        File.Delete(path);
         return true;
     }
 
