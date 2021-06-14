@@ -224,11 +224,11 @@ public class Movement : MonoBehaviour
                 {
                     if (inAirTimer > timeInAirToLandAnimation)
                     {
-                        animatorHandler.PlayTargetAnimation("Land", true);
+                        //animatorHandler.PlayTargetAnimation("Land", true);
                     }
                     else
                     {
-                        animatorHandler.PlayTargetAnimation("Movement", false);
+                        //animatorHandler.PlayTargetAnimation("Movement", false);
                     }
 
                     inAirTimer = 0;
