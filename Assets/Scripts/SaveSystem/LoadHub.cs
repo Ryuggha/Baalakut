@@ -16,7 +16,7 @@ public class LoadHub : MonoBehaviour
 
         gameData = SaveSystem.LoadGame();
         if (gameData == null) gameData = new GameData();
-        if (true)
+        if (gameData.position!=null)
         {
             Vector3 pos = new Vector3(gameData.position[0], gameData.position[1], gameData.position[2]);
             Quaternion rot = new Quaternion(gameData.rotation[0], gameData.rotation[1], gameData.rotation[2], gameData.rotation[3]);
