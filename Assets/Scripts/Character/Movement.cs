@@ -140,8 +140,8 @@ public class Movement : MonoBehaviour
 
             RaycastHit hit;
             float distance = dashDistance;
-            Debug.DrawRay(gameObject.transform.position + gameObject.transform.up, gameObject.transform.forward * distance, Color.red, dashRecuperationTime + dashCastTime);
-            if (Physics.Raycast(gameObject.transform.position + gameObject.transform.up, gameObject.transform.forward, out hit, distance, dashLayerMask))
+            Debug.DrawRay(gameObject.transform.position + gameObject.transform.up * 0.1f, gameObject.transform.forward * distance, Color.red, dashRecuperationTime + dashCastTime);
+            if (Physics.Raycast(gameObject.transform.position + gameObject.transform.up * 0.1f, gameObject.transform.forward, out hit, distance, dashLayerMask))
             {
                 distance = hit.distance - offSetOnImpact;
             }

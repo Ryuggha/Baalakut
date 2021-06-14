@@ -73,7 +73,7 @@ public class SweepAttack : State
         
         Vector3 direction = eye.rotation * new Vector3(Mathf.Sin(Mathf.Deg2Rad * (actualAngle + offsetAngle)), 0, Mathf.Cos(Mathf.Deg2Rad * (actualAngle + offsetAngle))).normalized;
         RaycastHit hit;
-        Physics.Raycast(eye.transform.position, direction, out hit, 50, layerMask);
+        Physics.Raycast(eye.transform.position, direction, out hit, layerMask);
         ray.SetPosition(1, hit.point);
         actualVelocity += actualAcceleration * delta;
         actualAcceleration += actualAcceleration * delta;
