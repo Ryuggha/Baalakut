@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
 
     public void HandleMovement (float delta)
     {
-        float velMultiplier = 1 - (playerManager.chargeStatus * movementMultWhenCharging);
+        float velMultiplier = Mathf.Lerp(1, movementMultWhenCharging, playerManager.chargeStatus);
         moveDirection = cameraObject.forward * inputHandler.vertical;
         moveDirection += cameraObject.right * inputHandler.horizontal;
         moveDirection.y = 0;
