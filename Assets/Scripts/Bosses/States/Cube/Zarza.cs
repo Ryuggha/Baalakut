@@ -14,6 +14,10 @@ public class Zarza : MonoBehaviour
         aux.x = Random.Range(-modelOffsetRandomMax, modelOffsetRandomMax);
         aux.z = Random.Range(-modelOffsetRandomMax, modelOffsetRandomMax) / 2;
         model.transform.localPosition = aux;
+
+        var rotationAux = model.transform.localEulerAngles;
+        rotationAux.y = Random.Range(0, 360f);
+        model.transform.localEulerAngles = rotationAux;
     }
 
     public void destroy(float time)

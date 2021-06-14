@@ -52,5 +52,10 @@ public class ThornAttack : State
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(attackSound, stateMachine.gameObject.transform, stateMachine.GetComponent<Rigidbody>());
         attackSound.start();
     }
+
+    private void OnDestroy()
+    {
+        attackSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
 }
 

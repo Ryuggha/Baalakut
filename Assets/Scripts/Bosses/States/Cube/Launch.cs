@@ -8,11 +8,17 @@ public class Launch : State
     public State nextState;
     private bool mooving;
     private FMOD.Studio.EventInstance moveSound;
+    public CameraShake shake;
+    public float shakeDuration = 0.15f;
+    public float shakeForce = 0.1f;
+    public ParticleSystem launchParticles;
+
 
     private void Start()
     {
         moveSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cube/CubeMovement");
-        
+        launchParticles.Stop();
+        shake = FindObjectOfType<CameraShake>();
     }
 
     public override State tick(float delta)
@@ -23,6 +29,7 @@ public class Launch : State
             moveSound.start();
             mooving = true;
             SoundHandler.playSound("event:/SFX/Cube/CubeLaunch", transform.position);
+            launchParticles.Play();
         }
         
         Vector3 aux = ((Cube)stateMachine).front.transform.localPosition;
@@ -39,9 +46,12 @@ public class Launch : State
         if (reachedDestinacion)
         {
             stopSound();
+            launchParticles.Stop();
+
             if (gonnaStun)
             {
                 SoundHandler.playSound("event:/SFX/Cube/WallImpact", transform.position);
+                StartCoroutine(shake.shake(shakeDuration, shakeForce));
                 ((Cube)stateMachine).stunned();
             }
             gonnaStun = false;
@@ -54,5 +64,10 @@ public class Launch : State
     {
         moveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         mooving = false;
+    }
+
+    private void OnDestroy()
+    {
+        stopSound();
     }
 }
