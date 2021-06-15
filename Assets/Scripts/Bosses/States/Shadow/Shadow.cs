@@ -48,6 +48,12 @@ public class Shadow : StateMachine
         actualState = gameObject.GetComponentInChildren<Vulnerable>();
     }
 
+    private void OnEnable()
+    {
+        MusicController music = FindObjectOfType<MusicController>();
+        music.shadowLayer(1);
+    }
+
     public override void hit()
     {
         if (activeCrystals >= numberOfCrystals)
@@ -93,6 +99,7 @@ public class Shadow : StateMachine
 
     public override void die()
     {
+        GetComponentInChildren<FastMovement>().getAgent().isStopped = true;
         GameData gd = SaveSystem.LoadGame();
         gd.shadowKilled = true;
         SaveSystem.saveGame(gd);

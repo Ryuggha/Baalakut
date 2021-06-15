@@ -32,6 +32,11 @@ public class MusicController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (levelIndex == 3) play();
+    }
+
     public void play()
     {
         if (!playing) musicInstance.start();
@@ -53,5 +58,14 @@ public class MusicController : MonoBehaviour
             _instance = null;
             Destroy(gameObject);
         }
+        else if (level == 3)
+        {
+            shadowLayer(0);
+        }
+    }
+
+    public void shadowLayer(int i)
+    {
+        musicInstance.setParameterByName("ShadowCombat", i);
     }
 }
