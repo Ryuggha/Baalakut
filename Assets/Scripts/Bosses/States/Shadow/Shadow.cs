@@ -41,8 +41,6 @@ public class Shadow : StateMachine
     [Header("Trail Attack")]
     public float TrailDuration = 10; //Time in seconds
 
-
-
     public void MakeItVulnerable()
     {
         actualState = gameObject.GetComponentInChildren<Vulnerable>();
