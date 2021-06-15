@@ -56,7 +56,7 @@ public class Shadow : StateMachine
 
     public override void hit()
     {
-        if (activeCrystals >= numberOfCrystals)
+        if (activeCrystals >= numberOfCrystals && !dead)
         {
             var gas = FindObjectsOfType<SlowTrigger>();
             foreach (SlowTrigger s in gas)

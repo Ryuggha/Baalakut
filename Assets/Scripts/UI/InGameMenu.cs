@@ -46,6 +46,11 @@ public class InGameMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void toggleActive()
     {
         if (active)
