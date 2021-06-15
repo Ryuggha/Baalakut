@@ -19737,8 +19737,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1136307712933550073}
   m_AABB:
-    m_Center: {x: -0.00051124435, y: 0.0015037011, z: -0.002181373}
-    m_Extent: {x: 0.0019686813, y: 0.0021953734, z: 0.0034486367}
+    m_Center: {x: -0.00051131286, y: 0.0015036799, z: -0.0021813735}
+    m_Extent: {x: 0.0019686464, y: 0.0021953662, z: 0.003448687}
   m_DirtyAABB: 0
 --- !u!183 &1136307712808380183
 Cloth:
@@ -60466,6 +60466,18 @@ PrefabInstance:
     - target: {fileID: 438790874346425867, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_Name
       value: ChargingParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: LightsModule.light
+      value: 
+      objectReference: {fileID: 8329938605270983293, guid: fb86683d98c0ead42a273b603636107f, type: 3}
+    - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: LightsModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
