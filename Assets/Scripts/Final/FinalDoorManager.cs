@@ -52,6 +52,7 @@ public class FinalDoorManager : MonoBehaviour
             if (eye.GetInstanceID() == shadowId && !shadow) i++;
             else if(eye.GetInstanceID() ==cubeId && !cube) i++;
             else if (eye.GetInstanceID() == dodecahedroId && !dodecahedro) i++;
+            eye.GetComponent<EyeController>().Death();
             Destroy(eye);
             
             if (i == 3) openPortal();

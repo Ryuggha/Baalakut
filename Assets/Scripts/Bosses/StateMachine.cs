@@ -7,8 +7,8 @@ public class StateMachine : MonoBehaviour
     protected State actualState;
     protected bool dead;
 
-    [Header("Boss Eye")]
-    public EyeController eye;
+    
+    private EyeController eye;
 
     [Header("Boss State Stats")]
     public State startingState;
@@ -24,6 +24,7 @@ public class StateMachine : MonoBehaviour
         player = FindObjectOfType<PlayerManager>();
         actualState = startingState;
         var stateList = GetComponentsInChildren<State>();
+        eye = GetComponentInChildren<EyeController>();
         foreach (State state in stateList)
         {
             state.go = gameObject;
@@ -65,8 +66,6 @@ public class StateMachine : MonoBehaviour
 
     public virtual void deathAnimation()
     {
-        GetComponentInChildren<EyeController>().death();
-        if (deathAnimationPrefab != null)
-            Instantiate(deathAnimationPrefab, gameObject.transform.position, gameObject.transform.rotation);
+        if (deathAnimationPrefab != null) Instantiate(deathAnimationPrefab, gameObject.transform.position, gameObject.transform.rotation);
     }
 }
