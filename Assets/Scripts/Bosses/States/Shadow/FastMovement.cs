@@ -79,4 +79,9 @@ public class FastMovement : State
     {
         walking = var;
     }
+
+    public NavMeshAgent getAgent()
+    {
+        return this.agent;
+    }
 }
