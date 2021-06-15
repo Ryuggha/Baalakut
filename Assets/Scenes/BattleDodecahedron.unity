@@ -795,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: 5, y: 0}
+  uvAnimationRate: {x: 0.5, y: 0}
   textureName: _MainTex
 --- !u!1 &92504363 stripped
 GameObject:
@@ -8012,7 +8012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: 5, y: 0}
+  uvAnimationRate: {x: 0.5, y: 0}
   textureName: _MainTex
 --- !u!4 &463033053 stripped
 Transform:
@@ -8739,7 +8739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: 5, y: 0}
+  uvAnimationRate: {x: 0.5, y: 0}
   textureName: _MainTex
 --- !u!4 &517443098 stripped
 Transform:
@@ -22719,7 +22719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: 5, y: 0}
+  uvAnimationRate: {x: 0.5, y: 0}
   textureName: _MainTex
 --- !u!1001 &1575870688
 PrefabInstance:
@@ -26090,7 +26090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: 5, y: 0}
+  uvAnimationRate: {x: 0.5, y: 0}
   textureName: _MainTex
 --- !u!4 &1878130586 stripped
 Transform:
@@ -27008,6 +27008,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 74919642325cef040b53756ff8fd2a3c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 74919642325cef040b53756ff8fd2a3c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 115c8242a6174e942bcccf8adf201998, type: 2}
@@ -27307,7 +27311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d28cb150ad86f4a8100312a4aea7a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uvAnimationRate: {x: 5, y: 0}
+  uvAnimationRate: {x: 0.5, y: 0}
   textureName: _MainTex
 --- !u!1 &2010425083
 GameObject:
@@ -27354,6 +27358,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portalLock: {fileID: 129902043}
   animator: {fileID: 1829159559}
+  boss: {fileID: 1222095172}
+  startsActive: 1
   openAnimation: ArenaRocksDisappear
   closeAnimation: ArenaRocksAppear
 --- !u!4 &2010425086
