@@ -15,6 +15,8 @@ public class Cristal : MonoBehaviour
     private int actualPoint = 0;
     public float vel = 1f;
 
+    public Light lightDef, lighAct;
+
     private ParticleSystem particles;
 
     private Shadow shadow;
@@ -48,6 +50,8 @@ public class Cristal : MonoBehaviour
                 timeLeft = timeActive;
                 active = true;
                 meshRenderer.material = act;
+                lighAct.enabled = true;
+                lightDef.enabled = false;
                 particles.Play();
                 if (!shadowSpawned)
                 {
@@ -68,6 +72,8 @@ public class Cristal : MonoBehaviour
             {
                 active = false;
                 meshRenderer.material = def;
+                lighAct.enabled = false;
+                lightDef.enabled = true;
                 shadow.addActiveCrystals(-1);
             }
         }

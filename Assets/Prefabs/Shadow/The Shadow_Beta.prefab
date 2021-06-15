@@ -43,8 +43,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 15
-  m_Range: 3
+  m_Intensity: 3
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -82,7 +82,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -507,14 +507,14 @@ MonoBehaviour:
   ShotRayWidth: 1
   TimeBetweenAimingAndShots: 0.1
   ShotDuration: 1
-  minDarknessLastingTime: 8
-  maxDarknessLastingTime: 12
+  minDarknessLastingTime: 7
+  maxDarknessLastingTime: 9
   aimingColor: {r: 1, g: 0, b: 0, a: 1}
   shotColor: {r: 0.8263159, g: 0, b: 1, a: 1}
   playerChaser: {fileID: 0}
   playerChaser_Speed: 8
   angleToShot: 50
-  sweepAcceleration: 10
+  sweepAcceleration: 6
   numberOfCrystals: 3
   stunTime: 2
   standardMaterial: {fileID: 2100000, guid: b1f1539dfa9028141b1a6e278c92c76a, type: 2}

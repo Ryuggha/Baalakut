@@ -78,7 +78,6 @@ public class Cube : StateMachine
 
     public override void deathAnimation()
     {
-        Debug.Log("asdasd");
         GameData data = SaveSystem.LoadGame();
         data.cubeKilled = true;
         if (SaveSystem.saveGame(data));

@@ -57,7 +57,6 @@ public class Retract : State
         if (reachedDestinacion)
         {
             stopSound();
-            retractParticles.Stop();
             SoundHandler.playSound("event:/SFX/Cube/ImpactBetweenParts", transform.position);
             createZarza();
             StartCoroutine(shake.shake(shakeDuration, shakeForce));
@@ -73,6 +72,7 @@ public class Retract : State
 
     public void stopSound()
     {
+        retractParticles.Stop();
         moveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         mooving = false;
     }

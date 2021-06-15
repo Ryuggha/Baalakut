@@ -46,7 +46,6 @@ public class Launch : State
         if (reachedDestinacion)
         {
             stopSound();
-            launchParticles.Stop();
 
             if (gonnaStun)
             {
@@ -62,6 +61,7 @@ public class Launch : State
 
     public void stopSound()
     {
+        launchParticles.Stop();
         moveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         mooving = false;
     }
