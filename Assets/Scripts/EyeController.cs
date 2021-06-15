@@ -15,7 +15,7 @@ public class EyeController : MonoBehaviour
         animator.Play("Eye_Idle");
     }
 
-    private void Death()
+    public void death()
     {
         animator.Play("Eye_Death");
         foreach (ParticleSystem bloodStream in bloodParticles)

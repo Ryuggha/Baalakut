@@ -60,6 +60,7 @@ public class StateMachine : MonoBehaviour
 
     public virtual void deathAnimation()
     {
+        GetComponentInChildren<EyeController>().death();
         if (deathAnimationPrefab != null)
             Instantiate(deathAnimationPrefab, gameObject.transform.position, gameObject.transform.rotation);
     }
