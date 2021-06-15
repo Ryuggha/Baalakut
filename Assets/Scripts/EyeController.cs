@@ -28,7 +28,8 @@ public class EyeController : MonoBehaviour
         animator.Play("Eye_Death");
         foreach (ParticleSystem bloodStream in bloodParticles)
         {
-            bloodStream.Play();
+           ParticleSystem ps =  Instantiate(bloodStream, transform.position, Quaternion.identity) as ParticleSystem;
+           ps.Play();
         }
     }
 
