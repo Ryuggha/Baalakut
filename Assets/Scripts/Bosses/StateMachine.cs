@@ -7,6 +7,9 @@ public class StateMachine : MonoBehaviour
     protected State actualState;
     protected bool dead;
 
+    [Header("Boss Eye")]
+    public EyeController eye;
+
     [Header("Boss State Stats")]
     public State startingState;
     public GameObject deathAnimationPrefab;
@@ -44,11 +47,13 @@ public class StateMachine : MonoBehaviour
     {
         if (!dead)
         {
+            if(eye != null) eye.Death();
             SoundHandler.playSound("event:/SFX/Character/CriticalHit", transform.position);
             dead = true;
             doorsManager.endCombat();
             FindObjectOfType<MusicController>().stop(true);
             Invoke("destroyGO", 3);
+
         }        
     }
 
