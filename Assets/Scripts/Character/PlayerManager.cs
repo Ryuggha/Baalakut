@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     private InGameMenu menu;
     private RagdollController ragdoll;
     private SoundHandler sound;
+    
+
 
     private bool dead;
 
@@ -34,6 +36,11 @@ public class PlayerManager : MonoBehaviour
     public float timeToDieFromDarkness;
     public float darknessSlow;
 
+    [Header("Invincible time after boss kill")]
+    public float timeInvincible = 2;
+    private float timeLeft = 0;
+    private bool invincible;
+
     private void Start()
     {
         sound = GetComponent<SoundHandler>();
@@ -51,6 +58,13 @@ public class PlayerManager : MonoBehaviour
     private void Update()
     {
         float delta = Time.deltaTime;
+        if (invincible)
+        {
+            timeLeft -= delta;
+            if (timeLeft <= 0) invincible = false;
+        }
+        
+
 
         
             #region Handle Player State
@@ -135,7 +149,25 @@ public class PlayerManager : MonoBehaviour
         cameraHandler.resetFollowSpeed();
     }
 
+    public void makePlayerInvincible()
+    {
+        timeLeft = timeInvincible;
+        invincible = true;
+    }
+
     public void takeDamage() //Unimplemented method
+    {
+        if (!dead && !invincible)
+        {
+            dead = true;
+            ragdoll.ragdollEnabled(true);
+            menu.die();
+            SoundHandler.playSound("event:/SFX/Character/CharacterDeath", transform.position);
+            Invoke("restartScene", deathTimer);
+        }
+    }
+
+    public void instaKill()
     {
         if (!dead)
         {
