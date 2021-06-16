@@ -46,7 +46,6 @@ public class AnimatorHandler : MonoBehaviour
     }
     public void UpdateAnimatorChargingValues(float horizontalMovement, float verticalMovement)
     {
-        Debug.Log(horizontalMovement);
         anim.SetFloat(verticalCharging, Mathf.Clamp(verticalMovement, -1, 1), 0.1f, Time.deltaTime);
         anim.SetFloat(horizontalCharging, Mathf.Clamp(horizontalMovement, -1, 1), 0.1f, Time.deltaTime);
     }

@@ -17,6 +17,7 @@ public class Cube : StateMachine
     public int nTimesToThornAttack = 4;
     public float durationOfAttack;
     public float periodOfThornAttackSpawn;
+    public ParticleSystem deathParticles; 
 
     [Header("Modelos")]
     public GameObject front;
@@ -83,5 +84,6 @@ public class Cube : StateMachine
         if (SaveSystem.saveGame(data));
         Instantiate(deathAnimationPrefab, front.transform.position, front.transform.rotation);
         Instantiate(backDeathAnimationPrefab, back.transform.position, back.transform.rotation);
+        deathParticles.Play();
     }
 }
