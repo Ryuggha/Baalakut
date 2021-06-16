@@ -12,6 +12,7 @@ public class GateToLevel : MonoBehaviour
         {
             GameData gd = SaveSystem.LoadGame();
             gd.level = sceneIndex;
+            SoundHandler.playSound("event:/SFX/Ambience/Teleport", other.transform.position);
             if(SaveSystem.saveGame(gd)) FindObjectOfType<LevelLoader>().loadLevel(sceneIndex);
         }
     }
