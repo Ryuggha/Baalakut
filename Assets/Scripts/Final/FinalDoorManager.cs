@@ -42,6 +42,10 @@ public class FinalDoorManager : MonoBehaviour
 
         isActive = shadowKilled && cubeKilled && dodecahedroKilled;
 
+        shadow_Eye.GetComponent<EyeController>().vulnerable = isActive;
+        cube_Eye.GetComponent<EyeController>().vulnerable = isActive;
+        dodecahedro_Eye.GetComponent<EyeController>().vulnerable = isActive;
+
     }
 
     public void hitEye(GameObject eye)
@@ -49,9 +53,21 @@ public class FinalDoorManager : MonoBehaviour
         
         if (isActive)
         {
-            if (eye.GetInstanceID() == shadowId && !shadow) i++;
-            else if(eye.GetInstanceID() ==cubeId && !cube) i++;
-            else if (eye.GetInstanceID() == dodecahedroId && !dodecahedro) i++;
+            if (eye.GetInstanceID() == shadowId && !shadow)
+            {
+                shadow = true;
+                i++;
+            }
+            else if (eye.GetInstanceID() == cubeId && !cube)
+            {
+                cube = true;
+                i++;
+            }
+            else if (eye.GetInstanceID() == dodecahedroId && !dodecahedro)
+            {
+                dodecahedro = true;
+                i++;
+            }
             eye.GetComponent<EyeController>().Death();
             Destroy(eye);
             

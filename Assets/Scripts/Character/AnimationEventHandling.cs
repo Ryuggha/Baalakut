@@ -7,6 +7,7 @@ public class AnimationEventHandling : MonoBehaviour
     private const string STEP = "event:/SFX/Character/RunStep";
     private const string WALKSTEP = "event:/SFX/Character/WalkStep";
     private InputHandler inputs;
+    public ParticleSystem stepParticles;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class AnimationEventHandling : MonoBehaviour
     {
         if (inputs.moveAmount > .4f)
             SoundHandler.playSound(STEP, transform.position);
+        stepParticles.Play();
     }
 
     public void walkStep()
