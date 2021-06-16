@@ -22,6 +22,7 @@ public class ProtectorActivation : MonoBehaviour
     public void activate()
     {
         fp.setActiveFace();
+        fp.startAnimation();
         Destroy(gameObject);
     }
 }

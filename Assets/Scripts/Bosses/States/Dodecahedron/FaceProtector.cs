@@ -34,4 +34,9 @@ public class FaceProtector : MonoBehaviour
     {
         return this.isGrounded;
     }
+
+    public void startAnimation()
+    {
+        GetComponentInChildren<Animator>().Play("SpikedDodeRe");
+    }
 }

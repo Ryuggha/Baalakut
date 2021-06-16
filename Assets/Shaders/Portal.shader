@@ -39,8 +39,8 @@ Shader "Baalakut/Portal"
             {
                 v2f o;
 
-				v.vertex.y += sin(v.vertex.x + _Time.y * 2) * .3;
-				v.vertex.x += sin(v.vertex.x + _Time.x * 2) * .3;
+				v.vertex.y += sin(v.vertex.x + _Time.y * 2) * .1;
+				v.vertex.x += sin(v.vertex.x + _Time.x * 2) * .1;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 UNITY_TRANSFER_FOG(o,o.vertex);
