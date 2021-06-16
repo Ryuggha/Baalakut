@@ -11,7 +11,7 @@ public class DeathHitBox : MonoBehaviour
         if (collision.gameObject.layer == 9)
         {
             if (lavaSound) SoundHandler.playSound("event:/SFX/Character/LavaSound", collision.gameObject.transform.position);
-            collision.gameObject.GetComponentInParent<PlayerManager>().takeDamage();
+            collision.gameObject.GetComponentInParent<PlayerManager>().instaKill();
         }
     }
 
@@ -20,7 +20,7 @@ public class DeathHitBox : MonoBehaviour
         if (other.gameObject.layer == 9)
         {
             if (lavaSound) SoundHandler.playSound("event:/SFX/Character/LavaSound", other.gameObject.transform.position);
-            other.gameObject.GetComponentInParent<PlayerManager>().takeDamage();
+            other.gameObject.GetComponentInParent<PlayerManager>().instaKill();
         }
     }
 }
