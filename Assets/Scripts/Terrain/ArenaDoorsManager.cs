@@ -20,6 +20,11 @@ public class ArenaDoorsManager : MonoBehaviour
 
     public string openAnimation, closeAnimation;
 
+    private void Awake()
+    {
+        playSound();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!combatInProgres&&!combatOver && boss.active == startsActive)
