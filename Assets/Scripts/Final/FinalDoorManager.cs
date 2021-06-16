@@ -8,6 +8,8 @@ public class FinalDoorManager : MonoBehaviour
     [Header("References")]
     public GameObject shadow_Eye, dodecahedro_Eye, cube_Eye;
     public bool isActive;
+    [SerializeField] public Material inactiveEyeMat, activeEyeMat;
+    [SerializeField] public MeshRenderer[] shadowEyeMesh, dodecEyeMesh, cubeEyeMesh;
 
     [Header("Open Portal Stats")]
     [SerializeField]
@@ -42,6 +44,47 @@ public class FinalDoorManager : MonoBehaviour
 
         isActive = shadowKilled && cubeKilled && dodecahedroKilled;
 
+        if(isActive){
+
+            foreach (var mesh in shadowEyeMesh)
+            {   
+                if(mesh != null)
+                    mesh.material = activeEyeMat;
+            }
+
+            foreach (var mesh in dodecEyeMesh)
+            {   
+                if(mesh != null)
+                    mesh.material = activeEyeMat;
+            }
+
+            foreach (var mesh in cubeEyeMesh)
+            {   
+                if(mesh != null)
+                    mesh.material = activeEyeMat;
+            }
+
+        } else {
+            foreach (var mesh in shadowEyeMesh)
+            {   
+                if(mesh != null)
+                    mesh.material = inactiveEyeMat;
+            }
+
+            foreach (var mesh in dodecEyeMesh)
+            {   
+                if(mesh != null)
+                    mesh.material = inactiveEyeMat;
+            }
+
+            foreach (var mesh in cubeEyeMesh)
+            {   
+                if(mesh != null)
+                    mesh.material = inactiveEyeMat;
+            }
+
+        }
+
         shadow_Eye.GetComponent<EyeController>().vulnerable = isActive;
         cube_Eye.GetComponent<EyeController>().vulnerable = isActive;
         dodecahedro_Eye.GetComponent<EyeController>().vulnerable = isActive;
@@ -53,6 +96,9 @@ public class FinalDoorManager : MonoBehaviour
         
         if (isActive)
         {
+
+            SoundHandler.playSound("event:/SFX/Character/CriticalHit", eye.transform.position);
+
             if (eye.GetInstanceID() == shadowId && !shadow)
             {
                 shadow = true;
@@ -68,6 +114,7 @@ public class FinalDoorManager : MonoBehaviour
                 dodecahedro = true;
                 i++;
             }
+
             eye.GetComponent<EyeController>().Death();
             Destroy(eye);
             
@@ -75,8 +122,6 @@ public class FinalDoorManager : MonoBehaviour
         }
         
     }
-
-
 
     private void openPortal()
     {
