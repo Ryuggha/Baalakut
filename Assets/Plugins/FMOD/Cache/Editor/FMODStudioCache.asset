@@ -39,7 +39,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 0
+  Exists: 1
 --- !u!114 &-8297382159374864683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -5179218082456321187}
+  - {fileID: -4009378426067997553}
   MinDistance: 0
   MaxDistance: 0
   Length: 36000
@@ -276,26 +276,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 10000
   Length: 7117
---- !u!114 &-5179218082456321187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/ShadowMusic/ShadowCombat
-  m_EditorClassIdentifier: 
-  Name: ShadowCombat
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &-4915949025740546657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +320,49 @@ MonoBehaviour:
     data2: 0
   Exists: 1
 --- !u!114 &-4654037872413708254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShadowMusic/ShadowCombat
+  m_EditorClassIdentifier: 
+  Name: ShadowCombat
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-4096824815912402001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dodecahedron/DodecahedronDoors
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dodecahedron/DodecahedronDoors
+  guid: 8fb070ba5bbe2640966e6ad2441754d7
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4009378426067997553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -680,6 +703,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-312595888584131291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShadowMusic/ShadowCombat
+  m_EditorClassIdentifier: 
+  Name: ShadowCombat
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-245949117970610241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,12 +874,15 @@ MonoBehaviour:
   - {fileID: 4323555698170795563}
   - {fileID: -90316507766133677}
   - {fileID: -5727572035376975758}
+  - {fileID: 8435105185367983582}
+  - {fileID: -4096824815912402001}
+  - {fileID: 3220174083394130816}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637593258688583405
+  stringsBankWriteTime: 637594063981417298
   cacheVersion: 6
 --- !u!114 &14642404424588950
 MonoBehaviour:
@@ -876,11 +922,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637593258688583405
+  lastModified: 637594063981417298
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3054
+    Value: 3194
   Exists: 1
 --- !u!114 &811118871826658994
 MonoBehaviour:
@@ -1129,6 +1175,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2977026629483164584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShadowMusic/ShadowCombat
+  m_EditorClassIdentifier: 
+  Name: ShadowCombat
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3077703872621802996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,6 +1217,29 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 0
+--- !u!114 &3220174083394130816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Cube/CubeDoors
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Cube/CubeDoors
+  guid: ce8f2db761bab64483f81de5fbc38a45
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 65
   Length: 0
 --- !u!114 &3838783693429512769
 MonoBehaviour:
@@ -1864,7 +1953,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637594065854348067
+  lastModified: 637594063981367765
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1951,6 +2040,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &8435105185367983582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Shadow/ShadowDoors
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Shadow/ShadowDoors
+  guid: 780d44addd6d874d96748f019d11811c
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8579249660345167246
 MonoBehaviour:
   m_ObjectHideFlags: 0
