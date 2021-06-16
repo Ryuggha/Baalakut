@@ -56,6 +56,7 @@ public class Shadow : StateMachine
     {
         if (activeCrystals >= numberOfCrystals && !dead)
         {
+            Destroy(GetComponentInChildren<TrailSlow>());
             var gas = FindObjectsOfType<SlowTrigger>();
             foreach (SlowTrigger s in gas)
             {

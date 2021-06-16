@@ -6,10 +6,9 @@ public class TrailSlow : MonoBehaviour
 {
     
     public Object trigger;
-    private float timeBetweenColliders = 0.5f;
+    private float timeBetweenColliders = 0.2f;
     private float timeLeft = 0;
     private float timetoLive;
-    private float slowPower;
     // Start is called before the first frame update
     void Start()
     {
