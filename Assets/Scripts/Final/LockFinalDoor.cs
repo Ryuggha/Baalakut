@@ -8,7 +8,7 @@ public class LockFinalDoor : MonoBehaviour
     
     public void hit()
     {
-      
+
         doorManager.hitEye(this.gameObject);
     }
 }

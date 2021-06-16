@@ -17,6 +17,7 @@ public class LockDoor : MonoBehaviour
     }
     public void hit()
     {
+        SoundHandler.playSound("event:/SFX/Character/CriticalHit", transform.position);
         eye.Death();
         Destroy(toDestroy);
     }
