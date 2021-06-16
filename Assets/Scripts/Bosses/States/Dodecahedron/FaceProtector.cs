@@ -37,6 +37,6 @@ public class FaceProtector : MonoBehaviour
 
     public void startAnimation()
     {
-        GetComponentInChildren<Animator>().Play("SpikedDodeRe");
+        if(weakProtector != true) GetComponentInChildren<Animator>().Play("SpikedDodeRe");
     }
 }

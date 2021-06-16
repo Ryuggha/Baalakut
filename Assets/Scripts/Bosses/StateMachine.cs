@@ -49,6 +49,7 @@ public class StateMachine : MonoBehaviour
         if (!dead)
         {
             if(eye != null) eye.Death();
+            player.makePlayerInvincible();
             SoundHandler.playSound("event:/SFX/Character/CriticalHit", transform.position);
             dead = true;
             doorsManager.endCombat();
