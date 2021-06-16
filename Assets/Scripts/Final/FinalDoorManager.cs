@@ -85,6 +85,10 @@ public class FinalDoorManager : MonoBehaviour
 
         }
 
+        shadow_Eye.GetComponent<EyeController>().vulnerable = isActive;
+        cube_Eye.GetComponent<EyeController>().vulnerable = isActive;
+        dodecahedro_Eye.GetComponent<EyeController>().vulnerable = isActive;
+
     }
 
     public void hitEye(GameObject eye)
@@ -92,10 +96,25 @@ public class FinalDoorManager : MonoBehaviour
         
         if (isActive)
         {
+
             SoundHandler.playSound("event:/SFX/Character/CriticalHit", eye.transform.position);
-            if (eye.GetInstanceID() == shadowId && !shadow) i++;
-            else if(eye.GetInstanceID() ==cubeId && !cube) i++;
-            else if (eye.GetInstanceID() == dodecahedroId && !dodecahedro) i++;
+
+            if (eye.GetInstanceID() == shadowId && !shadow)
+            {
+                shadow = true;
+                i++;
+            }
+            else if (eye.GetInstanceID() == cubeId && !cube)
+            {
+                cube = true;
+                i++;
+            }
+            else if (eye.GetInstanceID() == dodecahedroId && !dodecahedro)
+            {
+                dodecahedro = true;
+                i++;
+            }
+
             eye.GetComponent<EyeController>().Death();
             Destroy(eye);
             
@@ -103,8 +122,6 @@ public class FinalDoorManager : MonoBehaviour
         }
         
     }
-
-
 
     private void openPortal()
     {

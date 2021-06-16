@@ -19,7 +19,7 @@ public class EyeController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("AlliedProjectile")) Death();
+        if(collision.gameObject.layer == LayerMask.NameToLayer("AlliedProjectile") && vulnerable) Death();
         Debug.Log("HEY blood");
     }
   
