@@ -18,7 +18,7 @@ public class MusicController : MonoBehaviour
     [FMODUnity.EventRef]
     public string stinger;
 
-    private void Awake()
+    private void Start()
     {
         if (_instance != null && _instance != this)
         {
@@ -30,11 +30,8 @@ public class MusicController : MonoBehaviour
             _instance = this;
             musicInstance = FMODUnity.RuntimeManager.CreateInstance(song);
         }
-    }
 
-    private void Start()
-    {
-        if (levelIndex == 3) play();
+        if (levelIndex == 3 || levelIndex == 0 || levelIndex == 1) play();
     }
 
     public void play()
@@ -52,7 +49,7 @@ public class MusicController : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        if (level != levelIndex)
+        if (level != levelIndex && !((level == 1 && levelIndex == 0) ||(level == 0 && levelIndex == 1)))
         {
             stop(false);
             _instance = null;
