@@ -8,6 +8,10 @@ public class ArenaDoorsManager : MonoBehaviour
 
     public GameObject portalLock;
 
+    [FMODUnity.EventRef]
+    public string doorsSound;
+    public Transform soundTransform;
+
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject boss;
     [SerializeField] private bool startsActive;
@@ -19,8 +23,9 @@ public class ArenaDoorsManager : MonoBehaviour
         if (!combatOver && boss.active == startsActive)
 
             if (other.TryGetComponent(out PlayerManager pm))
-
+            {
                 animator.Play(openAnimation);
+            }
     }
 
     public void endCombat()
@@ -30,4 +35,10 @@ public class ArenaDoorsManager : MonoBehaviour
         if(portalLock) portalLock.SetActive(false);
         combatOver = true;
     }
+
+    private void playSound()
+    {
+        SoundHandler.playSound(doorsSound, soundTransform.position);
+    }
+
 }
