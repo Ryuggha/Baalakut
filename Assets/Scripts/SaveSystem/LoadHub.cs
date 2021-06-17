@@ -21,9 +21,6 @@ public class LoadHub : MonoBehaviour
             Vector3 pos = new Vector3(gameData.position[0], gameData.position[1], gameData.position[2]);
             Quaternion rot = new Quaternion(gameData.rotation[0], gameData.rotation[1], gameData.rotation[2], gameData.rotation[3]);
 
-            Debug.Log("Position: " + pos);
-            Debug.Log("Rotation: " + rot);
-
             player.SetPositionAndRotation(pos, rot);
 
         }

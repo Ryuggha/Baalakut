@@ -42,7 +42,7 @@ public class PlayerManager : MonoBehaviour
     void Awake()
     {
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = 120;
+        Application.targetFrameRate = 80;
     }
 
     private void Start()

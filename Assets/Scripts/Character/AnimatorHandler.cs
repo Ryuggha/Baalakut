@@ -54,6 +54,7 @@ public class AnimatorHandler : MonoBehaviour
     {
         if (isCharging)
         {
+            anim.CrossFade("ChargeMovement", 0.2f);
             this.isCharging = true;
             canRotate = false;
             anim.Play("Charge");

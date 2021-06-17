@@ -103,7 +103,6 @@ public class Shadow : StateMachine
         gd.shadowKilled = true;
         SaveSystem.saveGame(gd);
         IKFootSolver[] array = GetComponentsInChildren<IKFootSolver>();
-        Debug.Log("SHADOW DIE");
         foreach(IKFootSolver foot in array)
         {
             foot.Die(transform);
