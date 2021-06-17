@@ -19738,8 +19738,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 1136307712933550073}
   m_AABB:
-    m_Center: {x: -0.00031179143, y: 0.0011029083, z: -0.0024883684}
-    m_Extent: {x: 0.0016793094, y: 0.001794589, z: 0.003742898}
+    m_Center: {x: -0.0011116837, y: 0.0019668979, z: -0.0019873981}
+    m_Extent: {x: 0.0023872938, y: 0.00265858, z: 0.0032522273}
   m_DirtyAABB: 0
 --- !u!183 &1136307712808380183
 Cloth:
@@ -64897,7 +64897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8497137798476371487}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 1.45, z: 0.15999922}
+  m_LocalPosition: {x: 0.57, y: 1.45, z: 0.15999922}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8497137798937705370}
@@ -70259,37 +70259,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1136307712808380186}
     m_Modifications:
+    - target: {fileID: 124807880345873610, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0069660684
+      value: -0.0019
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.004041079
+      value: 0.00062
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0025052303
+      value: -0.00025
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.36261094
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.031650793
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.670638
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6463406
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 438790874346425866, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70316,7 +70320,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
       propertyPath: LightsModule.intensityCurve.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643251817849363224, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822807661348646071, guid: 7741626ee6b8ddb44a2a22c7a85f9ac2, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
