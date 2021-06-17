@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9085213010699460442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Ambience/ParticleDisappear
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Ambience/ParticleDisappear
+  guid: a0fe56028692a24d8053387e7392894d
+  Banks:
+  - {fileID: 7675014413968261407}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 55
+  Length: 1634
 --- !u!114 &-9025836790844120581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,10 +223,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3778477660000806336}
+  - {fileID: 7995497314630827743}
   MinDistance: 0
   MaxDistance: 0
   Length: 36000
+--- !u!114 &-6455700262345782993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShadowMusic/ShadowCombat
+  m_EditorClassIdentifier: 
+  Name: ShadowCombat
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-5917970483741621687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,12 +1141,13 @@ MonoBehaviour:
   - {fileID: -4096824815912402001}
   - {fileID: 3220174083394130816}
   - {fileID: 7591362774485328044}
+  - {fileID: -9085213010699460442}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637594681729747854
+  stringsBankWriteTime: 637594969796859199
   cacheVersion: 6
 --- !u!114 &14642404424588950
 MonoBehaviour:
@@ -1143,11 +1187,11 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637594681729747854
+  lastModified: 637594969796859199
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 3234
+    Value: 3282
   Exists: 1
 --- !u!114 &811118871826658994
 MonoBehaviour:
@@ -1541,7 +1585,7 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3838783693429512769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,9 +2361,29 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637594681729698766
+  lastModified: 637594969796819295
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &7995497314630827743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShadowMusic/ShadowCombat
+  m_EditorClassIdentifier: 
+  Name: ShadowCombat
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
   Exists: 1
 --- !u!114 &8015934564760022100
 MonoBehaviour:
