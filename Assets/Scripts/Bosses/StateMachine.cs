@@ -13,6 +13,8 @@ public class StateMachine : MonoBehaviour
     [Header("Boss State Stats")]
     public State startingState;
     public GameObject deathAnimationPrefab;
+    public bool KillBoss = false;
+    
 
     [HideInInspector] public PlayerManager player;
 
@@ -35,6 +37,7 @@ public class StateMachine : MonoBehaviour
     protected virtual void Update()
     {
         float delta = Time.deltaTime;
+        if (KillBoss && !dead) die();
         if (!dead)
             actualState = actualState.tick(delta);
     }
