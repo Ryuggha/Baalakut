@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.829
       objectReference: {fileID: 0}
+    - target: {fileID: 4366682378452741744, guid: f6ecefd633bde834698309933b665f32, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f25a353f0f3c444a8923712b1b3b0b0, type: 2}
     - target: {fileID: 4366682378452741746, guid: f6ecefd633bde834698309933b665f32, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -9005,6 +9009,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.0000076293945
       objectReference: {fileID: 0}
+    - target: {fileID: 4366682378452741744, guid: f6ecefd633bde834698309933b665f32, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f25a353f0f3c444a8923712b1b3b0b0, type: 2}
     - target: {fileID: 4366682378452741747, guid: f6ecefd633bde834698309933b665f32, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.91
@@ -9192,7 +9200,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 776677ab3818fb249adaca05f4e04545, type: 2}
+  - {fileID: 2100000, guid: 1887187fee4199c46bc8b20527c883b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23191,6 +23199,8 @@ MonoBehaviour:
   cubeDoor: {fileID: 1966435947}
   dodeDoor: {fileID: 1812119157}
   player: {fileID: 2074337748}
+  mainPlayer: {fileID: 0}
+  introPlayer: {fileID: 0}
 --- !u!4 &983922262
 Transform:
   m_ObjectHideFlags: 0
@@ -23373,6 +23383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -191.156
       objectReference: {fileID: 0}
+    - target: {fileID: 4366682378452741744, guid: f6ecefd633bde834698309933b665f32, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f25a353f0f3c444a8923712b1b3b0b0, type: 2}
     - target: {fileID: 4366682378452741746, guid: f6ecefd633bde834698309933b665f32, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -26268,7 +26282,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 776677ab3818fb249adaca05f4e04545, type: 2}
+  - {fileID: 2100000, guid: 1887187fee4199c46bc8b20527c883b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35313,7 +35327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!220 &1295265426
 LightProbeGroup:
   m_ObjectHideFlags: 0
@@ -50371,6 +50385,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.277
       objectReference: {fileID: 0}
+    - target: {fileID: 7489130243117346419, guid: 98ab0527ebda5d546ad7c070d38d1e7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f25a353f0f3c444a8923712b1b3b0b0, type: 2}
     - target: {fileID: 7489130243117346429, guid: 98ab0527ebda5d546ad7c070d38d1e7f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -52172,6 +52190,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -84.96
       objectReference: {fileID: 0}
+    - target: {fileID: 4366682378452741744, guid: f6ecefd633bde834698309933b665f32, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f25a353f0f3c444a8923712b1b3b0b0, type: 2}
     - target: {fileID: 4366682378452741746, guid: f6ecefd633bde834698309933b665f32, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -52234,7 +52256,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e27a3e2f84809914fa5bf3a7ac14ce9f, type: 2}
+  - {fileID: 2100000, guid: 90396c9c4b426f64eabecf90655be6a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
