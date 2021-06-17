@@ -45,9 +45,9 @@ public class IKFootSolver : MonoBehaviour
 
     public void Die(Transform pos)
     {
+        speed /= 10;
         diying = true;
         diyingPos = pos;
-        Debug.Log("FOOT DIYING");
     }
 
     // Update is called once per frame
@@ -73,14 +73,9 @@ public class IKFootSolver : MonoBehaviour
             distance = Vector3.Distance(oldPosition, newPosition);
 
             lerp += Time.deltaTime * speed;
-                Vector3 footPosition = Vector3.Lerp(oldPosition, newPosition, lerp);
-              
-
-                currentPosition = footPosition;
-                
+            Vector3 footPosition = Vector3.Lerp(oldPosition, newPosition, lerp);
             
-
-            
+            currentPosition = footPosition;
         }
         else if (Physics.Raycast(ray, out RaycastHit info, 10,layer)){
 
