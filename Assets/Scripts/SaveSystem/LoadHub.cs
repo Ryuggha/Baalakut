@@ -8,6 +8,8 @@ public class LoadHub : MonoBehaviour
     public GameObject shadowDoor, cubeDoor, dodeDoor;
 
     public Transform player;
+    public GameObject mainPlayer;
+    public GameObject introPlayer;
     
 
     // Start is called before the first frame update
@@ -24,7 +26,16 @@ public class LoadHub : MonoBehaviour
             player.SetPositionAndRotation(pos, rot);
 
         }
-
+        if (gameData.runIntro)
+        {
+            if(introPlayer != null)
+            {
+                mainPlayer.SetActive(false);
+                introPlayer.SetActive(true);
+                gameData.runIntro = false;
+                SaveSystem.saveGame(gameData);
+            }
+        }
         
 
         if (gameData.shadowKilled) shadowDoor.SetActive(false);
