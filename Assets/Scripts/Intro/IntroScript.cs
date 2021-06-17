@@ -20,6 +20,7 @@ public class IntroScript : MonoBehaviour
 
     public void shake()
     {
+        SoundHandler.playSound("event:/SFX/Dodecahedron/DodecahedronDoors", transform.position);
         StartCoroutine(camera.shake(0.5f, 0.1f));
     }
 

@@ -1821,6 +1821,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7250997970672176419, guid: 141f00f62b842c14facc775559066fd2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 88e2f580ce1830645aef159bff3a73da, type: 2}
     - target: {fileID: 7250997971708971332, guid: 141f00f62b842c14facc775559066fd2, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4622,6 +4626,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2e8d8081c566ff843a6531abf2948622, type: 2}
+    - target: {fileID: 4734928796670385500, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1887187fee4199c46bc8b20527c883b3, type: 2}
     m_RemovedComponents:
     - {fileID: 555607554343463264, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
     - {fileID: 473892858221435935, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
@@ -15652,7 +15660,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1.7014118e+38, y: NaN, z: 2.3509887e-38, w: 1.8e-43}
+  m_BoundingSphereOverride: {x: 0, y: 1, z: 0.25, w: -8.991039e-10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -23260,7 +23268,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.3151e-41, y: 6e-44, z: 0, w: 1e-44}
+  m_BoundingSphereOverride: {x: 0, y: -0.0000000017109585, z: 6.01e-43, w: -4.7694115e-10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -24347,7 +24355,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.0421e-41, y: 6e-44, z: 9.05e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 6e-45, z: 2.8409e-41, w: 6e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -25716,6 +25724,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2e8d8081c566ff843a6531abf2948622, type: 2}
+    - target: {fileID: 4734928796670385500, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1887187fee4199c46bc8b20527c883b3, type: 2}
     - target: {fileID: 4862904275157090252, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -30752,7 +30764,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.05e-43, y: 9.4e-44, z: 0, w: -0.000000011356626}
+  m_BoundingSphereOverride: {x: 6.01e-43, y: 1.02e-43, z: 0, w: -0.000000001256276}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -31161,7 +31173,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.22017051, y: 3.7484626e+9, z: 2.9965768e+32, w: 1.8523599e+28}
+  m_BoundingSphereOverride: {x: 9e-44, y: 9e-44, z: 0, w: 2.350989e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -33873,7 +33885,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.0338e-41, y: 6e-44, z: 4.5905e-41, w: 0}
+  m_BoundingSphereOverride: {x: 9e-44, y: 9e-44, z: 0, w: 2.350989e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -34842,6 +34854,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2e8d8081c566ff843a6531abf2948622, type: 2}
+    - target: {fileID: 4734928796670385500, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1887187fee4199c46bc8b20527c883b3, type: 2}
     - target: {fileID: 4862904275157090252, guid: 28ec241b40ef4984e9827fb1e6e231d9, type: 3}
       propertyPath: m_RootOrder
       value: 0
