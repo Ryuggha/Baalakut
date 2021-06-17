@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameData 
 {
     public int level;
-    public bool shadowKilled, cubeKilled, dodecahedroKilled;
+    public bool shadowKilled, cubeKilled, dodecahedroKilled, runIntro;
     public float[] position;
     public float[] rotation;
 
@@ -16,6 +16,7 @@ public class GameData
         shadowKilled = false;
         cubeKilled = false;
         dodecahedroKilled = false;
+        runIntro = true;
         position = null;
         rotation = null;
         
