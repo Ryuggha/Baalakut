@@ -223,7 +223,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7995497314630827743}
+  - {fileID: -744947062120490297}
   MinDistance: 0
   MaxDistance: 0
   Length: 36000
@@ -920,6 +920,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 65
   Length: 0
+--- !u!114 &-744947062120490297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ShadowMusic/ShadowCombat
+  m_EditorClassIdentifier: 
+  Name: ShadowCombat
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-592411766309886966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,7 +1167,7 @@ MonoBehaviour:
   - {fileID: 7675014413968261407}
   StringsBanks:
   - {fileID: 184281997272600534}
-  stringsBankWriteTime: 637594969796859199
+  stringsBankWriteTime: 637595022602689845
   cacheVersion: 6
 --- !u!114 &14642404424588950
 MonoBehaviour:
@@ -1187,7 +1207,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637594969796859199
+  lastModified: 637595022602689845
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2361,7 +2381,7 @@ MonoBehaviour:
   Path: FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637594969796819295
+  lastModified: 637595022602489672
   LoadResult: 0
   FileSizes: []
   Exists: 1
