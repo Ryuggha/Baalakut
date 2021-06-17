@@ -41,15 +41,27 @@ public class InGameMenu : MonoBehaviour
         FindObjectOfType<LevelLoader>().loadLevel(0);
     }
 
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void toggleActive()
     {
         if (active)
         {
+            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
             inGameMenu.SetActive(false);
         }
         else
         {
+            Cursor.lockState = CursorLockMode.None;
             menuFirstButton.Select();
             inGameMenu.SetActive(true);
             Time.timeScale = 0;

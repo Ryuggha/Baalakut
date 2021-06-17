@@ -41,17 +41,22 @@ public class Shadow : StateMachine
     [Header("Trail Attack")]
     public float TrailDuration = 10; //Time in seconds
 
-
-
     public void MakeItVulnerable()
     {
         actualState = gameObject.GetComponentInChildren<Vulnerable>();
     }
 
+    private void OnEnable()
+    {
+        MusicController music = FindObjectOfType<MusicController>();
+        music.shadowLayer(1);
+    }
+
     public override void hit()
     {
-        if (activeCrystals >= numberOfCrystals)
+        if (activeCrystals >= numberOfCrystals && !dead)
         {
+            Destroy(GetComponentInChildren<TrailSlow>());
             var gas = FindObjectsOfType<SlowTrigger>();
             foreach (SlowTrigger s in gas)
             {
@@ -65,24 +70,43 @@ public class Shadow : StateMachine
     public void addActiveCrystals(int i)
     {
         activeCrystals += i;
-        
+
         if (activeCrystals >= numberOfCrystals)
         {
             foreach (var mesh in eye)
-            {
-                mesh.material = vulnerableMaterial;
+            {   
+                if(mesh != null)
+                    mesh.material = vulnerableMaterial;
             }
-            vulnerableLight.enabled = true;
-            MakeItVulnerable();
-            SoundHandler.playSound("event:/SFX/Shadow/ShadowVulnerable", transform.position);
+            if(vulnerableLight != null) {
+                vulnerableLight.enabled = true;
+                MakeItVulnerable();
+                SoundHandler.playSound("event:/SFX/Shadow/ShadowVulnerable", transform.position);
+            }
         }
         else
         {
             foreach (var mesh in eye)
             {
-                mesh.material = standardMaterial;
+                if(mesh != null)
+                    mesh.material = standardMaterial;
             }
-            vulnerableLight.enabled = false;
+            if(vulnerableLight != null)
+                vulnerableLight.enabled = false;
         }
+    }
+
+    public override void die()
+    {
+        GetComponentInChildren<FastMovement>().getAgent().isStopped = true;
+        GameData gd = SaveSystem.LoadGame();
+        gd.shadowKilled = true;
+        SaveSystem.saveGame(gd);
+        IKFootSolver[] array = GetComponentsInChildren<IKFootSolver>();
+        foreach(IKFootSolver foot in array)
+        {
+            foot.Die(transform);
+        }
+        base.die();
     }
 }

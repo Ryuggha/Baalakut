@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour
 
     public void HandleMovement (float delta)
     {
-        float velMultiplier = 1 - (playerManager.chargeStatus * movementMultWhenCharging);
+        float velMultiplier = Mathf.Lerp(1, movementMultWhenCharging, playerManager.chargeStatus);
         moveDirection = cameraObject.forward * inputHandler.vertical;
         moveDirection += cameraObject.right * inputHandler.horizontal;
         moveDirection.y = 0;
@@ -140,8 +140,8 @@ public class Movement : MonoBehaviour
 
             RaycastHit hit;
             float distance = dashDistance;
-            Debug.DrawRay(gameObject.transform.position + gameObject.transform.up, gameObject.transform.forward * distance, Color.red, dashRecuperationTime + dashCastTime);
-            if (Physics.Raycast(gameObject.transform.position + gameObject.transform.up, gameObject.transform.forward, out hit, distance, dashLayerMask))
+            Debug.DrawRay(gameObject.transform.position + gameObject.transform.up * 0.1f, gameObject.transform.forward * distance, Color.red, dashRecuperationTime + dashCastTime);
+            if (Physics.Raycast(gameObject.transform.position + gameObject.transform.up * 0.1f, gameObject.transform.forward, out hit, distance, dashLayerMask))
             {
                 distance = hit.distance - offSetOnImpact;
             }
@@ -224,11 +224,11 @@ public class Movement : MonoBehaviour
                 {
                     if (inAirTimer > timeInAirToLandAnimation)
                     {
-                        animatorHandler.PlayTargetAnimation("Land", true);
+                        //animatorHandler.PlayTargetAnimation("Land", true);
                     }
                     else
                     {
-                        animatorHandler.PlayTargetAnimation("Movement", false);
+                        //animatorHandler.PlayTargetAnimation("Movement", false);
                     }
 
                     inAirTimer = 0;

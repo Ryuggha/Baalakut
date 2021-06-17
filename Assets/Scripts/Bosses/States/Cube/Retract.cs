@@ -16,10 +16,14 @@ public class Retract : State
     private float timer;
     private float zarzaTimer;
 
+    public ParticleSystem retractParticles;
+
+
     private void Start()
     {
         shake = FindObjectOfType<CameraShake>();
         moveSound = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Cube/CubeMovement");
+        retractParticles.Stop();
         zarzaTimer = ((Cube)stateMachine).zarzaSpawnTimer;
     }
 
@@ -31,6 +35,7 @@ public class Retract : State
             moveSound.start();
             mooving = true;
             SoundHandler.playSound("event:/SFX/Cube/CubeRetraction", transform.position);
+            retractParticles.Play();
         }
         Vector3 aux = ((Cube)stateMachine).back.transform.localPosition;
         aux.z += ((Cube)stateMachine).retractVelocity * delta;
@@ -67,7 +72,13 @@ public class Retract : State
 
     public void stopSound()
     {
+        retractParticles.Stop();
         moveSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         mooving = false;
+    }
+
+    private void OnDestroy()
+    {
+        stopSound();
     }
 }

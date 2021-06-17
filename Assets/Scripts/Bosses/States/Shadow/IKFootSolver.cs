@@ -28,6 +28,9 @@ public class IKFootSolver : MonoBehaviour
     private Vector3 oldPosition;
     private Vector3 newPosition;
     private float distance;
+    private bool diying = false;
+    private Transform diyingPos;
+    private bool setUp = true;
 
 
     // Start is called before the first frame update
@@ -39,39 +42,70 @@ public class IKFootSolver : MonoBehaviour
         legDirection.y = 0;
     }
 
+
+    public void Die(Transform pos)
+    {
+        speed /= 10;
+        diying = true;
+        diyingPos = pos;
+    }
+
     // Update is called once per frame
     void Update()
     {
 
+       
         transform.position = currentPosition;
 
         Ray ray = new Ray(legRoot.position + (body.TransformDirection(legDirection) * footSpacing), Vector3.down);
-        if (Physics.Raycast(ray, out RaycastHit info, 10,layer)){
-            if (Vector3.Distance(newPosition, info.point) >= stepDistance && otherLegReference.legGrounded) 
+        if (diying)
+        {
+
+            if (setUp)
             {
-                
                 lerp = 0;
-                newPosition = info.point;
                 legGrounded = false;
-
-                distance = Vector3.Distance(oldPosition, newPosition);
-
-                //transform.position = info.point;
-                //currentPosition = transform.position;
+                setUp = false;
+                
             }
+
+            newPosition = diyingPos.position;
+            distance = Vector3.Distance(oldPosition, newPosition);
+
+            lerp += Time.deltaTime * speed;
+            Vector3 footPosition = Vector3.Lerp(oldPosition, newPosition, lerp);
+            
+            currentPosition = footPosition;
+        }
+        else if (Physics.Raycast(ray, out RaycastHit info, 10,layer)){
+
+            if (Vector3.Distance(newPosition, info.point) >= stepDistance && otherLegReference.legGrounded) 
+                {
+                
+                    lerp = 0;
+                    newPosition = info.point;
+                    legGrounded = false;
+
+                    distance = Vector3.Distance(oldPosition, newPosition);
+
+                    //transform.position = info.point;
+                    //currentPosition = transform.position;
+                }
+
             if (lerp < 1)
-            {
-                Vector3 footPosition = Vector3.Lerp(oldPosition, newPosition, lerp);
-                footPosition.y += Mathf.Sin(lerp * Mathf.PI) * stepHeight;
+                {
+                    Vector3 footPosition = Vector3.Lerp(oldPosition, newPosition, lerp);
+                    footPosition.y += Mathf.Sin(lerp * Mathf.PI) * stepHeight;
 
-                currentPosition = footPosition;
-                lerp += Time.deltaTime * speed * distance;
-            }
+                    currentPosition = footPosition;
+                    lerp += Time.deltaTime * speed * distance;
+                }
+
             else
-            {
-                oldPosition = newPosition;
-                legGrounded = true;
-            }
+                {
+                    oldPosition = newPosition;
+                    legGrounded = true;
+                }
 
             
 
