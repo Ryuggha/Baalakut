@@ -17,7 +17,7 @@ public class LoadShadow : MonoBehaviour
         {
             Shadow.SetActive(false);
             Door.SetActive(false);
-            DoorManager.GetComponent<ArenaDoorsManager>().enabled = false;
+            DoorManager.SetActive(false);
         }
     }
 }
