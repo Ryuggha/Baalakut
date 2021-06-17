@@ -10,7 +10,8 @@ public class ParticleTouchesFloor : MonoBehaviour
     {
         if (collision.gameObject.layer != 8)
         {
-            Invoke("destroy", 2f);
+            SoundHandler.playSound("event:/SFX/Ambience/ParticleDisappear", transform.position);
+            Invoke("destroy", 0.4f);
         }
     }
 
