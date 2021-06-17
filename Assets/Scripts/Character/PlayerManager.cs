@@ -15,8 +15,6 @@ public class PlayerManager : MonoBehaviour
     private RagdollController ragdoll;
     private SoundHandler sound;
     
-
-
     private bool dead;
 
     public float deathTimer = 3f;
@@ -40,6 +38,12 @@ public class PlayerManager : MonoBehaviour
     public float timeInvincible = 2;
     private float timeLeft = 0;
     private bool invincible;
+
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 120;
+    }
 
     private void Start()
     {
