@@ -6,7 +6,7 @@ public class CameraShake : MonoBehaviour
 {
     public IEnumerator shake (float duration, float force)
     {
-        Debug.Log("Shaking during: " +duration + "with a force of " + force);
+       
         Vector3 startingPos = transform.localPosition;
         float timer = 0f;
 
